@@ -27,7 +27,7 @@ public class SwitchEnum
         GiorniSettimana giornoEnum = GiorniSettimana.Martedì;
         string nomeGiornoEnum;
 
-        switch (giorno)
+        switch (giornoEnum)
         {
             case GiorniSettimana.Lunedì:
                 nomeGiornoEnum = "Lunedì";

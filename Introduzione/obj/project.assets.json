@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\artha\\C# Projects\\Mac-Formazione\\1 Intro\\Introduzione\\Introduzione.csproj",
+      "projectUniqueName": "C:\\Users\\artha\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Introduzione.csproj",
       "projectName": "Introduzione",
-      "projectPath": "C:\\Users\\artha\\C# Projects\\Mac-Formazione\\1 Intro\\Introduzione\\Introduzione.csproj",
+      "projectPath": "C:\\Users\\artha\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Introduzione.csproj",
       "packagesPath": "C:\\Users\\artha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\artha\\C# Projects\\Mac-Formazione\\1 Intro\\Introduzione\\obj\\",
+      "outputPath": "C:\\Users\\artha\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
