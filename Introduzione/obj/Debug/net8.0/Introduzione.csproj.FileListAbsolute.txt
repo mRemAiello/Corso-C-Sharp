@@ -1,0 +1,14 @@
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\bin\Debug\net8.0\Introduzione.exe
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\bin\Debug\net8.0\Introduzione.deps.json
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\bin\Debug\net8.0\Introduzione.runtimeconfig.json
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\bin\Debug\net8.0\Introduzione.dll
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\bin\Debug\net8.0\Introduzione.pdb
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\obj\Debug\net8.0\Introduzione.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\obj\Debug\net8.0\Introduzione.AssemblyInfoInputs.cache
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\obj\Debug\net8.0\Introduzione.AssemblyInfo.cs
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\obj\Debug\net8.0\Introduzione.csproj.CoreCompileInputs.cache
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\obj\Debug\net8.0\Introduzione.dll
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\obj\Debug\net8.0\refint\Introduzione.dll
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\obj\Debug\net8.0\Introduzione.pdb
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\obj\Debug\net8.0\Introduzione.genruntimeconfig.cache
+C:\Users\artha\C# Projects\Mac-Formazione\1 Intro\Introduzione\obj\Debug\net8.0\ref\Introduzione.dll
