@@ -1,3 +1,5 @@
+using System.Diagnostics.Tracing;
+
 public class If
 {
     public void Execute()
@@ -17,10 +19,15 @@ public class If
         //
         bool haAccount = true;
         bool haEmailVerificata = false;
+        bool passwordCorretta = false;
 
         if (haAccount && haEmailVerificata)
         {
             Console.WriteLine("Accesso consentito.");
+        }
+        else if (!passwordCorretta)
+        {
+            Console.WriteLine("La password che hai scritto è sbagliata.");
         }
         else if (haAccount)
         {
@@ -30,6 +37,22 @@ public class If
         {
             Console.WriteLine("Registrati per creare un account.");
         }
+
+
+        // If ternario prima del suo utilizzo
+        int valore = 10;
+        if (haAccount)
+        {
+            valore = 20;
+        }
+        else
+        {
+            valore = 30;
+        }
+
+
+        // If ternario in azione
+        valore = (haAccount) ? 20 : 30;
 
 
         // If ternario

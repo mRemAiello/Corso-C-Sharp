@@ -3,7 +3,7 @@ public class ContinueBreak
     public void Execute()
     {
         // Break for
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 10; i++)
         {
             if (i == 3)
             {
@@ -14,7 +14,6 @@ public class ContinueBreak
 
         // Break while
         int contatore = 0;
-
         while (contatore < 5)
         {
             if (contatore == 2)
@@ -25,19 +24,27 @@ public class ContinueBreak
             contatore++;
         }
 
-        // Continue
-        for (int i = 0; i < 5; i++)
+        // Continue, il ciclo fa il writeline solo degli i pari
+        for (int i = 0; i < 20; i++)
         {
-            if (i == 2)
+            // Metodo 1:
+            if (i % 2 == 0 && i % 3 == 0)
             {
+                Console.WriteLine("Iterazione: " + i);
+            }           
+
+            // Metodo 2:
+            if (i % 2 != 0)
                 continue;
-            }
+
+            if (i % 3 == 0)
+                continue;
+
             Console.WriteLine("Iterazione: " + i);
         }
 
         // Continue while
         contatore = 0;
-
         while (contatore < 5)
         {
             if (contatore == 3)
