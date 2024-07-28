@@ -1,6 +1,15 @@
 public class SwitchEnum
 {
-    enum GiorniSettimana { Lunedì, Martedì, Mercoledì, Giovedì, Venerdì, Sabato, Domenica }
+    enum GiorniSettimana
+    { 
+        Lunedì, 
+        Martedì, 
+        Mercoledì, 
+        Giovedì, 
+        Venerdì, 
+        Sabato, 
+        Domenica 
+    }
 
     public void Execute()
     {
@@ -18,27 +27,27 @@ public class SwitchEnum
             case 3:
                 nomeGiorno = "Mercoledì";
                 break;
-            // Aggiungere altri casi se necessario
             default:
                 nomeGiorno = "Giorno non valido";
                 break;
         }
+        Console.WriteLine(nomeGiorno);
 
+        //
         GiorniSettimana giornoEnum = GiorniSettimana.Martedì;
-        string nomeGiornoEnum;
-
-        switch (giornoEnum)
+        string nomeGiornoEnum = giornoEnum switch
         {
-            case GiorniSettimana.Lunedì:
-                nomeGiornoEnum = "Lunedì";
-                break;
-            case GiorniSettimana.Martedì:
-                nomeGiornoEnum = "Martedì";
-                break;
-            // Gestire gli altri giorni
-            default:
-                nomeGiornoEnum = "Giorno non valido";
-                break;
-        }
+            GiorniSettimana.Lunedì => "Lunedì",
+            GiorniSettimana.Martedì => "Martedì",
+            GiorniSettimana.Mercoledì => "Mercoledì",
+            GiorniSettimana.Giovedì => "Giovedì",
+            _ => "Giorno non valido",
+        };
+        Console.WriteLine(nomeGiornoEnum);
     }
 }
+
+
+// https://codegrind.it/esercizi/csharp/switch
+
+// https://codegrind.it/esercizi/csharp/enum

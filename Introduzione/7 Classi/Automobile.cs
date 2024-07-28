@@ -1,34 +1,22 @@
-public class Automobile
+public class Automobile : Veicolo
 {
-    string marca;
-    string modello;
-    int anno;
+    private int _numeroPorte;
 
-    public Automobile(string m, string mod, int a)
+    public Automobile(string nome, string modello, int anno, int numeroPorte) : base(nome, modello, anno)
     {
-        marca = m;
-        modello = mod;
-        anno = a;
+        _numeroPorte = numeroPorte;
     }
 
-    public Automobile(string m, int a)
+    public Automobile() : base("", "", 0)
     {
-        marca = m;
-        anno = a;
-        modello = "Sconosciuto";
     }
 
-    // Costruttore predefinito senza parametri
-    public Automobile()
+    public override void Avvia()
     {
-        marca = "Sconosciuta";
-        modello = "Sconosciuto";
-        anno = 0;
-    }
+        // Qualora volessi avviare il metodo della superclasse
+        // base.Avvia();
 
-    public void MostraInformazioni() 
-    {
-        string stringa = "Marca: {}, Modello: {}, Anno: {}";
-        Console.WriteLine(string.Format(stringa, marca, modello, anno));
+        //
+        Console.WriteLine("Automobile avviata.");
     }
 }
