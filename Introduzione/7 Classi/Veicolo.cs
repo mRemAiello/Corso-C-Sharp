@@ -16,6 +16,9 @@ public class Veicolo
 
     public Veicolo()
     {
+        _marca = "Non definito";
+        _modello = "Non definito";
+        _anno = 0;
     }
 
     public string GetMarca()
@@ -33,7 +36,7 @@ public class Veicolo
         Console.WriteLine("Veicolo avviato.");
     }
 
-    public void MostraInformazioni() 
+    public virtual void MostraInformazioni() 
     {
         string stringa = "Marca: {}, Modello: {}, Anno: {}";
         Console.WriteLine(string.Format(stringa, _marca, _modello, _anno));

@@ -1,6 +1,6 @@
 public class Automobile : Veicolo
 {
-    private int _numeroPorte;
+    private int _numeroPorte = 0;
 
     public Automobile(string nome, string modello, int anno, int numeroPorte) : base(nome, modello, anno)
     {
@@ -9,6 +9,7 @@ public class Automobile : Veicolo
 
     public Automobile() : base("", "", 0)
     {
+        _numeroPorte = 0;
     }
 
     public override void Avvia()
@@ -18,5 +19,9 @@ public class Automobile : Veicolo
 
         //
         Console.WriteLine("Automobile avviata.");
+    }
+
+    public override void MostraInformazioni()
+    {
     }
 }
