@@ -2,19 +2,28 @@ public class Lista
 {
     public void Execute()
     {
-        // Primo metodo di creazione
-        List<string> nomi = ["Mario", "Luigi", "Peach"];
+        // Creazione di una lista di stringhe
+        List<string> frutti = new();
 
-        // Secondo
-        List<string> nomi2 = new List<string>();
-        nomi.Add("Mario");
-        nomi.Add("Luigi");
-        nomi.Add("Peach");
+        // Aggiungere elementi alla lista
+        frutti.Add("Mela");
+        frutti.Add("Banana");
+        frutti.Add("Arancia");
 
-        // Foreach
-        foreach (string nome in nomi)
+        // Accesso agli elementi della lista
+        Console.WriteLine("Il primo frutto è: " + frutti[0]);
+
+        // Iterazione attraverso la lista
+        Console.WriteLine("Tutti i frutti nella lista:");
+        foreach (var frutto in frutti)
         {
-            Console.WriteLine(nome);
+            Console.WriteLine(frutto);
         }
+
+        // Rimozione di un elemento dalla lista
+        frutti.Remove("Banana");
+
+        // Controllo del numero di elementi nella lista
+        Console.WriteLine("Numero di frutti dopo la rimozione: " + frutti.Count);
     }
 }
