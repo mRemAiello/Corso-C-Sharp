@@ -2,10 +2,11 @@
 {
     static void Main(string[] args)
     {
-        Veicolo auto = new Veicolo("Ford", "Fiesta", 2000);
+        Vettore3D vettore1 = new Vettore3D(1, 2, 3);
+        Vettore3D vettore2 = new Vettore3D(3, 4, 5);
 
-        var marca = auto.GetMarca();
+        Vettore3D vettore = vettore1 * vettore2;
 
-        auto.MostraInformazioni();
+        Console.WriteLine(vettore);
     }
 }

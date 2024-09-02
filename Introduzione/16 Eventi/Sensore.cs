@@ -30,7 +30,7 @@ public class Sensore
         Console.WriteLine("Secondo listener ha ricevuto: " + messaggio);
     }
 
-    static void Main()
+    /*static void Main()
     {
         SensoreEvento sensore = new();
 
@@ -40,5 +40,5 @@ public class Sensore
 
         // Simulazione del cambiamento
         sensore.RilevaCambiamento();
-    }
+    }*/
 }
