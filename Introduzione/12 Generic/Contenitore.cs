@@ -1,6 +1,6 @@
 public class Contenitore<T>
 {
-    private T _elemento;
+    private T? _elemento;
 
     public void Aggiungi(T nuovoElemento)
     {

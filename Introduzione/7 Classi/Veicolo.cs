@@ -31,9 +31,21 @@ public class Veicolo
         _marca = marca;
     }
 
-    public virtual void Avvia()
+    public void Avvia()
     {
-        Console.WriteLine("Veicolo avviato.");
+        string str = "{} {} avviato";
+        Console.WriteLine(string.Format(str, GetModello(), GetMarca()));
+    }
+
+    public string GetModello()
+    {
+        return _modello;
+    }
+
+    public void Arresta()
+    {
+        string str = "{} {} arrestato";
+        Console.WriteLine(string.Format(str, GetModello(), GetMarca()));
     }
 
     public virtual void MostraInformazioni() 

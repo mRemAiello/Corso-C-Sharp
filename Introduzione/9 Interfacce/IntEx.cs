@@ -48,3 +48,52 @@ ciclo per chiamare il metodo Ricarica() su ogni elemento dell’elenco e osserva
 
 
 */
+
+
+
+/*
+
+
+1. IComparable<T>
+
+    Esercizio: Crea una classe Studente che abbia proprietà come Nome e MediaVoti. 
+    Implementa l'interfaccia IComparable<Studente> per permettere l'ordinamento di una lista di studenti in base alla loro MediaVoti. 
+    Ordina quindi una lista di oggetti Studente.
+
+2. IEnumerable<T>
+
+    Esercizio: Crea una classe Libreria che contenga un elenco di libri (rappresentati da stringhe). 
+    Implementa l'interfaccia IEnumerable<string> per consentire l'iterazione dei libri all'interno della tua classe Libreria utilizzando un ciclo foreach.
+
+3. ICollection<T>
+
+    Esercizio: Crea una classe Inventario che implementi l'interfaccia ICollection<string>. 
+    La classe dovrebbe permettere di aggiungere, rimuovere e contare gli elementi nell'inventario. 
+    Gestisci anche la possibilità di verificare se un elemento esiste già nell'inventario.
+
+4. IDisposable
+
+    Esercizio: Crea una classe ConnessioneDatabase che implementa l'interfaccia IDisposable. 
+    La classe dovrebbe simulare l'apertura e la chiusura di una connessione a un database. 
+    Assicurati che la connessione venga chiusa automaticamente al termine dell'utilizzo della classe.
+
+5. IEquatable<T>
+
+    Esercizio: Crea una classe Libro che contenga proprietà come Titolo e Autore. 
+    Implementa l'interfaccia IEquatable<Libro> per confrontare due oggetti Libro e determinare se rappresentano lo stesso libro. 
+    Scrivi un programma che utilizza una lista di libri e verifica se un determinato libro è già presente nella lista.
+
+6. ICloneable
+
+    Esercizio: Crea una classe Auto con proprietà come Marca e Modello. 
+    Implementa l'interfaccia ICloneable per permettere la creazione di una copia dell'oggetto Auto. 
+    Successivamente, crea un oggetto Auto e genera una sua copia, dimostrando che i due oggetti sono separati ma identici.
+
+7. IObservable<T> e IObserver<T>
+
+    Esercizio: Crea una classe SensoreTemperatura che implementi l'interfaccia IObservable<int>, 
+    la quale notifica i cambiamenti di temperatura ai suoi osservatori. Crea anche una classe Display che implementi l'interfaccia IObserver<int>, 
+    in modo che il display possa ricevere notifiche e visualizzare la temperatura corrente ogni volta che cambia.
+
+
+    */
