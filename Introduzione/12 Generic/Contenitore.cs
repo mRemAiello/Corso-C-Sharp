@@ -1,14 +1,16 @@
 public class Contenitore<T>
 {
-    private T? _elemento;
+    private T? _contenuto;
+
+    public T Contenuto => _contenuto;
+
+    public Contenitore(T? contenuto)
+    {
+        _contenuto = contenuto;
+    }
 
     public void Aggiungi(T nuovoElemento)
     {
-        _elemento = nuovoElemento;
-    }
-
-    public T Ottieni()
-    {
-        return _elemento;
+        _contenuto = nuovoElemento;
     }
 }

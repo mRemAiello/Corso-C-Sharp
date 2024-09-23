@@ -14,12 +14,10 @@ public class EsempioEccezione
         finally
         {
             // Codice eseguito sempre, sia che l'eccezione si verifichi o meno
-        }
-        
+        }     
     }
 }
 
-[Serializable]
 public class EccezioneTipo : Exception
 {
     public EccezioneTipo()

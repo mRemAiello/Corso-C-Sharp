@@ -2,11 +2,27 @@
 {
     static void Main(string[] args)
     {
-        Vettore3D vettore1 = new Vettore3D(1, 2, 3);
-        Vettore3D vettore2 = new Vettore3D(3, 4, 5);
+        ContoBancario conto = new(100);
+        float cifra = 200;
 
-        Vettore3D vettore = vettore1 * vettore2;
+        try
+        {
+            conto.Preleva(cifra);
+        }
+        catch (SaldoInsufficienteException ex)
+        {
+            Console.WriteLine(ex.Message);
 
-        Console.WriteLine(vettore);
+            //
+            cifra = conto.Saldo;
+            conto.Preleva(cifra);
+        }
+        finally
+        {
+            Console.WriteLine("Operazione eseguita");
+        }
+
+        Console.WriteLine(conto.Saldo);
+        Console.WriteLine("Avanti");
     }
 }

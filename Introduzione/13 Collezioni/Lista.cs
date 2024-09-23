@@ -3,7 +3,8 @@ public class Lista
     public void Execute()
     {
         // Creazione di una lista di stringhe
-        List<string> frutti = new();
+        string[] valori = { "Ciao", "Ciao2" };
+        List<string> frutti = new(valori);
 
         // Aggiungere elementi alla lista
         frutti.Add("Mela");

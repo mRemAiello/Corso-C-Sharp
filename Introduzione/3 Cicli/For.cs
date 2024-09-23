@@ -2,7 +2,7 @@ public class For
 {
     public void Execute()
     {
-        string colore_singolo = "";
+        string colore_singolo = "Rosso";
         // 0 -> Rosso, 1 -> Verde, 2 -> Blu
         string[] colori = { "Rosso", "Verde", "Blu" };
         string[] colori_2 = new string[10];
@@ -10,7 +10,7 @@ public class For
         colori[0] = "Viola";
 
         // Foreach
-        foreach (string colore in colori)
+        foreach (var colore in colori)
         {
             Console.WriteLine(colore);
         }

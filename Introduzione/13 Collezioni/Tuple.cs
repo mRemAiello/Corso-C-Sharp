@@ -8,7 +8,7 @@ public class Tuple
         // Accesso agli elementi della tupla
         Console.WriteLine("Nome: " + persona.Item1);
         Console.WriteLine("Età: " + persona.Item2);
-        Console.WriteLine("Iscrivito: " + persona.Item3);
+        Console.WriteLine("Iscritto: " + persona.Item3);
 
         // Creazione di una tupla con sintassi più moderna
         var nuovaPersona = ("Luigi", 28, false);
@@ -16,6 +16,6 @@ public class Tuple
         // Accesso agli elementi tramite nomi di proprietà
         Console.WriteLine("Nome: " + nuovaPersona.Item1);
         Console.WriteLine("Età: " + nuovaPersona.Item2);
-        Console.WriteLine("Iscrivito: " + nuovaPersona.Item3);
+        Console.WriteLine("Iscritto: " + nuovaPersona.Item3);
     }
 }
