@@ -10,6 +10,12 @@ class LetturaBinary
         // Verifica se il file esiste
         if (File.Exists(path))
         {
+            // Metodo 1:
+            /*BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open));
+            var nome = reader.ReadString();
+            reader.Close();*/
+
+            // Metodo 2:
             using (BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open)))
             {
                 // Legge un intero dal file
