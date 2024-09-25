@@ -3,6 +3,12 @@ namespace EventExample
     // Definizione del delegate che rappresenta la firma dei metodi gestori dell'evento
     public delegate void ThresholdReachedEventHandler(object sender, EventArgs e);
 
+    class ThermostatEventArgs : EventArgs
+    {
+        public int TemperaturaCorrente;
+        public int SogliaDiSuperamento;
+    }
+
     // Classe che genera l'evento
     class Thermostat
     {
@@ -20,8 +26,11 @@ namespace EventExample
             // Verifica se la temperatura supera la soglia di 100 gradi
             if (_temperature >= 100)
             {
+                ThermostatEventArgs args = new ThermostatEventArgs();
+                args.TemperaturaCorrente = _temperature;
+                args.SogliaDiSuperamento = _temperature - 100;
                 // Se la soglia è raggiunta, solleva l'evento
-                ThresholdReached?.Invoke(this, EventArgs.Empty);
+                ThresholdReached?.Invoke(this, args);
             }
         }
     }
@@ -44,7 +53,12 @@ namespace EventExample
         // Metodo gestore dell'evento
         static void HandleThresholdReached(object sender, EventArgs e)
         {
-            Console.WriteLine("La soglia di temperatura è stata raggiunta!");
+            if (e is ThermostatEventArgs)
+            {
+                ThermostatEventArgs args = (ThermostatEventArgs)e;
+                Console.WriteLine("Soglia di temperatura superata di " + args.SogliaDiSuperamento);
+                Console.WriteLine("Temperatura attuale: " + args.TemperaturaCorrente);
+            }
         }
     }
 }

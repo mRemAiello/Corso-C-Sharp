@@ -43,7 +43,9 @@ Obiettivi:
 
 Esercizio 4: Gestione di Eventi con Argomenti Personalizzati
 
-Estendi l'esercizio precedente modificando l'evento TempoScaduto per includere delle informazioni aggiuntive (ad esempio, il tempo trascorso o un messaggio di avviso personalizzato). Usa una classe derivata da EventArgs per passare questi dati al gestore dell'evento.
+Estendi l'esercizio precedente modificando l'evento TempoScaduto per includere delle informazioni 
+aggiuntive (ad esempio, il tempo trascorso o un messaggio di avviso personalizzato). 
+Usa una classe derivata da EventArgs per passare questi dati al gestore dell'evento.
 
 Obiettivi:
 
@@ -51,9 +53,12 @@ Obiettivi:
     Aggiungere argomenti a un evento
     Usare i dati aggiuntivi all'interno del gestore dell'evento
 
+
+
 Esercizio 5: Pubblicazione e Sottoscrizione di Eventi
 
-Crea una classe SensoreTemperatura che emette un evento quando la temperatura supera una certa soglia. Crea una seconda classe Allarme, che si iscrive all'evento del sensore e mostra un messaggio di avviso quando la soglia è superata.
+Crea una classe SensoreTemperatura che emette un evento quando la temperatura supera una certa soglia. 
+Crea una seconda classe Allarme, che si iscrive all'evento del sensore e mostra un messaggio di avviso quando la soglia è superata.
 
 Obiettivi:
 
