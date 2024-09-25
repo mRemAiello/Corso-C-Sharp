@@ -1,5 +1,3 @@
-using System;
-
 namespace DelegateExample
 {
     // Definizione del delegate
@@ -7,6 +5,9 @@ namespace DelegateExample
 
     class DelegateEx
     {
+        //
+        public Operation? Operation { get; set; }
+
         // Metodo che somma due numeri
         static int Add(int a, int b)
         {

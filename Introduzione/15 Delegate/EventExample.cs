@@ -9,7 +9,7 @@ namespace EventExample
         private int _temperature;
 
         // Definizione dell'evento
-        public event ThresholdReachedEventHandler ThresholdReached;
+        public event ThresholdReachedEventHandler? ThresholdReached;
 
         // Metodo per aumentare la temperatura
         public void IncreaseTemperature(int increment)
@@ -21,15 +21,8 @@ namespace EventExample
             if (_temperature >= 100)
             {
                 // Se la soglia è raggiunta, solleva l'evento
-                OnThresholdReached(EventArgs.Empty);
+                ThresholdReached?.Invoke(this, EventArgs.Empty);
             }
-        }
-
-        // Metodo che solleva l'evento
-        protected virtual void OnThresholdReached(EventArgs e)
-        {
-            // Se qualcuno è iscritto all'evento, lo notifichiamo
-            ThresholdReached?.Invoke(this, e);
         }
     }
 
