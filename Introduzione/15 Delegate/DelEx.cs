@@ -27,15 +27,20 @@ Esercizio 6: Gestione di Contatti e File con Delegate
 
 Esercizio 7: Sistema di Prenotazioni con Delegate
 
-    Crea una classe Prenotazione con gli attributi ID, NomeCliente, DataPrenotazione e NumeroPersone.
+    Crea una classe Persona con ID, NomeCliente
+    Crea una classe Prenotazione con gli attributi Persona, DataPrenotazione e NumeroPersone.
+    
     Definisci un delegate chiamato GestionePrenotazioneDelegate che accetta un oggetto Prenotazione come parametro e restituisce void.
+    
     Definisci un'interfaccia IGestorePrenotazioni con i metodi AggiungiPrenotazione, RimuoviPrenotazione, SalvaPrenotazioniSuFile e CaricaPrenotazioniDaFile.
+    
     Crea una classe Ristorante che contenga una lista di oggetti Prenotazione e implementi l'interfaccia IGestorePrenotazioni.
         Utilizza un delegate GestionePrenotazioneDelegate per gestire l'operazione di aggiunta e rimozione delle prenotazioni.
         Il metodo AggiungiPrenotazione deve accettare un GestionePrenotazioneDelegate e usarlo per aggiungere una prenotazione alla lista.
         Il metodo RimuoviPrenotazione deve accettare un GestionePrenotazioneDelegate e usarlo per rimuovere una prenotazione data l'ID.
         Il metodo SalvaPrenotazioniSuFile deve salvare tutte le prenotazioni in un file.
         Il metodo CaricaPrenotazioniDaFile deve caricare le prenotazioni da un file e aggiungerle alla lista.
+    
     Crea un programma che permetta all'utente di:
         Aggiungere una prenotazione usando un delegate che esegue questa operazione.
         Rimuovere una prenotazione usando un delegate che esegue questa operazione.

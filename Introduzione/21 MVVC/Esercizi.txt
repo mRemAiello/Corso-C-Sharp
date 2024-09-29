@@ -1,0 +1,30 @@
+Esercizio 1: Modifica di un'applicazione MVVC
+
+Prendendo l'esempio di applicazione console che utilizza il pattern MVVC:
+
+    Aggiungi una funzionalità che permetta all'utente di aggiornare le informazioni di un utente esistente (es. cambiare il nome o l'età).
+    Implementa una validazione nel ViewModel per evitare l'inserimento di utenti con lo stesso nome.
+
+
+Esercizio 2: Estensione con funzionalità di ricerca
+
+Modifica l'applicazione per includere una funzionalità che permetta di cercare un utente per nome. 
+La funzione dovrà essere gestita nel Controller e visualizzare un messaggio nella View se l'utente cercato non viene trovato.
+
+
+Esercizio 3: Implementazione di Undo/Redo
+
+Estendi il ViewModel in modo da permettere un'operazione di "Undo" e "Redo" sugli utenti aggiunti o rimossi. 
+Ogni modifica fatta all'elenco di utenti dovrebbe essere registrata in una "cronologia" che può essere usata per annullare o ripetere le modifiche.
+
+
+Esercizio 4: Notifica degli aggiornamenti
+
+Modifica l'applicazione in modo che la View mostri una notifica ogni volta che viene aggiunto o eliminato un utente. 
+La notifica dovrebbe essere mostrata in un formato leggibile, ad esempio "Utente X aggiunto" o "Utente Y rimosso".
+
+
+Esercizio 5: Persistenza dei dati
+
+Modifica il programma per salvare gli utenti in un file di testo quando l'applicazione viene chiusa e ricaricarli all'avvio successivo. 
+Questa operazione dovrà essere implementata nel Model, e la ViewModel si occuperà di invocare le funzioni di salvataggio e caricamento.

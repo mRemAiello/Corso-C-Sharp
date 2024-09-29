@@ -1,7 +1,7 @@
 public class Veicolo2 : Veicolo, ISellable, IBuyable
 {
-    private int _buyPrice;
-    private int _sellPrice;
+    private int _buyPrice = 0;
+    private int _sellPrice = 0;
 
     public int BuyPrice => _buyPrice;
     public int SellPrice => _sellPrice;

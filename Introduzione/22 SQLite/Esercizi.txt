@@ -1,0 +1,67 @@
+Esercizio 1: Creare un Database e una Tabella
+
+    Crea un'applicazione console in C# che:
+        Crei un database SQLite chiamato School.db.
+        All'interno del database, crea una tabella chiamata Students con le seguenti colonne:
+            Id (INTEGER, chiave primaria, autoincrementante)
+            FirstName (TEXT)
+            LastName (TEXT)
+            Age (INTEGER)
+
+Esercizio 2: Inserire Record nella Tabella
+
+    Modifica l'applicazione creata nell'Esercizio 1 per inserire 3 record nella tabella Students.
+        I dati degli studenti da inserire sono:
+            Anna Bianchi, 20 anni
+            Luca Rossi, 22 anni
+            Marco Verdi, 21 anni
+
+Esercizio 3: Leggere e Visualizzare i Dati
+
+    Estendi il codice dell'esercizio 2 aggiungendo la funzionalità per leggere tutti i record dalla tabella Students e 
+    stamparli sulla console in questo formato:
+        Id: 1, Nome: Anna Bianchi, Età: 20
+        Id: 2, Nome: Luca Rossi, Età: 22
+        Id: 3, Nome: Marco Verdi, Età: 21
+
+Esercizio 4: Aggiornare i Dati
+
+    Aggiungi una funzionalità che permetta di aggiornare l'età di uno studente specifico. Modifica l'età di Luca Rossi da 22 a 23 anni.
+    Visualizza nuovamente i dati dopo l'aggiornamento.
+
+Esercizio 5: Cancellare un Record
+
+    Aggiungi una funzionalità che permetta di cancellare un record dalla tabella Students. Elimina lo studente Marco Verdi.
+    Visualizza nuovamente tutti i record presenti nella tabella dopo la cancellazione.
+
+Esercizio 6: Ricerca di un Record Specifico
+
+    Modifica il programma per permettere la ricerca di uno studente tramite il suo FirstName. 
+    Se lo studente esiste, stampa le informazioni, altrimenti mostra un messaggio del tipo "Studente non trovato".
+    Prova a cercare lo studente "Anna".
+
+Esercizio 7: Contare i Record
+
+    Aggiungi una funzione che conteggi quanti studenti sono presenti nella tabella Students e stampi il risultato sulla console.
+
+Esercizio 8: Gestione degli Errori
+
+    Modifica il programma per gestire eventuali errori che potrebbero verificarsi durante la connessione al database o 
+    l'esecuzione delle query. Ad esempio, gestisci il caso in cui il database non possa essere aperto o la query contenga errori.
+
+Esercizio 9: Inserimento Multiplo con Transazioni
+
+    Aggiungi una funzionalità per inserire più record nella tabella Students utilizzando una transazione SQLite. 
+    Inserisci 5 studenti in una singola transazione e poi conferma l'inserimento.
+
+Esercizio 10: Creare una Nuova Tabella
+
+    Crea una nuova tabella chiamata Courses con le seguenti colonne:
+        CourseId (INTEGER, chiave primaria, autoincrementante)
+        CourseName (TEXT)
+        Credits (INTEGER)
+    Inserisci 3 corsi nella tabella Courses:
+        Matematica, 5 crediti
+        Storia, 3 crediti
+        Informatica, 4 crediti
+
