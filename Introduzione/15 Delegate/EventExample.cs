@@ -26,9 +26,11 @@ namespace EventExample
             // Verifica se la temperatura supera la soglia di 100 gradi
             if (_temperature >= 100)
             {
-                ThermostatEventArgs args = new ThermostatEventArgs();
-                args.TemperaturaCorrente = _temperature;
-                args.SogliaDiSuperamento = _temperature - 100;
+                ThermostatEventArgs args = new()
+                {
+                    TemperaturaCorrente = _temperature,
+                    SogliaDiSuperamento = _temperature - 100
+                };
                 // Se la soglia è raggiunta, solleva l'evento
                 ThresholdReached?.Invoke(this, args);
             }

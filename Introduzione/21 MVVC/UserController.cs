@@ -1,6 +1,6 @@
 public class UserController
 {
-    private UserViewModel _viewModel;
+    private IUserViewModel _viewModel;
     private ConsoleView _view;
 
     public UserController(UserViewModel viewModel, ConsoleView view)

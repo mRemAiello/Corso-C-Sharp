@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-public class UserViewModel
+public class UserViewModel : IUserViewModel
 {
     private List<User> _users;
 
@@ -23,5 +23,10 @@ public class UserViewModel
     public void ClearUsers()
     {
         _users.Clear();
+    }
+
+    public void RemoveUser(string name)
+    {
+        throw new NotImplementedException();
     }
 }

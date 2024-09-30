@@ -5,6 +5,16 @@ public class Program
 {
     static void Main(string[] args)
     {
+        ConsoleView consoleView = new ConsoleView();
+        UserViewModel userViewModel = new UserViewModel();
+        UserController userController = new UserController(userViewModel, consoleView);
+
+        userController.Run();
+    }
+
+    /*
+    static void Main(string[] args)
+    {
         Thermostat thermostat = new();
 
         // Iscrizione all'evento
@@ -33,5 +43,5 @@ public class Program
             // Eventuali funzioni da richiamare nella classe che lancia l'evento
             Thermostat thermostat = (Thermostat)sender;
         }
-    }
+    }*/
 }
