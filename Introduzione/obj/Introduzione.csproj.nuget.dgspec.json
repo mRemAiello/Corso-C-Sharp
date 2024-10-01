@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\artha\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Introduzione.csproj": {}
+    "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Introduzione.csproj": {}
   },
   "projects": {
-    "C:\\Users\\artha\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Introduzione.csproj": {
+    "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Introduzione.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\artha\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Introduzione.csproj",
+        "projectUniqueName": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Introduzione.csproj",
         "projectName": "Introduzione",
-        "projectPath": "C:\\Users\\artha\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Introduzione.csproj",
+        "projectPath": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Introduzione.csproj",
         "packagesPath": "C:\\Users\\artha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\artha\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\obj\\",
+        "outputPath": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -46,6 +46,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.119, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

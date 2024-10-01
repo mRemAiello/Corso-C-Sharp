@@ -1,0 +1,3 @@
+Installare SQLite dentro il progetto, con questo comando da Terminale
+
+dotnet add package System.Data.SQLite
