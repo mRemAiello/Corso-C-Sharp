@@ -1,0 +1,63 @@
+Esercizio 1: Esecuzione asincrona di una funzione
+
+Scrivi una funzione asincrona che simuli il caricamento di dati da un database (usa Task.Delay per simulare un'attesa di 3 secondi). 
+Quando i dati sono "caricati", stampa un messaggio che indichi il termine dell'operazione.
+
+
+Esercizio 2: Somma di numeri con operazioni asincrone
+
+Crea due metodi asincroni che restituiscono ciascuno un numero intero dopo una pausa simulata di 2 secondi. 
+Usa await per attendere la somma dei due numeri e stampa il risultato.
+
+
+Esercizio 3: Download di file simulato
+
+Simula il download di 3 file utilizzando metodi asincroni. Ogni "download" deve richiedere un tempo diverso (puoi usare Task.Delay per simulare i tempi). 
+Stampa un messaggio quando ogni download è completato.
+
+
+Esercizio 4: Gestione di eccezioni asincrone
+
+Crea un metodo asincrono che simuli una chiamata ad un'API, ma che lanci un'eccezione dopo 2 secondi. 
+Gestisci l'eccezione con try-catch all'interno del metodo chiamante e stampa un messaggio di errore appropriato.
+
+
+Esercizio 5: Parallelismo con Task.WhenAll
+
+Crea tre metodi asincroni che restituiscano ciascuno un valore dopo un ritardo diverso. 
+Usa Task.WhenAll per eseguirli contemporaneamente e attendere la loro terminazione. Quando tutti i task sono completati, stampa i risultati.
+
+
+Esercizio 6: Annullamento di un'operazione asincrona
+
+Utilizza un CancellationToken per annullare un'operazione asincrona.
+Scrivi una funzione che inizi un lungo processo (simulato con Task.Delay), ma permetta di annullarlo se non si completa entro 3 secondi.
+
+
+Esercizio 1: Lettura e scrittura asincrona di file
+
+Crea un programma che legga un file di testo in modo asincrono, e poi scriva il contenuto in un altro file con una modifica 
+(per esempio, aggiungi una frase alla fine). Usa metodi asincroni per leggere e scrivere i file.
+
+
+Esercizio 2: Copia asincrona di file
+
+Scrivi un programma che copi un file di grandi dimensioni da una directory all'altra utilizzando metodi asincroni. 
+Durante la copia, stampa un messaggio ogni 2 secondi per indicare che il processo è ancora in corso.
+
+
+Esercizio 3: Ricerca asincrona di parole in un file
+
+Scrivi un programma che cerchi una parola chiave all'interno di un file di testo grande. 
+Il programma deve leggere il file in modo asincrono e contare quante volte la parola appare, restituendo il risultato al termine della ricerca.
+
+
+Esercizio 4: Download di file da URL e salvataggio asincrono
+
+Crea un programma che scarichi il contenuto di una pagina web da un URL fornito dall'utente, e lo salvi in un file di testo in modo asincrono.
+
+
+Esercizio 5: Leggere file multipli contemporaneamente
+
+Scrivi un programma che legga il contenuto di tre file diversi in parallelo utilizzando Task.WhenAll. 
+Al termine, il programma deve concatenare il contenuto dei file e scriverlo in un nuovo file.
