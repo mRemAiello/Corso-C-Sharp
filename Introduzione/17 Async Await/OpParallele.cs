@@ -1,6 +1,6 @@
 public class OpParallele
 {
-    static async Task Main(string[] args)
+    /*static async Task Main(string[] args)
     {
         // Avvio di più operazioni asincrone in parallelo
         Task operazione1 = OperazioneAsincrona("Operazione 1", 2000);
@@ -19,5 +19,5 @@ public class OpParallele
         Console.WriteLine($"{nomeOperazione} avviata.");
         await Task.Delay(delay);
         Console.WriteLine($"{nomeOperazione} completata.");
-    }
+    }*/
 }

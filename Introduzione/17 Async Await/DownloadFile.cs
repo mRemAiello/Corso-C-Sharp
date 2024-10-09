@@ -1,6 +1,6 @@
 public class DownloadFile
 {
-    static async Task Main(string[] args)
+    /*static async Task Main(string[] args)
     {
         string url = "https://www.example.com";
 
@@ -20,5 +20,5 @@ public class DownloadFile
             string contenuto = await client.GetStringAsync(url);
             return contenuto;
         }
-    }
+    }*/
 }
