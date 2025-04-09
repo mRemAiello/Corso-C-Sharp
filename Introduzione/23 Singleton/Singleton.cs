@@ -1,19 +1,19 @@
-public class MyClass
+public class Singleton
 {
     //..attributi membro di istanza....
-    private static MyClass _instance = null;
+    private static Singleton? _instance = null;
     
-    protected MyClass()
+    protected Singleton()
     {
         //...inizializzazione istanza...
     }
     
-    public static MyClass Instance
+    public static Singleton Instance
     {
         get
         {
-            if (_instance==null) 
-                _instance=new MyClass();
+            if (_instance == null) 
+                _instance = new Singleton();
             
             return _instance;
         }

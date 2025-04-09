@@ -14,7 +14,7 @@ public class Rand
 
         // Casting esplicito
         double numeroVirgolaMobile = 3.14;
-        int numeroIntero = (int)numeroVirgolaMobile; // Conversione esplicita
+        int numeroIntero = (int)numeroVirgolaMobile + (int)valoreDoppio; // Conversione esplicita
         Console.WriteLine(numeroIntero);
     }
 }

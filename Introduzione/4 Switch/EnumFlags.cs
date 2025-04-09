@@ -12,16 +12,21 @@ enum PermessiAccesso
 
 public class EnumFlags
 {
-    /*static void Main(string[] args)
+    public void Execute()
     {
+        // Esempio di un utente con permessi di Lettura
+        PermessiAccesso permessiLettura = PermessiAccesso.Lettura;
+        StampaPermessi(permessiLettura);
+
         // Esempio di un utente con permessi di Lettura, Scrittura ed Esecuzione
         PermessiAccesso permessiUtente = PermessiAccesso.Lettura | PermessiAccesso.Scrittura | PermessiAccesso.Esecuzione;
         StampaPermessi(permessiUtente);
 
         // Esempio di un utente con tutti i permessi (Amministratore)
         PermessiAccesso permessiAdmin = PermessiAccesso.Amministratore | PermessiAccesso.Lettura | PermessiAccesso.Scrittura | PermessiAccesso.Esecuzione;
+        Console.WriteLine(permessiAdmin);
         StampaPermessi(permessiAdmin);
-    }*/
+    }
 
     static void StampaPermessi(PermessiAccesso permessi)
     {

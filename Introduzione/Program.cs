@@ -1,13 +1,24 @@
-﻿using DelegateExample;
-using EventExample;
-using System;
-using System.Data.SQLite;
-
-
+﻿
 class Program
 {
-    static async Task Main(string[] args)
+    static void Main(string[] args)
     {
+        Veicolo veicolo = new Veicolo("Fiat", "Panda", 2020);
+        veicolo.MostraInformazioni();
+        veicolo.Avvia();
+        veicolo.Arresta();
+
+        Veicolo veicolo2 = new Veicolo("Ford", "Focus", 2018);
+        veicolo2.MostraInformazioni();
+        veicolo2.Avvia();
+        veicolo2.Arresta();
+    }
+}
+
+    /*static async Task Main(string[] args)
+    {
+        DatabaseManager.Instance.Connect();
+
         // Avvio di più operazioni asincrone in parallelo
         Task operazione1 = OperazioneAsincrona("Operazione 1", 2000);
         Task operazione2 = OperazioneAsincrona("Operazione 2", 3000);

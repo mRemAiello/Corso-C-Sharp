@@ -62,5 +62,9 @@ public class Stringhe
         string toFormat = "Nome: {0}, Cognome: {1}, Età: {2}";
         toFormat = string.Format(toFormat, nome, cognome, eta);
         Console.WriteLine(toFormat);
+
+        // Metodo 2
+        string toFormat2 = $"Nome: {nome}, Cognome: {cognome}, Età: {eta}";
+        Console.WriteLine(toFormat2);
     }
 }

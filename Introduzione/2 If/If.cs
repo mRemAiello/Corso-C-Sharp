@@ -5,8 +5,8 @@ public class If
     public void Execute()
     {
         // If
-        int età = 15;
-        if (età >= 18)
+        int eta = 15;
+        if (eta >= 18)
         {
             Console.WriteLine("Sei maggiorenne.");
         }
@@ -21,21 +21,21 @@ public class If
         bool haEmailVerificata = false;
         bool passwordCorretta = false;
 
-        if (haAccount && haEmailVerificata)
+        if (!haAccount)
         {
-            Console.WriteLine("Accesso consentito.");
+            Console.WriteLine("Registrati per creare un account.");
         }
-        else if (!passwordCorretta)
-        {
-            Console.WriteLine("La password che hai scritto è sbagliata.");
-        }
-        else if (haAccount)
+        else if (haAccount && !haEmailVerificata)
         {
             Console.WriteLine("Verifica l'email per accedere.");
         }
+        else if (haAccount && haEmailVerificata && !passwordCorretta)
+        {
+            Console.WriteLine("La password che hai scritto è sbagliata.");
+        }
         else
         {
-            Console.WriteLine("Registrati per creare un account.");
+            Console.WriteLine("Accesso consentito.");
         }
 
 
@@ -56,7 +56,8 @@ public class If
 
 
         // If ternario
-        età = 20;
-        string stato = (età >= 18) ? "Maggiorenne" : "Minorenne";
+        eta = 20;
+        string stato = (eta >= 18) ? "Sei maggiorenne." : "Non sei ancora maggiorenne.";
+        Console.WriteLine(stato);
     }
 }

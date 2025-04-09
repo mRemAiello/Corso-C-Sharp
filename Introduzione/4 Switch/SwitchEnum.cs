@@ -1,37 +1,78 @@
 public class SwitchEnum
 {
+    enum Operazioni
+    {
+        Aggiunta = 0,
+        AggiuntaMultipla = 4,
+        Rimozione = 1,
+        Visualizza = 2,
+        Uscita = 3,
+    }
+
     enum GiorniSettimana
-    { 
-        Lunedì, 
-        Martedì, 
-        Mercoledì, 
-        Giovedì, 
-        Venerdì, 
-        Sabato, 
-        Domenica 
+    {
+        Lunedì,
+        Martedì,
+        Mercoledì,
+        Giovedì,
+        Venerdì,
+        Sabato,
+        Domenica
     }
 
     public void Execute()
     {
-        int giorno = 2;
-        string nomeGiorno;
-
-        switch (giorno)
+        Operazioni operazione = Operazioni.Aggiunta;
+        if (operazione == Operazioni.Aggiunta)
         {
-            case 1:
-                nomeGiorno = "Lunedì";
+            Console.WriteLine("Aggiunta");
+        }
+        else if (operazione == Operazioni.AggiuntaMultipla)
+        {
+            Console.WriteLine("Aggiunta multipla");
+        }
+        else if (operazione == Operazioni.Rimozione)
+        {
+            Console.WriteLine("Rimozione");
+        }
+        else if (operazione == Operazioni.Visualizza)
+        {
+            Console.WriteLine("Visualizza");
+        }
+
+        //
+        switch (operazione)
+        {
+            case Operazioni.Aggiunta:
+            case Operazioni.AggiuntaMultipla:
+                Console.WriteLine("Aggiunta");
                 break;
-            case 2:
-                nomeGiorno = "Martedì";
+            
+            case Operazioni.Rimozione:
+                Console.WriteLine("Rimozione");
                 break;
-            case 3:
-                nomeGiorno = "Mercoledì";
-                break;
-            default:
-                nomeGiorno = "Giorno non valido";
+            
+            case Operazioni.Visualizza:
+                Console.WriteLine("Visualizza");
                 break;
         }
-        Console.WriteLine(nomeGiorno);
+
+        //
+        string localizedString = "";
+        GiorniSettimana giorno = GiorniSettimana.Mercoledì;
+        localizedString = giorno switch
+        {
+            GiorniSettimana.Lunedì => "Lunedì",
+            GiorniSettimana.Martedì => "Martedì",
+            GiorniSettimana.Mercoledì => "Mercoledì",
+            GiorniSettimana.Giovedì => "Giovedì",
+            GiorniSettimana.Venerdì => "Venerdì",
+            GiorniSettimana.Sabato => "Sabato",
+            GiorniSettimana.Domenica => "Domenica",
+            _ => "Giorno non valido",
+        };
+        Console.WriteLine(localizedString);
+
 
         //
         GiorniSettimana giornoEnum = GiorniSettimana.Martedì;

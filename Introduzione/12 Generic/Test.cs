@@ -7,12 +7,12 @@ public class Test
         Contenitore<Acqua> bottiglia = new(acqua);
         Contenitore<Vino> bottiglia2 = new(vino);
 
-        Contenitore<int> contenitoreInt = new(4);
+        /*Contenitore<int> contenitoreInt = new(4);
         contenitoreInt.Aggiungi(5);
         Console.WriteLine(contenitoreInt.Contenuto); // Output: 5
 
         Contenitore<string> contenitoreStringa = new Contenitore<string>("");
         contenitoreStringa.Aggiungi("Ciao");
-        Console.WriteLine(contenitoreStringa.Contenuto); // Output: Ciao
+        Console.WriteLine(contenitoreStringa.Contenuto); // Output: Ciao*/
     }
 }
