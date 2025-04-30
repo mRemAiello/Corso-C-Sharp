@@ -9,6 +9,7 @@ public class Dizionario
         etaPersone["Mario"] = 30;
         etaPersone["Luigi"] = 28;
         etaPersone["Peach"] = 25;
+        etaPersone["Mario"] = 35;
 
         // Accesso a un valore tramite la chiave
         Console.WriteLine("L'età di Luigi è: " + etaPersone["Luigi"]);
@@ -17,6 +18,7 @@ public class Dizionario
         Console.WriteLine("Tutte le persone nel dizionario:");
         foreach (var persona in etaPersone)
         {
+            // persona = KeyValuePair<string, int>
             Console.WriteLine(persona.Key + " ha " + persona.Value + " anni.");
         }
 

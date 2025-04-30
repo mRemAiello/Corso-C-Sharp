@@ -1,7 +1,7 @@
 /*
 
 Esercizio 1
-• Implementare in Java una classe generica CoppiaMista<A,B> per gestire una coppia ordinata di
+• Implementare in C# una classe generica CoppiaMista<A,B> per gestire una coppia ordinata di
 oggetti, che possono essere anche di tipo diverso
 • La classe espone i seguenti metodi:
 • Costruttore: prende in input i due oggetti
@@ -12,7 +12,7 @@ stesso tipo (istanze della stessa classe), false altrimenti
 
 
 Esercizio 2
-• Implementare in Java una classe generica per gestire una coppia di oggetti (anche di tipo diverso) colorati
+• Implementare in C# una classe generica per gestire una coppia di oggetti (anche di tipo diverso) colorati
 • La classe espone i seguenti metodi:
 • Costruttore: prende in input i due oggetti
 • coloraTutti(Color c): setta il colore di tutti gli oggetti a c

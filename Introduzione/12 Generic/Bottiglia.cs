@@ -10,10 +10,32 @@ public class Liquido
 
 public class Acqua : Liquido
 {
+    public int ProprietaAcqua;
 }
 
 public class Vino : Liquido
 {
+    public int ProprietaVino;
+}
+
+public class BottigliaLiquido
+{
+    private Liquido _liquido;
+
+    public BottigliaLiquido(Liquido liquido)
+    {
+        _liquido = liquido;
+    }
+
+    public Liquido GetLiquido()
+    {
+        return _liquido;
+    }
+
+    public void Versa(int valore)
+    {
+        _liquido.Aggiungi(valore);
+    }
 }
 
 public class BottigliaDiAcqua

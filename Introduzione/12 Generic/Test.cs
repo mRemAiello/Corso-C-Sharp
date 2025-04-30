@@ -4,8 +4,13 @@ public class Test
     {
         Acqua acqua = new Acqua();
         Vino vino = new Vino();
-        Contenitore<Acqua> bottiglia = new(acqua);
-        Contenitore<Vino> bottiglia2 = new(vino);
+
+        Contenitore<Acqua> bottiglia = new Contenitore<Acqua>(acqua);
+        Contenitore<Vino> bottiglia2 = new Contenitore<Vino>(vino);
+
+
+        /*
+        */
 
         /*Contenitore<int> contenitoreInt = new(4);
         contenitoreInt.Aggiungi(5);
