@@ -14,7 +14,7 @@ public class EsempioEccezione
         finally
         {
             // Codice eseguito sempre, sia che l'eccezione si verifichi o meno
-        }     
+        }
     }
 }
 

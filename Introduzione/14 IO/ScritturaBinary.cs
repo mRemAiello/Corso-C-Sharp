@@ -8,6 +8,11 @@ class ScritturaBinary
         string path = "esempio.bin";
         int numero = 42;
 
+        // numero = 42;
+        // stringa
+        // numero
+        // stringa
+
         using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Create)))
         {
             // Scrive un intero nel file

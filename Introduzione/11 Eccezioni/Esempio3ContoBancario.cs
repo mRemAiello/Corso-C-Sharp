@@ -12,6 +12,11 @@ public class ContoBancario
         Saldo = saldo;
     }
 
+    public bool VerificaSaldo()
+    {
+        return Saldo > 0;
+    }
+
     public void Preleva(float importo)
     {
         if (importo > Saldo)

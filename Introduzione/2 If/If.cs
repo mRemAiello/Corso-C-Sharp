@@ -38,6 +38,30 @@ public class If
             Console.WriteLine("Accesso consentito.");
         }
 
+        // Metodo alternativo più leggibile
+        if (haAccount)
+        {
+            if (haEmailVerificata)
+            {
+                if (passwordCorretta)
+                {
+                    Console.WriteLine("Accesso consentito.");
+                }
+                else
+                {
+                    Console.WriteLine("La password che hai scritto è sbagliata.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Verifica l'email per accedere.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Registrati per creare un account.");
+        }
+
 
         // If ternario prima del suo utilizzo
         int valore = 10;

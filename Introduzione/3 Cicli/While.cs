@@ -10,6 +10,21 @@ public class While
             contatore++;
         }
 
+        // Esempio con connessione
+        // bool conn = Connection.Open();
+        // int tentativi = 0;
+        // while (conn == false)
+        // {
+        //     conn = Connection.Open();
+        //     tentativi++;
+        //     if (tentativi == 3)
+        //     {
+        //         Console.WriteLine("Connessione non riuscita");
+        //         break;
+        //     }
+        //     Console.WriteLine("Connessione non riuscita");
+        // }
+
         // Trasformo while in for
         for (contatore = 0; contatore < 5; contatore++)
         {
