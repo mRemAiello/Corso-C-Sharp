@@ -23,6 +23,9 @@ public class Func
     }
 
     // Overloading (Stesso nome della funzione, parametri differenti)
+    // Somma(float, float);
+    // Somma(int, int);
+    // Somma(20.5f); => Somma => a = 20.5, b = 0
     float Somma(float a = 0, float b = 0)
     {
         return a + b;
@@ -41,7 +44,7 @@ public class Func
         return true;
     }
 
-    float Media(int[] numeri)
+    float Media(int[] numeri, bool excludeNegative = true)
     {
         int somma = 0;
         for (int i = 0; i < numeri.Length; i++)
@@ -57,7 +60,9 @@ public class Func
     {
         int x = 5;
         int y = 3;
-        int risultato = Somma(x, y);
+        int a = 5;
+        int b = 3;
+        int risultato = Somma(a, b);
         float risultato2 = Somma((float)x, y);
 
         //

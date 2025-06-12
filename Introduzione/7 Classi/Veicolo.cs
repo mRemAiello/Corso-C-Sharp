@@ -36,8 +36,7 @@ public class Veicolo
 
     public void Avvia()
     {
-        string str = "{} {} avviato";
-        Console.WriteLine(string.Format(str, GetModello(), GetMarca()));
+        Console.WriteLine(_marca + " " + _modello + " motore avviato");
     }
 
     public string GetModello()
@@ -79,7 +78,7 @@ public class Veicolo
     {
         // Console.WriteLine(veicolo1);
         // veicolo1.MostraInformazioni();
-        return $"Marca: {_marca}, Modello: {_modello}, Anno: {_annoDiProduzione}";
+        return $"Marca: {_marca}, Modello: {_modello}, Anno: {_annoDiProduzione}, Anzianità: {_anzianita}";
     }
 
     public virtual void MostraInformazioni()

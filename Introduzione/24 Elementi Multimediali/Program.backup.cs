@@ -1,4 +1,4 @@
-﻿class Program
+/*class Program
 {
     static void Main(string[] args)
     {
@@ -39,4 +39,4 @@
         Console.WriteLine(audio);
         Console.WriteLine(filmato);
     }
-}
+}*/

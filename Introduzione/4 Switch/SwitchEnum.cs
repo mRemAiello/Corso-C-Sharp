@@ -5,7 +5,9 @@ public class SwitchEnum
         Aggiunta = 0,
         AggiuntaMultipla = 4,
         Rimozione = 1,
+        RimozioneMultipla = 6,
         Visualizza = 2,
+        Modifica = 5,
         Uscita = 3,
     }
 
@@ -22,6 +24,12 @@ public class SwitchEnum
 
     public void Execute()
     {
+        // Esempio di operazione con intero
+        // int operazione = ....
+        // if (operazione == 0)
+        // 
+        // Qui sotto con l'enum
+        // Console.WriteLine("Quale operazione vuoi eseguire? (0: Aggiunta, 1: Rimozione, 2: Visualizza, 3: Uscita)");
         Operazioni operazione = Operazioni.Aggiunta;
         if (operazione == Operazioni.Aggiunta)
         {
@@ -47,11 +55,11 @@ public class SwitchEnum
             case Operazioni.AggiuntaMultipla:
                 Console.WriteLine("Aggiunta");
                 break;
-            
+
             case Operazioni.Rimozione:
                 Console.WriteLine("Rimozione");
                 break;
-            
+
             case Operazioni.Visualizza:
                 Console.WriteLine("Visualizza");
                 break;
@@ -72,7 +80,6 @@ public class SwitchEnum
             _ => "Giorno non valido",
         };
         Console.WriteLine(localizedString);
-
 
         //
         GiorniSettimana giornoEnum = GiorniSettimana.Martedì;
