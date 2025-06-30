@@ -134,6 +134,8 @@ _NCrunch*
 
 
 #
+.vs
+.vs/
 .vscode
 .vscode/
 C#.zip
