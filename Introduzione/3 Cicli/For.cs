@@ -4,11 +4,12 @@ public class For
     {
         string colore_singolo = "Rosso";
         Console.WriteLine(colore_singolo);
+        colore_singolo = "Viola";
 
         // 0 -> Rosso, 1 -> Verde, 2 -> Blu
         string[] colori = ["Rosso", "Verde", "Blu"];
         // 0 posizione
-        // colori[0] -> Rosso 
+        // colori[0] -> Rosso
         colori[0] = "Viola";
 
         // Foreach
@@ -24,15 +25,17 @@ public class For
         }
 
         // For semplice con array
-        // i = 0;
-        // i < colori.Length;
+        // int i = 0;
+        // i < colori.Length => 0 < 3
         // Console.WriteLine(colori[0]);
-        // i++;
-        // i < colori.Length;
+        // i++; => i = 1
+        // i < colori.Length => 1 < 3
         // Console.WriteLine(colori[1]);
-        // i++;
-        // i < colori.Length;
+        // i++ => i = 2
+        // i < colori.Length => 2 < 3
         // Console.WriteLine(colori[2]);
+        // i++ => i = 3
+        // i < colori.Length => 3 < 3 (false)
         for (int i = 0; i < colori.Length; i++)
         {
             Console.WriteLine(colori[i]);

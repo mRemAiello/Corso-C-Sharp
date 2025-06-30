@@ -24,6 +24,7 @@ public class Intro
         // Tipi di variabili
         int x = 20;
         float t = 20.5f;
+        double decimale = 200.4;
         string frase = "Ciao sono ";
         bool prova = true;
         prova = false;

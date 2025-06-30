@@ -24,7 +24,7 @@ public class ContinueBreak
             contatore++;
         }
 
-        // Continue, il ciclo fa il writeline solo degli i pari
+        // Continue, il ciclo fa il WriteLine delle i pari ma anche multiple di 3
         for (int i = 0; i < 20; i++)
         {
             // Metodo 1:

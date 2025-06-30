@@ -11,6 +11,7 @@ public class Rand
 
         // Casting implicito
         int valoreIntero = 5;
+        // 5 => 5.0
         double valoreDoppio = valoreIntero; // Conversione implicita
         Console.WriteLine(valoreDoppio);
 

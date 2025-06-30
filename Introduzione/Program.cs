@@ -2,6 +2,7 @@
 {
     static void Main(string[] args)
     {
+        /*
         // Elemento Multimediale
         ElementoMultimediale elemento = new ElementoMultimediale("Rock of Ages");
         Console.WriteLine(elemento.GetTitolo());
@@ -37,6 +38,6 @@
         Console.WriteLine(elemRiproducibile);
         Console.WriteLine(img);
         Console.WriteLine(audio);
-        Console.WriteLine(filmato);
+        Console.WriteLine(filmato);*/
     }
 }

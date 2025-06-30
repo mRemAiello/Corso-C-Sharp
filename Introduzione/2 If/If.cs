@@ -1,5 +1,3 @@
-using System.Diagnostics.Tracing;
-
 public class If
 {
     public void Execute()
@@ -21,6 +19,8 @@ public class If
         bool haEmailVerificata = false;
         bool passwordCorretta = false;
 
+        // haAccount == false => !haAccount
+        // haAccount == true => haAccount
         if (!haAccount)
         {
             Console.WriteLine("Registrati per creare un account.");
@@ -61,6 +61,11 @@ public class If
         {
             Console.WriteLine("Registrati per creare un account.");
         }
+
+
+        // condizione 1 && condizione 2
+        // if (numero1 > numero2 && numero1 > numero3)
+        // if (numero1 > numero2 || numero1 > numero3)
 
 
         // If ternario prima del suo utilizzo
