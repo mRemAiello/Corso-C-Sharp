@@ -1,0 +1,45 @@
+class Program
+{
+    /*
+        Scrivere una funzione che calcoli il fattoriale di un numero.
+        Il fattoriale di un numero n è il prodotto dei primi n numeri.
+        n = 3 => 3 * 2 * 1 
+
+        Creare una funzione crea_lista_di_fattoriali() che prende un intero n, e restituisce una
+        lista contenente tutti i fattoriali (ex. n = 4, la lista contiene il fattoriale di 0, 1, 2, 3, 4)
+
+*/
+
+    static int Fattoriale(int numero)
+    {
+        int risultato = 1;
+        for (int i = 1; i <= numero; i++)
+        {
+            risultato *= i;
+        }
+        return risultato;
+    }
+
+    static int[] Fattoriali(int numero)
+    {
+        int[] risultato = new int[numero + 1];
+        for (int i = 0; i < risultato.Length; i++)
+        {
+            risultato[i] = Fattoriale(i);
+        }
+        return risultato;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Fattoriale di 0: " + Fattoriale(0));
+        Console.WriteLine("Fattoriale di 1: " + Fattoriale(1));
+        Console.WriteLine("Fattoriale di 2: " + Fattoriale(2));
+        Console.WriteLine("Fattoriale di 3: " + Fattoriale(3));
+        int[] risultati = Fattoriali(10);
+        foreach (int risultato in risultati)
+        {
+            Console.WriteLine(risultato);
+        }
+    }
+}

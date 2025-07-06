@@ -1,0 +1,75 @@
+class Program
+{
+    /*
+        Si scriva una funzione, chiamata find_min, che ricerchi il minimo in un array di valori interi. Fare lo stesso col massimo.
+        Usare while e for.
+        Creare anche due funzioni che restituiscano la posizione del minimo / massimo.
+    */
+
+    static bool TryFindMin(int[]? numbers, out int? min, out int pos)
+    {
+        min = null;
+        pos = -1;
+        if (numbers == null || numbers.Length == 0)
+            return false;
+
+        //
+        min = numbers[0];
+        pos = 0;
+        for (int i = 1; i < numbers.Length; i++)
+        {
+            if (numbers[i] < min)
+            {
+                min = numbers[i];
+                pos = i;
+            }
+        }
+
+        return true;
+    }
+
+    static bool TryFindMax(int[]? numbers, out int? max, out int pos)
+    {
+        max = null;
+        pos = -1;
+        if (numbers == null || numbers.Length == 0)
+            return false;
+
+        //
+        max = numbers[0];
+        pos = 0;
+        for (int i = 1; i < numbers.Length; i++)
+        {
+            if (numbers[i] > max)
+            {
+                max = numbers[i];
+                pos = i;
+            }
+        }
+
+        return true;
+    }
+
+    static void Main(string[] args)
+    {
+        int[]? numbers = [1, 2, 3, 4, -5];
+        if (TryFindMin(numbers, out int? min, out int pos))
+        {
+            Console.WriteLine("Minimo trovato: " + min + " in posizione: " + pos);
+        }
+        else
+        {
+            Console.WriteLine("Il formato di numbers è errato");
+        }
+
+        //
+        if (TryFindMax(numbers, out int? max, out pos))
+        {
+            Console.WriteLine("Massimo trovato: " + max + " in posizione: " + pos);
+        }
+        else
+        {
+            Console.WriteLine("Il formato di numbers è errato");
+        }
+    }
+}

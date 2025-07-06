@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "E:\\C# Projects\\Mac-Formazione\\CSharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Introduzione\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\esercizi (1).txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Introduzione\\3 Cicli\\esercizi (1).txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\5 Funzioni\\esercizi.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Introduzione\\5 Funzioni\\esercizi.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\esercizi 3.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Introduzione\\3 Cicli\\esercizi 3.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\1 Basi\\Rand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Introduzione\\1 Basi\\Rand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\1 Basi\\Intro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Introduzione\\1 Basi\\Intro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\For.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Introduzione\\3 Cicli\\For.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\ContinueBreak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Introduzione\\3 Cicli\\ContinueBreak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\While.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Introduzione\\3 Cicli\\While.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Introduzione\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +38,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Rand.cs",
+              "DocumentMoniker": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\1 Basi\\Rand.cs",
+              "RelativeDocumentMoniker": "Introduzione\\1 Basi\\Rand.cs",
+              "ToolTip": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\1 Basi\\Rand.cs",
+              "RelativeToolTip": "Introduzione\\1 Basi\\Rand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T10:35:20.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Intro.cs",
+              "DocumentMoniker": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\1 Basi\\Intro.cs",
+              "RelativeDocumentMoniker": "Introduzione\\1 Basi\\Intro.cs",
+              "ToolTip": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\1 Basi\\Intro.cs",
+              "RelativeToolTip": "Introduzione\\1 Basi\\Intro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T10:35:19.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "esercizi 3.txt",
+              "DocumentMoniker": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\esercizi 3.txt",
+              "RelativeDocumentMoniker": "Introduzione\\3 Cicli\\esercizi 3.txt",
+              "ToolTip": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\esercizi 3.txt",
+              "RelativeToolTip": "Introduzione\\3 Cicli\\esercizi 3.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-07-02T10:12:12.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "esercizi.txt",
+              "DocumentMoniker": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\5 Funzioni\\esercizi.txt",
+              "RelativeDocumentMoniker": "Introduzione\\5 Funzioni\\esercizi.txt",
+              "ToolTip": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\5 Funzioni\\esercizi.txt",
+              "RelativeToolTip": "Introduzione\\5 Funzioni\\esercizi.txt",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-07-02T10:09:52.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "For.cs",
+              "DocumentMoniker": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\For.cs",
+              "RelativeDocumentMoniker": "Introduzione\\3 Cicli\\For.cs",
+              "ToolTip": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\For.cs",
+              "RelativeToolTip": "Introduzione\\3 Cicli\\For.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T10:03:56.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "esercizi (1).txt",
+              "DocumentMoniker": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\esercizi (1).txt",
+              "RelativeDocumentMoniker": "Introduzione\\3 Cicli\\esercizi (1).txt",
+              "ToolTip": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\esercizi (1).txt",
+              "RelativeToolTip": "Introduzione\\3 Cicli\\esercizi (1).txt",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAABoAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-07-02T10:03:42.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\Program.cs",
               "RelativeDocumentMoniker": "Introduzione\\Program.cs",
@@ -39,45 +129,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T10:01:02.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "For.cs",
-              "DocumentMoniker": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\For.cs",
-              "RelativeDocumentMoniker": "Introduzione\\3 Cicli\\For.cs",
-              "ToolTip": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\For.cs",
-              "RelativeToolTip": "Introduzione\\3 Cicli\\For.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T09:37:00.692Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ContinueBreak.cs",
-              "DocumentMoniker": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\ContinueBreak.cs",
-              "RelativeDocumentMoniker": "Introduzione\\3 Cicli\\ContinueBreak.cs",
-              "ToolTip": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\ContinueBreak.cs",
-              "RelativeToolTip": "Introduzione\\3 Cicli\\ContinueBreak.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T09:05:07.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "While.cs",
-              "DocumentMoniker": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\While.cs",
-              "RelativeDocumentMoniker": "Introduzione\\3 Cicli\\While.cs",
-              "ToolTip": "E:\\C# Projects\\Mac-Formazione\\CSharp\\Introduzione\\3 Cicli\\While.cs",
-              "RelativeToolTip": "Introduzione\\3 Cicli\\While.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T09:05:05.641Z",
               "EditorCaption": ""
             }
           ]

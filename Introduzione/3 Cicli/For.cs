@@ -7,7 +7,18 @@ public class For
         colore_singolo = "Viola";
 
         // 0 -> Rosso, 1 -> Verde, 2 -> Blu
-        string[] colori = ["Rosso", "Verde", "Blu"];
+        // Primo caso: conosco il numero di elementi e sotto specifico i valori
+        string[] colori = new string[3];
+        colori[0] = "Rosso";
+        colori[1] = "Verde";
+        colori[2] = "Blu";
+        // Secondo caso: inserisco gli elementi direttamente
+        string[] colori_2 = new string[] { "Rosso", "Verde", "Blu" };
+
+        // Sintassi semplificata per nuove versione di C#
+        string[] colori_3 = ["Rosso", "Verde", "Blu"];
+
+
         // 0 posizione
         // colori[0] -> Rosso
         colori[0] = "Viola";

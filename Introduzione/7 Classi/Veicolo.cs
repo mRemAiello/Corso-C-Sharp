@@ -1,6 +1,6 @@
 public class Veicolo
 {
-    private string _marca = "";
+    protected string _marca = "";
     private string _modello = "";
     private int _annoDiProduzione = 0;
     private int _anzianita = 0;
@@ -26,12 +26,6 @@ public class Veicolo
     public string GetMarca()
     {
         return _marca;
-    }
-
-    public void SetMarca(string marca)
-    {
-        // 
-        _marca = marca;
     }
 
     public void Avvia()

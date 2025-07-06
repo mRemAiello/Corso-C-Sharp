@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Introduzione"
+    "\\Introduzione",
+    "\\Introduzione\\1 Basi",
+    "\\Introduzione\\3 Cicli"
   ],
-  "SelectedNode": "\\Introduzione\\Program.cs",
+  "SelectedNode": "\\Introduzione\\1 Basi\\Rand.cs",
   "PreviewInSolutionExplorer": false
 }

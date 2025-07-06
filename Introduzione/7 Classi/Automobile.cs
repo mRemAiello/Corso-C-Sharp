@@ -2,11 +2,12 @@ public class Automobile : Veicolo
 {
     private int _numeroPorte = 0;
 
-    //
     // Automobile auto = new Automobile("Fiat", "Panda", 2020, 5);
+    // Automobile auto = new Automobile("Fiat", "Panda", 2020, 5) -> Veicolo("Fiat", "Panda", 2020) -> _numeroPorte = 5;
 
-    public Automobile(string nome, string modello, int anno, int numeroPorte) : base(nome, modello, anno)
+    public Automobile(string marca, string modello, int anno, int numeroPorte) : base(marca, modello, anno)
     {
+        _marca = marca;
         _numeroPorte = numeroPorte;
     }
 

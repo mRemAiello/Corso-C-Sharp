@@ -16,7 +16,7 @@ public class Func
     // Somma(1, 2);
 
     // Metodo che calcola la somma di due numeri interi
-    int Somma(int a, int b)
+    int Somma(int a, int b = 0)
     {
         int risultato = a + b;
         return risultato;
@@ -32,10 +32,11 @@ public class Func
     }
 
     // numeri, i, somma
-    bool TryMedia(int[] numeri, out float media)
+    // media = 2, pippo = 2 
+    bool TryMedia(int[]? numeri, out float media)
     {
         media = 0;
-        if (numeri.Length == 0)
+        if (numeri == null || numeri.Length == 0)
         {
             return false;
         }
@@ -44,8 +45,33 @@ public class Func
         return true;
     }
 
-    float Media(int[] numeri, bool excludeNegative = true)
+    // float Media(float[])
+    // float Media(int[], bool)
+
+    float Media(float[] numeri)
     {
+        if (numeri == null || numeri.Length == 0)
+        {
+            return 0;
+        }
+
+        float somma = 0;
+        for (int i = 0; i < numeri.Length; i++)
+        {
+            somma += numeri[i];
+        }
+
+        somma /= numeri.Length;
+        return somma;
+    }
+
+    float Media(int[]? numeri, bool excludeNegative = true)
+    {
+        if (numeri == null || numeri.Length == 0)
+        {
+            return 0;
+        }
+
         int somma = 0;
         for (int i = 0; i < numeri.Length; i++)
         {
@@ -65,8 +91,12 @@ public class Func
         int risultato = Somma(a, b);
         float risultato2 = Somma((float)x, y);
 
+
         //
-        int[] eta = { 20, 22, 21 };
+        int[] eta = { 10, 20, 30 };
+        float risultato_media = Media(eta);
+
+        // 
         if (TryMedia(eta, out float pippo))
         {
             Console.WriteLine("Media: " + pippo);

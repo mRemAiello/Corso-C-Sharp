@@ -4,30 +4,30 @@
 # e restituiscono rispettivamente la somma, la sottrazione, la moltiplicazione e la divisione tra x e y.
 
 
-# Scrivi una funzione che prende una lista di numeri e restituisce la somma di tutti gli elementi.
+# Scrivi una funzione che prende un array di numeri e restituisce la somma di tutti gli elementi.
 
 
-# Scrivere una funzione che, preso in ingresso una lista, esegua una somma alterna.
+# Scrivere una funzione che, preso in ingresso un array, esegua una somma alterna.
 # Per somma alterna si intende la somma di tutti i numeri pari della lista, e la sottrazione di tutti i numeri dispari dell’array.
 
 
-# Scrivere due funzioni che, presa una lista, vadano a contare rispettivamente, la totalità dei numeri pari e dispari.
+# Scrivere due funzioni che, presa un array, vadano a contare rispettivamente, la totalità dei numeri pari e dispari.
 
 
-# Si Scriva una funzione, chiamata find_min, che ricerchi il minimo in una lista di valori interi. Fare lo stesso col massimo.
+# Si scriva una funzione, chiamata find_min, che ricerchi il minimo in un array di valori interi. Fare lo stesso col massimo.
 # Usare while e for.
 
 
 # Creare anche due funzioni che restituiscano la posizione del minimo / massimo.
 
 
-# Scrivere una funzione per il calcolo della media, che prenda in input una lista e restituisca la media dei numeri.
+# Scrivere una funzione per il calcolo della media, che prenda in input un array e restituisca la media dei numeri.
 
 # Calcolare, sempre usando una funzione, la media dei numeri pari, dispari ed entrambi.
-# Restituire un dict.
+# Restituire un array.
 
 
-# Sviluppare una funzione che restituisca una tupla, con all'interno di una lista i positivi, negativi o nulli.
+# Sviluppare una funzione che restituisca 3 elementi, con all'interno di un array i positivi, negativi o nulli.
 # Ordinarli numericamente.
 
 
@@ -38,15 +38,15 @@
 
 
 # Scrivere tre funzioni che, preso in ingresso un numero di secondi, restituiscano il numero di giorni, ore e minuti
-# (rappresentati come float dentro un dict).
+# (rappresentati come float dentro un array).
 
 
-# Si scriva una funzione, denominata Find, che ricerchi la presenza di un elemento in una lista di interi.
-# La funzione riceve in ingresso due parametri: una lista di
+# Si scriva una funzione, denominata Find, che ricerchi la presenza di un elemento in un array di interi.
+# La funzione riceve in ingresso due parametri: un array di
 # interi v[] nel quale ricercare il valore e il valore intero x che deve essere ricercato.
 # La funzione deve restituire un valore intero, ed in particolare:
 # Se il valore x è presente nella lista, allora la funzione restituisce l’indice della posizione alla quale si trova tale valore;
-# Se il valore x è presente più volte, si restituiscano tutti gli indici dentro una lista.
+# Se il valore x è presente più volte, si restituiscano tutti gli indici dentro un array.
 # Se il valore x non è presente nella lista, si restituisca -1.
 
 
@@ -56,23 +56,23 @@
 # Scrivi una funzione che verifichi se una frase è palindroma.
 
 
-# Scrivi una funzione che prende una lista di parole e restituisce una lista
+# Scrivi una funzione che prende un array di parole e restituisce un array
 # contenente solo le parole palindrome.
 
 
-# Scrivi una funzione che prende una lista di parole e restituisce una lista
+# Scrivi una funzione che prende un array di parole e restituisce un array
 # contenente solo le parole che iniziano con una lettera specificata.
 
 
-# Scrivi una funzione che prende una lista di parole e restituisce una lista
+# Scrivi una funzione che prende un array di parole e restituisce un array
 # contenente la lunghezza di ciascuna parola.
 
 
-# Scrivi una funzione che prende una lista di parole e
+# Scrivi una funzione che prende un array di parole e
 # restituisce la parola più lunga (e poi più corta).
 
 
-# Scrivi una funzione che prende una lista di parole e
+# Scrivi una funzione che prende un array di parole e
 # restituisce quelle lunghe oltre un certo valore (e corte oltre un certo valore).
 
 
