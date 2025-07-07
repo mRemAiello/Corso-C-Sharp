@@ -93,7 +93,7 @@
 
 # Creare una funzione stampa_dizionario() che prende un dizionario e
 # stampa a schermo le coppie chiave-valore del dizionario formattate come da esempio sotto:
-# dizionario = { "arginina": 0.7}
+# dizionario = { "arginina": 0.7 }
 # arginina -> 70%
 
 

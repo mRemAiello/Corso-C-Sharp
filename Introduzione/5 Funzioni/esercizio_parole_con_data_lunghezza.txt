@@ -1,0 +1,64 @@
+    /*
+        
+        Scrivi una funzione che prende un array di parole e
+        restituisce quelle lunghe oltre un certo valore (e corte oltre un certo valore).
+
+    */
+
+    static int WordsCountLength(string[] words, int length)
+    {
+        int count = 0;
+        foreach (string word in words)
+        {
+            if (word.Length > length)
+                count++;
+        }
+        return count;
+    }
+
+    static string[] GetWordsWithLength(string[] words, int length)
+    {
+        string[] results = new string[WordsCountLength(words, length)];
+        int i = 0;
+        foreach (string word in words)
+        {
+            if (word.Length >= length)
+            {
+                results[i] = word;
+                i++;
+            }
+        }
+
+        return results;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Quante parole vuoi inserire nell'array di parole?");
+        int arrayLength = Convert.ToInt32(Console.ReadLine());
+
+        // Utilizzo il sistema 2 che gestisce i Nullables
+        string[] words = new string[arrayLength];
+        for (int i = 0; i < words.Length; i++)
+        {
+            Console.WriteLine("Inserisci la parola nella posizione " + i);
+            string? tmpWord = Console.ReadLine();
+            if (tmpWord == null)
+            {
+                Console.WriteLine("Hai inserito null, riprova!");
+                i--;
+            }
+            else
+            {
+                words[i] = tmpWord;
+            }
+        }
+
+        Console.WriteLine("Inserisci la lunghezza desiderata");
+        int length = Convert.ToInt32(Console.ReadLine());
+        string[] wordResults = GetWordsWithLength(words, length);
+        foreach (var word in wordResults)
+        {
+            Console.WriteLine(word);
+        }
+    }

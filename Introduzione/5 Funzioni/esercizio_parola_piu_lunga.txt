@@ -1,0 +1,79 @@
+    /*
+        
+        Scrivi una funzione che prende un array di parole e
+        restituisce la parola più lunga (e poi più corta).
+
+        Scrivi una funzione che prende un array di parole e
+        restituisce quelle lunghe oltre un certo valore (e corte oltre un certo valore).
+
+    */
+
+    static string GetLongestWord2(string[] words)
+    {
+        string longestWord = words[0];
+        foreach (string word in words)
+        {
+            if (word.Length > longestWord.Length)
+                longestWord = word;
+        }
+
+        return longestWord;
+    }
+
+    static string? GetLongestWord(string?[] words)
+    {
+        if (words == null)
+            return null;
+
+        string? longestWord = null;
+        foreach (string? word in words)
+        {
+            longestWord ??= word;
+            if (word != null)
+            {
+                if (longestWord != null && word.Length > longestWord.Length)
+                    longestWord = word;
+            }
+        }
+
+        return longestWord;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Quante parole vuoi inserire nell'array di parole?");
+        int length = Convert.ToInt32(Console.ReadLine());
+
+        // Sistema 1 con i Nullables
+        string?[] words = new string[length];
+        for (int i = 0; i < words.Length; i++)
+        {
+            Console.WriteLine("Inserisci la parola nella posizione " + i);
+            words[i] = Console.ReadLine();
+        }
+
+        string? word = GetLongestWord(words);
+        if (word != null)
+        {
+            Console.WriteLine("La parola più lunga è " + word + " ed è lunga " + word.Length + " lettera/e");
+        }
+
+        // Sistema 2 pre Nullable
+        string[] words2 = new string[length];
+        for (int i = 0; i < words.Length; i++)
+        {
+            Console.WriteLine("Inserisci la parola nella posizione " + i);
+            string? tmpWord = Console.ReadLine();
+            if (tmpWord == null)
+            {
+                Console.WriteLine("Hai inserito null, riprova!");
+                i--;
+            }
+            else
+            {
+                words2[i] = tmpWord;
+            }
+        }
+        string word2 = GetLongestWord2(words2);
+        Console.WriteLine("La parola più lunga è " + word2 + " ed è lunga " + word2.Length + " lettera/e");
+    }
