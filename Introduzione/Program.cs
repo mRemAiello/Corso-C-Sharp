@@ -1,74 +1,8 @@
 ﻿class Program
 {
-    /*
-        
-        Scrivi una funzione che prende una stringa e restituisce la stringa invertita.
-
-
-        Scrivi una funzione che verifichi se una frase è palindroma.
-
-
-        Scrivi una funzione che prende un array di parole e restituisce un array
-        contenente solo le parole palindrome.
-
-    */
-
-    static string Reverse(string word)
-    {
-        string reverse = "";
-        for (int i = word.Length - 1; i >= 0; i--)
-        {
-            reverse += word.ElementAt(i);
-        }
-        return reverse;
-    }
-
-    // Scrivere word == reverse significa prendere la posizione in memoria di word e di reverse e confrontarle
-    // word => 0x0000056, reverse => 0x0000070, word == reverse darà false
-    // Se invece scrivo word.Equals(reverse) la funzione semplicemente controlle le parole di entrambe
-    // Nel caso di C#, e nel caso specifico della stringa, == e Equals hanno lo stesso effetto
-    static bool IsPalindrome(string word)
-    {
-        string reverse = Reverse(word).ToLower();
-        if (word.ToLower().Equals(reverse))
-            return true;
-        return false;
-    }
-
-    static int CountPalindromeWords(string[] words)
-    {
-        int count = 0;
-        foreach (string word in words)
-        {
-            if (IsPalindrome(word))
-                count++;
-        }
-        return count;
-    }
-
-    static string[] GetPalindromeWords(string[] words)
-    {
-        string[] results = new string[CountPalindromeWords(words)];
-        int i = 0;
-        foreach (string word in words)
-        {
-            if (IsPalindrome(word))
-            {
-                results[i] = word;
-                i++;
-            }
-        }
-        return results;
-    }
-
     static void Main(string[] args)
     {
 
-        string[] test = ["OtTo", "Ciao", "Anna"];
-        var words = GetPalindromeWords(test);
-        foreach (string word in words)
-        {
-            Console.WriteLine(word.ToLower());
-        }
+
     }
 }

@@ -7,7 +7,7 @@ public class EsempioEccezione
         {
             // Codice che può causare un'eccezione
         }
-        catch (EccezioneTipo e)
+        catch (EccezioneTipo)
         {
             // Codice per gestire l'eccezione
         }

@@ -7,7 +7,7 @@ public class ConsoleView
         Console.WriteLine(message);
     }
 
-    public virtual string GetUserInput(string prompt)
+    public virtual string? GetUserInput(string prompt)
     {
         Console.Write(prompt);
         return Console.ReadLine();

@@ -3,11 +3,11 @@ public class Intro
     public void Execute()
     {
         // Dichiarazione
-        int variabile;
+        //int variabile = 0;
         // Inizializzazione
-        variabile = 10;
+        // variabile = 10;
         // Dichiarazione e inizializzazione
-        int variabile2 = 20;
+        //int variabile2 = 20;
 
         // 0x000123834823 -> 40
         int etaDiMirko = 34;

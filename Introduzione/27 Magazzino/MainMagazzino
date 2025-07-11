@@ -1,0 +1,42 @@
+// Crea una classe Prodotto che abbia gli attributi “nome”, “prezzo” e “scorta”.
+// Crea una classe GestoreMagazzino che gestisca un magazzino di prodotti. La classe dovrà avere i seguenti attributi:
+//     Un array “prodotti” che mappa i nomi dei prodotti ai rispettivi oggetti “Prodotto” (che descriverai in seguito)
+//     Una variabile “costo_magazzinaggio” che indica il costo per magazzinare ogni prodotto per un mese
+
+// La classe dovrà avere i seguenti metodi:
+//     Un metodo “aggiungi_prodotto” che aggiunga un nuovo prodotto al magazzino
+//     Un metodo “rimuovi_prodotto” che rimuova un prodotto dal magazzino
+//     Un metodo “calcola_costi_magazzinaggio” che calcoli i costi di magazzinaggio per tutti i prodotti presenti nel magazzino
+//
+// Aggiungi poi la possibilità di inserire prodotti multipli (2 e una array)
+
+
+Prodotto mela = new("mela", 20);
+Prodotto pera = new("pera", 20);
+Prodotto[] prodotti = [mela, pera];
+
+Console.WriteLine(mela);
+Console.WriteLine(pera);
+
+// Magazzino
+GestoreMagazzino magazzino = new();
+magazzino.AggiungiProdotto("mela", 10);
+magazzino.AggiungiProdotto("pera", 5);
+magazzino.AggiungiProdotto("banana", 5);
+magazzino.AggiungiProdotto("uva", 10);
+magazzino.AggiungiProdotto("mela", 5);
+magazzino.AggiungiProdotto("mela", -10);
+magazzino.AggiungiProdotto(prodotti);
+magazzino.SetPrezzo("mela", 9.99f);
+magazzino.SetPrezzo("pera", 5.99f);
+magazzino.RimuoviProdotto("uva");
+
+Console.WriteLine(magazzino.CalcolaCostoMagazzinaggio());
+
+Console.WriteLine(magazzino);
+
+GestoreMagazzino magazzino2 = new(99, 2);
+magazzino2.AggiungiProdotto("mela", 20);
+Console.WriteLine(magazzino2.CalcolaCostoMagazzinaggio());
+
+Console.WriteLine(magazzino2);

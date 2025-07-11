@@ -7,7 +7,7 @@ public class FileView : ConsoleView
         Console.WriteLine(message);
     }
 
-    public override string GetUserInput(string prompt)
+    public override string? GetUserInput(string prompt)
     {
         Console.Write(prompt);
         return Console.ReadLine();
