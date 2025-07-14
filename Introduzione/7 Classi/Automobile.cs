@@ -7,7 +7,6 @@ public class Automobile : Veicolo
 
     public Automobile(string marca, string modello, int anno, int numeroPorte) : base(marca, modello, anno)
     {
-        _marca = marca;
         _numeroPorte = numeroPorte;
     }
 
