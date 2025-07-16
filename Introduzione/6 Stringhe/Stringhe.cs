@@ -14,13 +14,16 @@ public class Stringhe
         // Split(separator) - Divide la stringa in un array di sottostringhe basate sul separatore.
         
         // Stringa di esempio
-        string prova = "Hello";
+        string prova = "  Hello";
 
         // ToUpper(): Converte la stringa in maiuscolo.
         string maiuscolo = prova.ToUpper(); // "HELLO"
 
+        // Lancio multiplo di funzioni
+        prova = prova.ToUpper().Trim();
+
         // ToLower(): Converte la stringa in minuscolo.
-        string minuscolo = prova.ToLower(); // "world"
+        string minuscolo = prova.ToLower(); // "hello"
 
         // Trim(): Rimuove gli spazi vuoti all’inizio e alla fine.
         string spazi = "   Ciao   ".Trim(); // "Ciao"
@@ -60,7 +63,8 @@ public class Stringhe
 
         // Metodo format
         string toFormat = "Nome: {0}, Cognome: {1}, Età: {2}";
-        toFormat = string.Format(toFormat, nome, cognome, eta);
+        string utente_1 = string.Format(toFormat, nome, cognome, eta);
+        string utente_2 = string.Format(toFormat, "Marco", "Rossi", 24);
         Console.WriteLine(toFormat);
 
         // Metodo 2

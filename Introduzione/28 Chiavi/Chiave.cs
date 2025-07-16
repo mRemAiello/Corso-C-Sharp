@@ -17,6 +17,6 @@ public class Chiave
     //
     public override string ToString()
     {
-        return "Descrizione: " + _descrizione + " - Peso: " + _peso;
+        return $"Descrizione: {_descrizione} - Peso: {_peso}";
     }
 }

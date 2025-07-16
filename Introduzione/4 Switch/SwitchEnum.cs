@@ -29,8 +29,10 @@ public class SwitchEnum
         // if (operazione == 0)
         // 
         // Qui sotto con l'enum
-        // Console.WriteLine("Quale operazione vuoi eseguire? (0: Aggiunta, 1: Rimozione, 2: Visualizza, 3: Uscita)");
-        Operazioni operazione = Operazioni.Aggiunta;
+        // 
+        Console.WriteLine("Quale operazione vuoi eseguire? (0: Aggiunta, 1: Rimozione, 2: Visualizza, 3: Uscita)");
+        int numero = Convert.ToInt32(Console.ReadLine());
+        Operazioni operazione = (Operazioni)numero;
         if (operazione == Operazioni.Aggiunta)
         {
             Console.WriteLine("Aggiunta");
@@ -66,9 +68,9 @@ public class SwitchEnum
         }
 
         //
-        string localizedString = "";
+        
         GiorniSettimana giorno = GiorniSettimana.Mercoledì;
-        localizedString = giorno switch
+        string localizedString = giorno switch
         {
             GiorniSettimana.Lunedì => "Lunedì",
             GiorniSettimana.Martedì => "Martedì",

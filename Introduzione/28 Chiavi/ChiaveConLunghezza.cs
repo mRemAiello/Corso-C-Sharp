@@ -13,6 +13,6 @@ public class ChiaveConLunghezza : Chiave
     //
     public override string ToString()
     {
-        return base.ToString() + " - Lunghezza: " + _lunghezza;
+        return $"{base.ToString()} - Lunghezza: {_lunghezza}";
     }
 }
