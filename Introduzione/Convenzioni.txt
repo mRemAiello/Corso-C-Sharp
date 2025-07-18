@@ -2,3 +2,6 @@ https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding
 
 
 https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
+
+
+https://medium.com/@a.kago1988/naming-conventions-in-c-crafting-clean-and-declarative-code-14812e1d4c6b

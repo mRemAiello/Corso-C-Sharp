@@ -59,6 +59,8 @@ public class EnumFlags
         // typeof(PermessiAccesso) è un modo per ottenere il tipo enum
         // type(PermessiAccesso)
         // [PermessiAcessso.Nessuno, PermessiAccesso.Lettura, PermessiAccesso.Scrittura, PermessiAccesso.Esecuzione]
+        // permesso => PermessiAccesso.Nessuno
+        // permesso => PermessiAccesso.Lettura
         foreach (PermessiAccesso permesso in Enum.GetValues(typeof(PermessiAccesso)))
         {
             if (permesso != PermessiAccesso.Nessuno && permessi.HasFlag(permesso))

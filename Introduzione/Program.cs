@@ -1,38 +1,26 @@
 ﻿class Program
 {
-    // Realizzare 3 classi Chiave (Le chiavi possono essere meccaniche, magnetiche e con microchip) con le seguenti caratteristiche :
-    // descrizione, peso
-    // Le chiavi magnetiche sono caratterizzate dall'ampiezza, le chiavi meccaniche da un numero di dentelli.
-    // Sia le chiavi meccaniche che quelle magnetiche sono rappresentate dalla lunghezza.
-    // Inoltre, esiste un'operazione di aggiornamento per le chiavi con microchip.
-    // La chiave con microchip avrà un codice seriale (stringa), che verrà aggiornato dalla funzione sopra menzionata.
-    // Inserire, per ogni classe, una funzione che printa in maniera ordinata tutte le informazioni sulle chiavi
-    // Infine, inserire una funzione che verifica quale è la chiave più leggera
-    // Ogni chiave dovrà avere un costruttore che prenda in input tutti i parametri sopracitati.
-
     static void Main(string[] args)
     {
-        ChiaveMeccanica meccanica = new("Una chiave meccanica", 0.2f, 0.3f, 4);
-        ChiaveMagnetica magnetica = new("Una chiave magnetica", 0.15f, 0.2f, 0.4f);
-        ChiaveConMicrochip microchip = new("Una chiave", 0.1f, "FF2XX4");
+        Libro libro = new("AX01", "Signore degli Anelli", "JRR Tolkien", 1950, 20);
+        Libro libro2 = new("AX02", "Harry Potter e la pietra filosofale", "Rowling", 1990, 30);
 
-        Chiave[] chiavi = [meccanica, magnetica, microchip];
-        foreach (Chiave chiave in chiavi)
+        Console.WriteLine(libro);
+        Console.WriteLine(libro2);
+
+        Libreria libreria = new(40);
+        libreria.AggiungiLibro(libro);
+        libreria.AggiungiLibro(libro2);
+        Libro? libroCerca = libreria.CercaLibroPerISBN("AX01");
+        if (libroCerca != null)
         {
-            Console.WriteLine(chiave);
+            Console.WriteLine(libroCerca);
         }
 
-        Chiave chiavePiuLeggera = chiavi[0];
-        foreach (var chiave in chiavi)
-        {
-            if (chiave.GetPeso() < chiavePiuLeggera.GetPeso())
-            {
-                chiavePiuLeggera = chiave;
-            }
-        }
 
-        chiavePiuLeggera.SetDescrizione("Questa è la più leggera");
-        Console.WriteLine(chiavi[2]);
-        Console.WriteLine(chiavePiuLeggera);
+        Data data1 = new Data(20, 1, 2025);
+        Data data2 = new Data(1, 2, 2025);
+        Console.WriteLine(data1.CompareTo(data2));
+        Console.WriteLine(data1.Equals(data2));
     }
 }
