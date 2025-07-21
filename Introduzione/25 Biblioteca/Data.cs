@@ -1,5 +1,3 @@
-using System.Runtime.CompilerServices;
-
 public class Data
 {
     private int _giorno;
@@ -7,6 +5,13 @@ public class Data
     private int _anno;
 
     //
+    public Data()
+    {
+        _giorno = 1;
+        _mese = 1;
+        _anno = 1;
+    }
+
     public Data(int giorno, int mese, int anno)
     {
         _giorno = giorno;
@@ -84,6 +89,6 @@ public class Data
     //
     public override string ToString()
     {
-        return $"Giorno: {GetGiorno()}, Mese: {GetMese()}, Anno: {GetAnno()}";
+        return $"{GetGiorno()}-{GetMese()}-{GetAnno()}";
     }
 }
