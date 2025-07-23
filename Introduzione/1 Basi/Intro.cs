@@ -34,6 +34,7 @@ public class Intro
         Console.WriteLine("Il valore di t è " + t);
         Console.WriteLine("Il valore di frase è " + frase);
         Console.WriteLine("Il valore di prova è " + prova);
+        Console.WriteLine("Il valore di decimale è " + decimale);
 
 
         // Utilizzo di una variabile

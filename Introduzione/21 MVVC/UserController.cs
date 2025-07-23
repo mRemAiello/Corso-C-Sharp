@@ -15,7 +15,7 @@ public class UserController
         while (running)
         {
             _view.ShowMessage("\n1. Add User\n2. Display Users\n3. Clear Users\n4. Exit");
-            string choice = _view.GetUserInput("Choose an option: ");
+            string? choice = _view.GetUserInput("Choose an option: ");
 
             switch (choice)
             {
@@ -40,8 +40,14 @@ public class UserController
 
     private void AddUser()
     {
-        string name = _view.GetUserInput("Enter user name: ");
-        string ageInput = _view.GetUserInput("Enter user age: ");
+        string? name = _view.GetUserInput("Enter user name: ");
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            _view.ShowMessage("Invalid name. Please try again.");
+            return;
+        }
+
+        string? ageInput = _view.GetUserInput("Enter user age: ");
         
         if (int.TryParse(ageInput, out int age))
         {
