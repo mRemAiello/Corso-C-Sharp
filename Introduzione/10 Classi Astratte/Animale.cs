@@ -9,10 +9,13 @@ public abstract class Animale
     {
         Console.WriteLine("L'animale dorme.");
     }
+
+    public abstract bool CanRun();
+    public abstract bool CanFly();
 }
 
 // Proprietà della classe astratta
-// Una classe definita abstract potrebbe NON avere metodi astratte.
+// Una classe definita abstract potrebbe NON avere metodi astratti.
 // Una classe che ha almeno 1 metodo astratto deve essere astratta.
 
 // Animale

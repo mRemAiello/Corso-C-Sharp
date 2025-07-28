@@ -13,4 +13,14 @@ public class Contenitore<T> where T : Liquido
     {
         _contenuto = nuovoElemento;
     }
+
+    public override string ToString()
+    {
+        string? ret = "Contenitore vuoto";
+        if (_contenuto != null)
+        {
+            ret = _contenuto.ToString();
+        }
+        return ret ?? string.Empty;
+    }
 }

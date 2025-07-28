@@ -3,7 +3,7 @@ public interface IVeicolo
     void Avvia();
     void Arresta();
     void Accelera(int velocita);
-    void Frenare(int velocita);
+    void Frena(int velocita);
 }
 
 // Esempio di interfaccia di oggetto vendibile / acquistabile

@@ -1,4 +1,4 @@
-public class ChiaveConLunghezza : Chiave
+public abstract class ChiaveConLunghezza : Chiave
 {
     private float _lunghezza;
 

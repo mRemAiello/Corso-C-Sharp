@@ -18,13 +18,13 @@ public class Veicolo2 : Veicolo, IVeicolo, ISellable, IBuyable
     {
     }
 
-    public void Frenare(int velocita)
+    public void Frena(int velocita)
     {
     }
 
     // Vendita => SellPrice, BuyPrice, Buy, Sell
-    // Libro : Vendita
-    // Auto : Vendita
+    // Libro : Venduto, Comprato
+    // Auto : Veicolo, Venduta, Comprata
 
     // Esempio Videogioco RPG
     // Item => ID, Nome, Descrizione

@@ -1,4 +1,4 @@
-public class Libro
+public class Libro : ICloneable
 {
     private string _isbn;
     private string _titolo;
@@ -22,6 +22,7 @@ public class Libro
     public int GetAnnoPubblicazione() => _annoPubblicazione;
     public int GetDisponibilita() => _disponibilita;
     public void SetDisponibilita(int disponibilita) => _disponibilita = disponibilita;
+    public object Clone() => new Libro(GetISBN(), GetTitolo(), GetAutore(), GetAnnoPubblicazione(), GetDisponibilita());
 
     //
     public override string ToString()

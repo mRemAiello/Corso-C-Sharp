@@ -1,4 +1,4 @@
-public class Chiave
+public abstract class Chiave
 {
     private string? _descrizione;
     private float _peso;

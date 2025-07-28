@@ -5,8 +5,17 @@ public class Test
         Acqua acqua = new Acqua();
         Vino vino = new Vino();
 
-        Contenitore<Acqua> bottiglia = new Contenitore<Acqua>(acqua);
-        Contenitore<Vino> bottiglia2 = new Contenitore<Vino>(vino);
+        BottigliaLiquido bottiglia0 = new BottigliaLiquido(vino);
+        if (bottiglia0.GetLiquido() is Vino vinoTmp)
+        {
+            vinoTmp.ProprietaVino = 20;
+        }
+
+
+
+
+        Contenitore<Acqua> bottiglia = new(acqua);
+        Contenitore<Vino> bottiglia2 = new(vino);
 
 
         /*

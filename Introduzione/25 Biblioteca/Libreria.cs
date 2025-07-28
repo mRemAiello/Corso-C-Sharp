@@ -1,6 +1,6 @@
-using System.Runtime.ExceptionServices;
+using System.Collections;
 
-public class Libreria
+public class Libreria : IEnumerable
 {
     private Libro[] _libri;
     private Utente[] _utenti;
@@ -314,5 +314,12 @@ public class Libreria
                 ret += $"{prestito}\n";
         }
         return ret;
+    }
+
+    public IEnumerator GetEnumerator()
+    {
+        Libro[] libri = new Libro[_libri.Length];
+        _libri.CopyTo(libri, 0);
+        return libri.GetEnumerator();
     }
 }

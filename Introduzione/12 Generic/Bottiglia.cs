@@ -1,4 +1,4 @@
-public class Liquido
+public abstract class Liquido
 {
     public int _valore;
 

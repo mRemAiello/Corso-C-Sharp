@@ -1,0 +1,10 @@
+/*
+
+Create an abstract class “BankAccount” with abstract methods “deposit()” and “withdraw()”. 
+Implement two subclasses “SavingsAccount” and “CheckingAccount” which extend “BankAccount” and implement the abstract methods. Create a “Customer” class which contains a list of “BankAccount” objects. 
+Add methods to the “Customer” class to display account balances, deposit/withdraw money, etc. Create objects of all classes and test their behavior.
+
+Create an abstract class “Account” with abstract method “calculateInterest()”. 
+Implement two subclasses “SavingsAccount” and “CurrentAccount” which extend “Account” and implement the “calculateInterest()” method. Create objects of both classes and test their behavior.
+
+*/
