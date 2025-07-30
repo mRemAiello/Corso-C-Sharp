@@ -4,7 +4,7 @@ public class Lista
     {
         // Memoria: 0x0001 -> 0x0021
         // PrimoElemento, 10 x stringa
-        string[] valori = { "Ciao", "Ciao2" };
+        string[] valori = ["Ciao", "Ciao2"];
 
         // lista -> Nodo1 (3, 0x00020) -> Nodo2 (3, 0x00015) -> Nodo3 (50, null)
         // PrimoElemento, 10 x stringa, 10 x Nodo, 10 x Successivo

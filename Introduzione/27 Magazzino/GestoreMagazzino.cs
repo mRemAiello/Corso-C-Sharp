@@ -1,68 +1,62 @@
 public class GestoreMagazzino
 {
-    public Prodotto?[] prodotti;
-    public int prodottiInseriti = 0;
-    public int defaultProdottiLunghezza = 3;
+    public List<Prodotto?> prodotti;
     public int costoMagazzinaggio;
 
     public GestoreMagazzino()
     {
-        prodotti = new Prodotto[defaultProdottiLunghezza];
+        prodotti = [];
         costoMagazzinaggio = 1;
-    }
-
-    public GestoreMagazzino(int dimensione, int costoMagazzinaggio)
-    {
-        prodotti = new Prodotto[dimensione];
-        this.costoMagazzinaggio = costoMagazzinaggio;
     }
 
     public GestoreMagazzino(int costoMagazzinaggio)
     {
-        prodotti = new Prodotto[defaultProdottiLunghezza];
+        prodotti = [];
         this.costoMagazzinaggio = costoMagazzinaggio;
     }
 
     public GestoreMagazzino(Prodotto[] prodotti, int costoMagazzinaggio)
     {
-        this.prodotti = prodotti;
+        this.prodotti = [];
+        this.prodotti.AddRange(prodotti);
         this.costoMagazzinaggio = costoMagazzinaggio;
     }
 
-    public void AggiungiProdotto(string? nome, int scorta)
+    private bool CheckProductInput(string? nome, int scorta)
     {
         if (scorta <= 0)
         {
             Console.WriteLine("La scorta non può essere zero o negativa");
-            return;
+            return false;
         }
+
+        if (nome == null)
+        {
+            Console.WriteLine("Il nome non può essere null");
+            return false;
+        }
+
+        return true;
+    }
+
+    public void AggiungiProdotto(string nome, int scorta)
+    {
+        if (!CheckProductInput(nome, scorta))
+            return;
 
         //
-        Prodotto? prodotto = CercaProdotto(nome);
-        if (prodotto == null)
+        if (TryGetProduct(nome, out Prodotto? prodotto))
         {
-            if (prodottiInseriti + 1 > prodotti.Length)
+            if (prodotto != null)
             {
-                Console.WriteLine("Non c'è più spazio nel magazzino");
-                return;
+                Console.WriteLine("Aumentata scorta di " + nome);
+                prodotto.scorta += scorta;
             }
-
-            //
-            for (int i = 0; i < prodotti.Length; i++)
+            else
             {
-                if (prodotti[i] == null && nome != null)
-                {
-                    prodotti[i] = new Prodotto(nome, scorta);
-                    prodottiInseriti++;
-                    Console.WriteLine("Prodotto " + nome + " aggiunto al magazzino");
-                    break;
-                }
+                prodotti.Add(new Prodotto(nome, scorta));
+                Console.WriteLine("Prodotto " + nome + " aggiunto al magazzino");
             }
-        }
-        else
-        {
-            Console.WriteLine("Aumentata scorta di " + nome);
-            prodotto.scorta += scorta;
         }
     }
 
@@ -80,33 +74,40 @@ public class GestoreMagazzino
         }
     }
 
-    public void SetPrezzo(string nome, float prezzo)
+    private bool TryGetProduct(string nome, out Prodotto? product)
     {
-        Prodotto? prodotto = CercaProdotto(nome);
-        if (prodotto == null)
+        product = CercaProdotto(nome);
+        if (product == null)
         {
             Console.WriteLine("Il prodotto " + nome + " non esiste");
-            return;
+            return false;
         }
+        return true;
+    }
 
-        //
-        prodotto.prezzo = prezzo;
+    public void SetPrezzo(string nome, float prezzo)
+    {
+        if (TryGetProduct(nome, out Prodotto? prodotto))
+        {
+            if (prodotto != null)
+            {
+                prodotto.prezzo = prezzo;
+            }
+        }
     }
 
     public void RimuoviProdotto(string nome)
     {
-        Prodotto? prodotto = CercaProdotto(nome);
-        if (prodotto == null)
+        if (TryGetProduct(nome, out Prodotto? prodotto))
         {
-            Console.WriteLine("Il prodotto " + nome + " non esiste");
-            return;
+            if (prodotto != null)
+            {
+                prodotti.RemoveAt(prodotti.IndexOf(prodotto));
+            }
         }
-
-        int i = CercaIndiceProdotto(nome);
-        prodotti[i] = null;
     }
 
-    public Prodotto? CercaProdotto(string? nome)
+    public Prodotto? CercaProdotto(string nome)
     {
         foreach (Prodotto? prodotto in prodotti)
         {
@@ -131,17 +132,11 @@ public class GestoreMagazzino
         return costo;
     }
 
-    public int CercaIndiceProdotto(string? nome)
+    public int CercaIndiceProdotto(string nome)
     {
-        int i = 0;
-        foreach (Prodotto? prodotto in prodotti)
-        {
-            if (prodotto != null && prodotto.nome != null && prodotto.nome.Equals(nome))
-            {
-                return i;
-            }
-            i++;
-        }
+        if (TryGetProduct(nome, out Prodotto? prodotto))
+            return prodotti.IndexOf(prodotto);
+
         return -1;
     }
 
