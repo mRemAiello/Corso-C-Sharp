@@ -9,7 +9,7 @@ class Scrittura
         string contenuto = "Ciao, questo è un esempio di scrittura su file.";
 
         // Esempio di scrittura di un array di stringhe
-        /*foreach (Persona persona in persona)
+        /*foreach (Persona persona in persone)
         {
             contenuto += persona.ToString();
             contenuto += Environment.NewLine;
