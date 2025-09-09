@@ -3,6 +3,9 @@ public class Dizionario
     public void Execute()
     {
         // Creazione di un dizionario che associa nomi di persone a età
+        // La chiave è string, il valore è int
+        // x000c1 -> Mirko
+        // ISBN -> 978-3-16-148410-0 -> Libro
         Dictionary<string, int> etaPersone = new();
 
         // Aggiungere coppie chiave-valore al dizionario
@@ -16,6 +19,7 @@ public class Dizionario
 
         // Iterazione attraverso il dizionario
         Console.WriteLine("Tutte le persone nel dizionario:");
+        // persona -> KeyValuePair<string, int>
         foreach (var persona in etaPersone)
         {
             // persona = KeyValuePair<string, int>
