@@ -3,6 +3,10 @@ class Program
     static void Main(string[] args)
     {
         MethodVsQuery.Execute();
-        InterfaceExample.Execute();
+        LinqInterfacesExample.Execute();
+        WhereGreaterThanExample.Execute();
+        WhereObjectsExample.Execute();
+        FirstLastElementAtSingleExample.Execute();
+        AllAnyContainsExample.Execute();
     }
 }
