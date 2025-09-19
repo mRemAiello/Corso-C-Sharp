@@ -16,5 +16,7 @@ class Program
         WhereObjectsExample.Execute();
         FirstLastElementAtSingleExample.Execute();
         AllAnyContainsExample.Execute();
+        OrderByExample.Execute();
+        CustomComparerOrderByExample.Execute();
     }
 }
