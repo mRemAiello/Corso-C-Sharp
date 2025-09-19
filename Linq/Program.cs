@@ -20,5 +20,7 @@ class Program
         CustomComparerOrderByExample.Execute();
         CountSumExample.Execute();
         MaxMinAverageExample.Execute();
+        JoinExample.Execute();
+        GroupJoinExample.Execute();
     }
 }
