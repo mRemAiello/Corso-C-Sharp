@@ -1,7 +1,14 @@
+using LinqExamples;
+
 class Program
 {
     static void Main(string[] args)
     {
+        SelectExample.Execute();
+        SelectTypedExample.Execute();
+        SelectAdvancedExample.Execute();
+        SelectManyExample.Execute();
+
         MethodVsQuery.Execute();
         LinqInterfacesExample.Execute();
         LinqInterfaceExample2.Execute();
