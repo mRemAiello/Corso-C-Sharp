@@ -23,5 +23,7 @@ class Program
         GroupByCategoryExample.Execute();
         JoinExample.Execute();
         GroupJoinExample.Execute();
+        TakeSkipExample.Execute();
+        SetOperationsExample.Execute();
     }
 }
