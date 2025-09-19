@@ -1,0 +1,30 @@
+Write a C# program that prompts the user to input a numeric integer 
+and throws an exception if the number is less than 0 or greater than 1000. 
+
+
+Write a C# program that implements a method that takes an array of integers as input and calculates the average value. 
+Handle the exception if the array is empty. 
+
+
+Write a C# program that reads a string from the user and converts it to an integer. 
+Handle the exception if the input cannot be parsed into an integer. 
+
+
+Write a C# program that reads a list of integers from the user. 
+Handle the exception that occurs if the user enters a value outside the range of Int32. 
+
+
+Write a C# program that implements a method that divides two numbers. 
+Handle the DivideByZeroException that occurs if the denominator is 0. 
+
+
+Write a C# program that reads a number from the user and calculates its square root. 
+Handle the exception if the number is negative. 
+
+
+Write a C# program that creates a method that takes a string as input and converts it to uppercase. 
+Handle the NullReferenceException that occurs if the input string is null. 
+
+
+Write a C# program that creates a method that calculates the factorial of a given number. 
+Handle the OverflowException that occurs if the result exceeds the Int32 maximum value.

@@ -1,0 +1,43 @@
+        ContoBancario conto = new(100);
+
+        Console.WriteLine("Selezione un comando: (0: Preleva, 1: Deposita, -1: Esci)");
+        string? comando = Console.ReadLine();
+        while (comando != "-1")
+        {
+            if (comando == "0")
+            {
+                Console.WriteLine("Inserisci l'importo da prelevare:");
+                float importo = float.Parse(Console.ReadLine() ?? "0");
+                try
+                {
+                    conto.Preleva(importo);
+                }
+                catch (SaldoInsufficienteException ex)
+                {
+                    Console.WriteLine("Errore: " + ex.Message);
+                }
+            }
+            else if (comando == "1")
+            {
+                Console.WriteLine("Inserisci l'importo da depositare");
+                float importo = float.Parse(Console.ReadLine() ?? "0");
+                try
+                {
+                    conto.Deposita(importo);
+                }
+                catch (LimiteDepositoRaggiuntoException ex)
+                {
+                    Console.WriteLine("Errore: " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Errore generico: " + ex.Message);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Comando non riconosciuto.");
+            }
+
+            Console.WriteLine("Selezione un comando: (0: Preleva, 1: Esci)");
+            comando = Console.ReadLine();

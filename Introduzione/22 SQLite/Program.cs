@@ -3,7 +3,7 @@ using System.Data.SQLite;
 
 namespace SQLiteExamples;
 
-class Program
+/*class Program
 {
     static void Main()
     {
@@ -41,4 +41,4 @@ class Program
             Console.WriteLine($"{reader["id"]}: {reader["name"]} ({reader["age"]})");
         }
     }
-}
+}*/
