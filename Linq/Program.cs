@@ -18,5 +18,7 @@ class Program
         AllAnyContainsExample.Execute();
         OrderByExample.Execute();
         CustomComparerOrderByExample.Execute();
+        CountSumExample.Execute();
+        MaxMinAverageExample.Execute();
     }
 }
