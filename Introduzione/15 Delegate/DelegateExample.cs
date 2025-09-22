@@ -26,10 +26,12 @@ namespace DelegateExample
             Operation op = Add;
 
             // Chiamata del metodo tramite il delegate
+            // op(10, 5) -> Add(10, 5)
             int result = op(10, 5);
             Console.WriteLine("Somma: " + result);  // Output: Somma: 15
 
             // Riassegnazione del delegate al metodo Subtract
+            // op(10, 5) -> Subtract(10, 5)
             op = Subtract;
 
             // Chiamata del metodo tramite il delegate
@@ -41,6 +43,7 @@ namespace DelegateExample
             op += Subtract;
 
             //
+            // op(10, 25) -> Add(10, 25) + Subtract(10, 25)
             result = op(10, 25);
             Console.WriteLine("Risultato: " + result);
         }

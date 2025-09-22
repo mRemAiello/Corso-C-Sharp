@@ -33,9 +33,17 @@ namespace EventExample
                 };
                 // Se la soglia è raggiunta, solleva l'evento
                 ThresholdReached?.Invoke(this, args);
+
+                //
+                // SMSSender.Send("Soglia di temperatura superata!");
+                // EmailSender.Send("Soglia di temperatura superata!");
+                // LogWriter.Write("Soglia di temperatura superata!");
+                // 
             }
         }
     }
+
+    // SmsSender -> ThresholdReached -> Send()
 
     class EventEx
     {

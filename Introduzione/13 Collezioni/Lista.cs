@@ -26,10 +26,15 @@ public class Lista
         }
 
         // Rimozione di un elemento dalla lista
-        frutti.Remove("Banana");
+        bool rimosso = frutti.Remove("Banana");
+        Console.WriteLine("Banana rimossa: " + rimosso);
 
         // Add Multiplo
         frutti.AddRange(valori);
+
+        // Trova l'indice di un elemento
+        int index = frutti.IndexOf("Banana");
+        Console.WriteLine("L'indice di Banana è: " + index);
 
         // Controllo se un elemento esiste nella lista
         if (frutti.Contains("Ciao1"))
