@@ -8,7 +8,7 @@ Raccolta di materiale didattico per il corso di C# e MAUI. Ogni macro-area del p
 - **ProgrammazioneOggetti** (`ProgrammazioneOggetti/`): classi, proprietà, interfacce, ereditarietà ed eccezioni.
 - **StruttureEDati** (`StruttureEDati/`): esempi su generics, collezioni e gestione di file.
 - **ProgrammazioneAvanzata** (`ProgrammazioneAvanzata/`): delegati, eventi e programmazione asincrona.
-- **PatternEDatabase** (`PatternEDatabase/`): MVVM, accesso SQLite e pattern Singleton.
+- **PatternEDatabase** (`PatternEDatabase/`): MVVM, accesso SQLite e pattern di progettazione (Singleton, Observer, State, Command).
 - **ProgettiExtra** (`ProgettiExtra/`): esercizi e mini-progetti di approfondimento.
 - **Linq** (`Linq/`): esempi dedicati alle principali operazioni LINQ.
 
