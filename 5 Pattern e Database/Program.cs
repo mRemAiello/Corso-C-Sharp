@@ -1,4 +1,5 @@
 using System;
+using PatternEDatabase.Command;
 using PatternEDatabase.Observer;
 using PatternEDatabase.State;
 using SQLiteExamples;
@@ -13,7 +14,7 @@ public static class Program
         {
             if (!TryRunDemo(args[0]))
             {
-                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, state.");
+                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state.");
             }
 
             return;
@@ -27,7 +28,8 @@ public static class Program
             Console.WriteLine(" 2. 22 SQLite");
             Console.WriteLine(" 3. 23 Singleton");
             Console.WriteLine(" 4. 24 Observer");
-            Console.WriteLine(" 5. 25 State");
+            Console.WriteLine(" 5. 25 Command");
+            Console.WriteLine(" 6. 25 State");
             Console.WriteLine(" Q. Esci");
             Console.WriteLine();
             Console.Write("Seleziona un'opzione: ");
@@ -78,6 +80,10 @@ public static class Program
                 ObserverPatternDemo.Run();
                 return true;
             case "5":
+            case "command":
+                CommandPatternDemo.Run();
+                return true;
+            case "6":
             case "state":
                 StatePatternDemo.Run();
                 return true;
