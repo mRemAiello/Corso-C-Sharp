@@ -1,11 +1,10 @@
-﻿using DelegateExample;
+namespace ProgettiExtraApp;
 
-class Program
+public static class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         Rubrica rubrica = new Rubrica();
-        //FileManager fileManager = new FileManager(rubrica);
 
         Contatto contatto = new Contatto("Mario Rossi", "mario.rossi@gmai.com", "340");
         rubrica.OnContattoAggiunto += OnContattoAggiunto;
@@ -15,7 +14,7 @@ class Program
         Console.WriteLine("Post aggiunta");
     }
 
-    static void OnContattoAggiunto(Contatto contatto)
+    private static void OnContattoAggiunto(Contatto contatto)
     {
         Console.WriteLine($"Contatto aggiunto: {contatto}, dalla classe Program funzione Main");
     }
