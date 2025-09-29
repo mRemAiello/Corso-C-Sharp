@@ -8,6 +8,7 @@ public static class Program
         Console.WriteLine(" - 15 Delegate");
         Console.WriteLine(" - 16 Eventi");
         Console.WriteLine(" - 17 Async Await");
+        Console.WriteLine(" - 18 Memory Management (Modulo 2)");
         Console.WriteLine();
         Console.WriteLine("Apri ogni cartella per esplorare il relativo codice sorgente.");
     }
