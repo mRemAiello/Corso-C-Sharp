@@ -1,0 +1,20 @@
+# Creare un dizionario di partenza che contenga un nome ed un cognome. Dopo inserire la matricola, chiedendola
+# in input (insieme a nome e cognome) e aggiungere poi gli esami sostenuti con il nome della materia
+# ed il voto ottenuto. Calcola inoltre la media delle materie.
+
+
+# Crea un dizionario vuoto chiamato "rubrica" per memorizzare i contatti.
+# Fornisci all'utente un menu con le opzioni di aggiungere un nuovo contatto, visualizzare i dettagli di un contatto o eliminare un contatto.
+# Implementa la logica per ciascuna opzione del menu.
+# Assicurati di gestire i casi in cui l'utente cerca di visualizzare o eliminare un contatto che non esiste.
+
+
+# Creare un dizionario dove le chiavi sono dei semi (bastoni, coppe, denari, cuori) e i valori sono una lista da 1 a 13.
+# Estrai una carta casuale a partire da un seme chiesto all'utente. Estrai anche una carta casuale senza chiedere nulla all'utente.
+
+
+# Unisci 2 dizionari qualunque in un terzo.
+# Poi cerca di generalizzare l'algoritmo e unisci N dizionari dentro un dizionario.
+
+
+# Dati2 dizionari, uniscili in un terzo invertendo le chiave con i valori e viceversa.
