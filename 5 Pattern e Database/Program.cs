@@ -1,6 +1,7 @@
 using System;
 using PatternEDatabase.Builder;
 using PatternEDatabase.Command;
+using PatternEDatabase.Decorator;
 using PatternEDatabase.Facade;
 using PatternEDatabase.Factory;
 using PatternEDatabase.Observer;
@@ -17,7 +18,7 @@ public static class Program
         {
             if (!TryRunDemo(args[0]))
             {
-                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state, builder, factory, facade.");
+                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state, builder, factory, facade, decorator.");
             }
 
             return;
@@ -36,6 +37,7 @@ public static class Program
             Console.WriteLine(" 7. Builder");
             Console.WriteLine(" 8. Factory Method / Abstract Factory");
             Console.WriteLine(" 9. Facade");
+            Console.WriteLine("10. Decorator");
             Console.WriteLine(" Q. Esci");
             Console.WriteLine();
             Console.Write("Seleziona un'opzione: ");
@@ -107,6 +109,10 @@ public static class Program
             case "9":
             case "facade":
                 FacadePatternDemo.Run();
+                return true;
+            case "10":
+            case "decorator":
+                DecoratorPatternDemo.Run();
                 return true;
             default:
                 return false;
