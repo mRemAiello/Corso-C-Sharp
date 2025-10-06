@@ -52,3 +52,10 @@ public class DatabaseManager : GenericSingleton<DatabaseManager>
         Console.WriteLine("[DatabaseManager] Salvataggio delle modifiche eseguito.");
     }
 }
+
+// DatabaseManager.Instance.AddTable("Users");
+// DatabaseManager.Instance.GetTable("Users");
+// DatabaseManager.Instance.SaveChanges();
+
+// SaveManager.Instance.Save("Profiles/User1/Theme", "VintageDark");
+// var theme = SaveManager.Instance.Load<string>("Profiles/User1/Theme");

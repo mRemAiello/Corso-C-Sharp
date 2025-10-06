@@ -21,9 +21,12 @@ Esercizio 6: Gestione di Contatti e File
 
     Crea una classe Contatto con gli attributi Nome, Cognome e NumeroTelefono.
     Definisci un'interfaccia ISalvabileSuFile con i metodi SalvaSuFile e CaricaDaFile.
+    
     Crea una classe Rubrica che contenga una lista di oggetti Contatto e implementi l'interfaccia ISalvabileSuFile.
         Il metodo SalvaSuFile deve salvare tutti i contatti della rubrica in un file.
         Il metodo CaricaDaFile deve caricare i contatti da un file e aggiungerli alla lista della rubrica.
-    Crea un programma che permetta all'utente di aggiungere nuovi contatti alla rubrica, salvare la rubrica su file e caricare i contatti esistenti da un file.
+    
+    Crea un programma che permetta all'utente di aggiungere nuovi contatti alla rubrica, 
+    salvare la rubrica su file e caricare i contatti esistenti da un file.
 
 */
