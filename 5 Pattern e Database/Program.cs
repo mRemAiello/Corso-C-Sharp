@@ -1,5 +1,6 @@
 using System;
 using PatternEDatabase.Command;
+using PatternEDatabase.Factory;
 using PatternEDatabase.Observer;
 using PatternEDatabase.State;
 using SQLiteExamples;
@@ -30,6 +31,7 @@ public static class Program
             Console.WriteLine(" 4. 24 Observer");
             Console.WriteLine(" 5. 25 Command");
             Console.WriteLine(" 6. 25 State");
+            Console.WriteLine(" 7. 26 Factory Method / Abstract Factory");
             Console.WriteLine(" Q. Esci");
             Console.WriteLine();
             Console.Write("Seleziona un'opzione: ");
@@ -86,6 +88,12 @@ public static class Program
             case "6":
             case "state":
                 StatePatternDemo.Run();
+                return true;
+            case "7":
+            case "factory":
+            case "factory method":
+            case "abstract factory":
+                FactoryPatternDemo.Run();
                 return true;
             default:
                 return false;
