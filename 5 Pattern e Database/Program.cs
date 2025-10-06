@@ -1,6 +1,7 @@
 using System;
 using PatternEDatabase.Builder;
 using PatternEDatabase.Command;
+using PatternEDatabase.Factory;
 using PatternEDatabase.Observer;
 using PatternEDatabase.State;
 using SQLiteExamples;
@@ -25,13 +26,14 @@ public static class Program
         while (running)
         {
             Console.WriteLine("Pattern e accesso ai dati inclusi:");
-            Console.WriteLine(" 1. 21 MVVC");
-            Console.WriteLine(" 2. 22 SQLite");
-            Console.WriteLine(" 3. 23 Singleton");
-            Console.WriteLine(" 4. 24 Observer");
-            Console.WriteLine(" 5. 25 Command");
-            Console.WriteLine(" 6. 25 State");
-            Console.WriteLine(" 7. 26 Builder");
+            Console.WriteLine(" 1. MVVC");
+            Console.WriteLine(" 2. SQLite");
+            Console.WriteLine(" 3. Singleton");
+            Console.WriteLine(" 4. Observer");
+            Console.WriteLine(" 5. Command");
+            Console.WriteLine(" 6. State");
+            Console.WriteLine(" 7. Builder");
+            Console.WriteLine(" 8. Factory Method / Abstract Factory");
             Console.WriteLine(" Q. Esci");
             Console.WriteLine();
             Console.Write("Seleziona un'opzione: ");
@@ -92,6 +94,10 @@ public static class Program
             case "7":
             case "builder":
                 BuilderPatternDemo.Run();
+            case "factory":
+            case "factory method":
+            case "abstract factory":
+                FactoryPatternDemo.Run();
                 return true;
             default:
                 return false;
