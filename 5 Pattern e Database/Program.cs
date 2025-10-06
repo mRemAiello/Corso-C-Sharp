@@ -1,4 +1,5 @@
 using System;
+using PatternEDatabase.Builder;
 using PatternEDatabase.Command;
 using PatternEDatabase.Observer;
 using PatternEDatabase.State;
@@ -14,7 +15,7 @@ public static class Program
         {
             if (!TryRunDemo(args[0]))
             {
-                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state.");
+                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state, builder.");
             }
 
             return;
@@ -30,6 +31,7 @@ public static class Program
             Console.WriteLine(" 4. 24 Observer");
             Console.WriteLine(" 5. 25 Command");
             Console.WriteLine(" 6. 25 State");
+            Console.WriteLine(" 7. 26 Builder");
             Console.WriteLine(" Q. Esci");
             Console.WriteLine();
             Console.Write("Seleziona un'opzione: ");
@@ -86,6 +88,10 @@ public static class Program
             case "6":
             case "state":
                 StatePatternDemo.Run();
+                return true;
+            case "7":
+            case "builder":
+                BuilderPatternDemo.Run();
                 return true;
             default:
                 return false;
