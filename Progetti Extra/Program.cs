@@ -16,14 +16,14 @@ public static class Program
 {
     public static async Task Main(string[] args)
     {
-        Rubrica rubrica = new Rubrica();
+        /*Rubrica rubrica = new Rubrica();
 
         Contatto contatto = new Contatto("Mario Rossi", "mario.rossi@gmai.com", "340");
         rubrica.OnContattoAggiunto += OnContattoAggiunto;
 
         Console.WriteLine("Pre aggiunta");
         rubrica.AggiungiContatto(contatto);
-        Console.WriteLine("Post aggiunta");
+        Console.WriteLine("Post aggiunta");*/
 
         Console.WriteLine();
         Console.WriteLine("Verifica disponibilità serie TV su Netflix:\n");
@@ -126,10 +126,10 @@ internal sealed class NetflixCatalogApiClient
     }
 
     private sealed record JustWatchCatalogRequest(
-        [property: JsonPropertyName("page_size")] int PageSize,
-        [property: JsonPropertyName("page")] int Page,
-        [property: JsonPropertyName("query")] string Query,
-        [property: JsonPropertyName("providers")] string[] Providers);
+        [property: JsonPropertyName("pageSize")] int pageSize,
+        [property: JsonPropertyName("page")] int page,
+        [property: JsonPropertyName("query")] string query,
+        [property: JsonPropertyName("providers")] string[] providers);
 
     private sealed record JustWatchCatalogResponse(
         [property: JsonPropertyName("items")] JustWatchItem[]? Items);

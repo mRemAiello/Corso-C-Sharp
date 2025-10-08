@@ -1,12 +1,14 @@
 namespace DelegateExample
 {
     // Definizione del delegate
+    // Operation tipo di funzione che accetta due int e restituisce un int
     public delegate int Operation(int x, int y);
+    
 
     class DelegateEx
     {
         //
-        public Operation? Operation { get; set; }
+        public Operation? _op;
 
         // Metodo che somma due numeri
         static int Add(int a, int b)
@@ -18,6 +20,11 @@ namespace DelegateExample
         static int Subtract(int a, int b)
         {
             return a - b;
+        }
+
+        static int Multiply(int a, int b)
+        {
+            return a * b;
         }
 
         public void Execute()

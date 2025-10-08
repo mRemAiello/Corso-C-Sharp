@@ -1,7 +1,7 @@
 namespace EventExample
 {
     // Definizione del delegate che rappresenta la firma dei metodi gestori dell'evento
-    public delegate void ThresholdReachedEventHandler(object sender, EventArgs e);
+    public delegate void ThresholdReachedEvent(object sender, EventArgs e);
 
     class ThermostatEventArgs : EventArgs
     {
@@ -15,13 +15,12 @@ namespace EventExample
         private int _temperature;
 
         // Definizione dell'evento
-        public event ThresholdReachedEventHandler? ThresholdReached;
+        public event ThresholdReachedEvent? OnThresholdReached;
 
         // Metodo per aumentare la temperatura
         public void IncreaseTemperature(int increment)
         {
             _temperature += increment;
-            Console.WriteLine("Temperatura attuale: " + _temperature);
 
             // Verifica se la temperatura supera la soglia di 100 gradi
             if (_temperature >= 100)
@@ -31,8 +30,9 @@ namespace EventExample
                     TemperaturaCorrente = _temperature,
                     SogliaDiSuperamento = _temperature - 100
                 };
+
                 // Se la soglia è raggiunta, solleva l'evento
-                ThresholdReached?.Invoke(this, args);
+                OnThresholdReached?.Invoke(this, args);
 
                 //
                 // SMSSender.Send("Soglia di temperatura superata!");
@@ -52,7 +52,13 @@ namespace EventExample
             Thermostat thermostat = new Thermostat();
 
             // Iscrizione all'evento
-            thermostat.ThresholdReached += HandleThresholdReached;
+            thermostat.OnThresholdReached += HandleThresholdReached;
+
+            // SmsSender smsSender = new SmsSender(3464471541);
+            // thermostat.ThresholdReached += smsSender.Send;
+
+            // LogWriter logWriter = new LogWriter("log.txt");
+            // thermostat.ThresholdReached += logWriter.Write;
 
             // Aumento della temperatura
             thermostat.IncreaseTemperature(30);
