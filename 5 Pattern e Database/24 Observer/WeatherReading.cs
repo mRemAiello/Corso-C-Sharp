@@ -6,4 +6,16 @@ namespace PatternEDatabase.Observer;
 /// <param name="TemperatureCelsius">Temperatura in gradi centigradi.</param>
 /// <param name="HumidityPercentage">Percentuale di umidità relativa.</param>
 /// <param name="PressureHpa">Pressione atmosferica in hPa.</param>
-public readonly record struct WeatherReading(decimal TemperatureCelsius, int HumidityPercentage, decimal PressureHpa);
+public class WeatherReading
+{
+    public decimal TemperatureCelsius;
+    public int HumidityPercentage;
+    public decimal PressureHpa;
+
+    public WeatherReading(decimal temperatureCelsius, int humidityPercentage, decimal pressureHpa)
+    {
+        TemperatureCelsius = temperatureCelsius;
+        HumidityPercentage = humidityPercentage;
+        PressureHpa = pressureHpa;
+    }
+}

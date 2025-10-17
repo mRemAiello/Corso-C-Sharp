@@ -1,5 +1,8 @@
 using System.Collections;
 
+// DatabaseManager -> Singleton
+// Libreria (100 istanze)
+
 public class Libreria : IEnumerable
 {
     private Libro[] _libri;

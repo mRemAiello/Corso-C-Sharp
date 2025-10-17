@@ -3,13 +3,12 @@ public class Program
     public static void Main(string[] args)
     {
         Thermostat thermostat = new(20, 100, 0);
-        SenderSMS sender = new();
 
         // Iscrizione agli eventi
         thermostat.OnMaxThresholdReached += (senderObj, eventArgs) =>
         {
-            Console.WriteLine($"[EVENTO] Soglia massima superata! Temperatura attuale: {eventArgs.CurrentTemperature}°C, Superata di: {eventArgs.ThresholdExceededBy}°C");
-            sender.Send($"Allarme! La temperatura ha superato la soglia massima di {thermostat.MaxThreshold}°C ed è attualmente a {eventArgs.CurrentTemperature}°C.", "+391234567890");
+            LogWriter.Instance.WriteLine($"[EVENTO] Soglia massima superata! Temperatura attuale: {eventArgs.CurrentTemperature}°C, Superata di: {eventArgs.ThresholdExceededBy}°C");
+            SenderSMS.Instance.Send("+391234567890", $"Allarme! La temperatura ha superato la soglia massima di {thermostat.MaxThreshold}°C ed è attualmente a {eventArgs.CurrentTemperature}°C.");
         };
 
         //
@@ -51,5 +50,8 @@ public class Program
 
         //
         thermostat.ShutDown();
+
+        // 
+        SenderSMS.Instance.Send("320204394", "Il termostato XY si è spento");
     }
 }

@@ -14,21 +14,21 @@ public sealed class WeatherStation
     /// <summary>
     /// Registra un nuovo osservatore e restituisce un oggetto IDisposable per annullare l'iscrizione.
     /// </summary>
-    public IDisposable Subscribe(IWeatherObserver observer)
+    public void Subscribe(IWeatherObserver observer)
     {
-        ArgumentNullException.ThrowIfNull(observer);
-
         if (!_observers.Contains(observer))
         {
+            // TODO: Qualora io voglia delle priorità, non devo mettere gli oggetti in lista uno dopo l'altro,
+            // Ma impostarli in ordine di priorità
             _observers.Add(observer);
 
+            // Dopo averlo aggiunto in lista, lo notifico con le novità del meteo
+            // E' opzionale, il design pattern non lo cita come obbligo
             if (_lastReading is WeatherReading lastReading)
             {
                 observer.Update(lastReading);
             }
         }
-
-        return new Subscription(_observers, observer);
     }
 
     /// <summary>

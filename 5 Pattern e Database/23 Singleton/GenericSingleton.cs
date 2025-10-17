@@ -16,6 +16,11 @@ public class GenericSingleton<T> where T : GenericSingleton<T>, new()
         }
     }
 
+    protected GenericSingleton()
+    {
+    }
+
+    // Distruttore
     ~GenericSingleton()
     {
         if (Instance == this)
