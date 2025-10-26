@@ -28,6 +28,9 @@ public static class SQLiteDemo
                 connection);
             create.ExecuteNonQuery();
 
+            // uso simile al format, diventa 
+            // nella query INSERT INTO people (name, age) VALUES (@name, @age) 
+            // andiamo a sostituire @name e @age con i valori reali
             using var insert = new SQLiteCommand(
                 "INSERT INTO people (name, age) VALUES (@name, @age)",
                 connection);
@@ -44,6 +47,8 @@ public static class SQLiteDemo
 
             using var query = new SQLiteCommand("SELECT id, name, age FROM people", connection);
             using var reader = query.ExecuteReader();
+            // il contenuto di reader.Read()
+            // reader["id"], reader["name"], reader["age"]
             while (reader.Read())
             {
                 Console.WriteLine($"{reader["id"]}: {reader["name"]} ({reader["age"]})");
