@@ -1,4 +1,5 @@
 using System;
+using PatternEDatabase.Adapter;
 using PatternEDatabase.Bridge;
 using PatternEDatabase.Builder;
 using PatternEDatabase.ChainOfResponsibility;
@@ -20,7 +21,7 @@ public static class Program
         {
             if (!TryRunDemo(args[0]))
             {
-                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state, builder, factory, facade, decorator, chain, bridge.");
+                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state, builder, factory, facade, decorator, chain, bridge, adapter.");
             }
 
             return;
@@ -42,6 +43,7 @@ public static class Program
             Console.WriteLine("10. Decorator");
             Console.WriteLine("11. Chain of Responsibility");
             Console.WriteLine("12. Bridge");
+            Console.WriteLine("13. Adapter");
             Console.WriteLine(" Q. Esci");
             Console.WriteLine();
             Console.Write("Seleziona un'opzione: ");
@@ -126,6 +128,10 @@ public static class Program
             case "12":
             case "bridge":
                 BridgePatternDemo.Run();
+                return true;
+            case "13":
+            case "adapter":
+                AdapterPatternDemo.Run();
                 return true;
             default:
                 return false;
