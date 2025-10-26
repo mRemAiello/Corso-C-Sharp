@@ -9,6 +9,7 @@ using PatternEDatabase.Decorator;
 using PatternEDatabase.Facade;
 using PatternEDatabase.Factory;
 using PatternEDatabase.Observer;
+using PatternEDatabase.Flyweight;
 using PatternEDatabase.State;
 using SQLiteExamples;
 
@@ -22,7 +23,7 @@ public static class Program
         {
             if (!TryRunDemo(args[0]))
             {
-                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state, builder, factory, facade, decorator, chain, bridge, adapter, composite.");
+                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state, builder, factory, facade, decorator, chain, bridge, adapter, composite, flyweight.");
             }
 
             return;
@@ -46,6 +47,7 @@ public static class Program
             Console.WriteLine("12. Bridge");
             Console.WriteLine("13. Adapter");
             Console.WriteLine("14. Composite");
+            Console.WriteLine("15. Flyweight");
             Console.WriteLine(" Q. Esci");
             Console.WriteLine();
             Console.Write("Seleziona un'opzione: ");
@@ -138,6 +140,10 @@ public static class Program
             case "14":
             case "composite":
                 CompositePatternDemo.Run();
+                return true;
+            case "15":
+            case "flyweight":
+                FlyweightPatternDemo.Run();
                 return true;
             default:
                 return false;
