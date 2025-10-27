@@ -9,7 +9,7 @@ public ref struct StackSpanBuilder
     private Span<char> _buffer;
     private int _written;
 
-    public StackSpanBuilder(scoped Span<char> buffer)
+    public StackSpanBuilder(Span<char> buffer)
     {
         _buffer = buffer;
         _written = 0;
