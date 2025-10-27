@@ -7,8 +7,12 @@ namespace DelegateExample
 
     class DelegateEx
     {
-        //
-        public Operation? _op;
+        private Operation _op;
+
+        public DelegateEx()
+        {
+            _op = Add;
+        }
 
         // Metodo che somma due numeri
         static int Add(int a, int b)
@@ -30,28 +34,26 @@ namespace DelegateExample
         public void Execute()
         {
             // Creazione di un'istanza del delegate e assegnazione del metodo Add
-            Operation op = Add;
-
             // Chiamata del metodo tramite il delegate
-            // op(10, 5) -> Add(10, 5)
-            int result = op(10, 5);
+            // _op(10, 5) -> Add(10, 5)
+            int result = _op(10, 5);
             Console.WriteLine("Somma: " + result);  // Output: Somma: 15
 
             // Riassegnazione del delegate al metodo Subtract
             // op(10, 5) -> Subtract(10, 5)
-            op = Subtract;
+            _op = Subtract;
 
             // Chiamata del metodo tramite il delegate
-            result = op(10, 5);
+            result = _op(10, 5);
             Console.WriteLine("Sottrazione: " + result);  // Output: Sottrazione: 5
 
             //
-            op = Add;
-            op += Subtract;
+            _op = Add;
+            _op += Subtract;
 
             //
             // op(10, 25) -> Add(10, 25) + Subtract(10, 25)
-            result = op(10, 25);
+            result = _op(10, 25);
             Console.WriteLine("Risultato: " + result);
         }
     }
