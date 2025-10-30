@@ -4,8 +4,8 @@ Questo progetto mostra come creare una semplice applicazione Windows Forms con .
 
 ## Funzionalità
 - Una finestra centrata con titolo.
-- Un'etichetta di benvenuto.
-- Un pulsante che, se premuto, mostra l'ora corrente in un `MessageBox`.
+- Un layout con pulsanti che reagiscono agli eventi di `Click`, `MouseEnter` e `MouseLeave` mostrando un messaggio di stato.
+- Una `TextBox` e un pulsante che visualizzano il testo digitato all'interno di una `Label`.
 
 ## Esecuzione
 1. Apri il progetto su Windows con Visual Studio 2022 (o successivo).
