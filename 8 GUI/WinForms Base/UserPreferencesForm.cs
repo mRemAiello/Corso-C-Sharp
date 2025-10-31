@@ -1,29 +1,45 @@
-using System;
-using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
-
 namespace WinFormsBase;
 
 public class UserPreferencesForm : Form
 {
-    private readonly RadioButton _lightThemeRadio;
-    private readonly RadioButton _darkThemeRadio;
-    private readonly RadioButton _systemThemeRadio;
+    private RadioButton? _lightThemeRadio;
+    private RadioButton? _darkThemeRadio;
+    private RadioButton? _systemThemeRadio;
 
-    private readonly CheckBox _emailCheckbox;
-    private readonly CheckBox _smsCheckbox;
-    private readonly CheckBox _pushCheckbox;
+    private CheckBox? _emailCheckbox;
+    private CheckBox? _smsCheckbox;
+    private CheckBox? _pushCheckbox;
 
-    private readonly Label _summaryLabel;
+    private Button? _saveButton;
+    private Button? _resetButton;
+    private Button? _closeButton;
+
+    private Label? _summaryLabel;
+
+    Label _titleLabel = new()
+    {
+        Dock = DockStyle.Top,
+        Height = 50,
+        Text = "Imposta le tue preferenze",
+        Font = new Font(FontFamily.GenericSansSerif, 16, FontStyle.Bold),
+        TextAlign = ContentAlignment.MiddleCenter,
+        Margin = new Padding(0, 0, 0, 12)
+    };
 
     public UserPreferencesForm()
     {
         Text = "Preferenze utente";
         StartPosition = FormStartPosition.CenterScreen;
-        MinimumSize = new Size(520, 360);
-        ClientSize = new Size(640, 420);
+        MinimumSize = new Size(550, 400);
+        MaximumSize = new Size(700, 500);
+        ClientSize = new Size(700, 500);
 
+        //
+        InitRadioButtons();
+        InitCheckboxes();
+        InitActionButtons();
+
+        //
         var mainLayout = new TableLayoutPanel
         {
             Dock = DockStyle.Fill,
@@ -35,15 +51,6 @@ public class UserPreferencesForm : Form
         mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
         mainLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         mainLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-
-        var titleLabel = new Label
-        {
-            Dock = DockStyle.Fill,
-            Text = "Imposta le tue preferenze",
-            Font = new Font(FontFamily.GenericSansSerif, 16, FontStyle.Bold),
-            TextAlign = ContentAlignment.MiddleCenter,
-            Margin = new Padding(0, 0, 0, 12)
-        };
 
         var preferencesLayout = new TableLayoutPanel
         {
@@ -70,27 +77,7 @@ public class UserPreferencesForm : Form
             WrapContents = false
         };
 
-        _lightThemeRadio = new RadioButton
-        {
-            AutoSize = true,
-            Text = "Chiaro",
-            Checked = true
-        };
-        _darkThemeRadio = new RadioButton
-        {
-            AutoSize = true,
-            Text = "Scuro"
-        };
-        _systemThemeRadio = new RadioButton
-        {
-            AutoSize = true,
-            Text = "Sistema"
-        };
-
-        _lightThemeRadio.CheckedChanged += (_, _) => UpdateSummary();
-        _darkThemeRadio.CheckedChanged += (_, _) => UpdateSummary();
-        _systemThemeRadio.CheckedChanged += (_, _) => UpdateSummary();
-
+        // Inserisco i RadioButton nel FlowLayoutPanel
         themeOptionsPanel.Controls.Add(_lightThemeRadio);
         themeOptionsPanel.Controls.Add(_darkThemeRadio);
         themeOptionsPanel.Controls.Add(_systemThemeRadio);
@@ -111,6 +98,72 @@ public class UserPreferencesForm : Form
             WrapContents = false
         };
 
+        notificationsPanel.Controls.Add(_emailCheckbox);
+        notificationsPanel.Controls.Add(_smsCheckbox);
+        notificationsPanel.Controls.Add(_pushCheckbox);
+        notificationsGroup.Controls.Add(notificationsPanel);
+
+        // Layout Tabella che divide in 2
+        // BoxGroup1 -> FlowLayout -> 3 bottoni
+        // BoxGroup2 -> FlowLayout -> 3 checkbox
+        preferencesLayout.Controls.Add(themeGroup, 0, 0);
+        preferencesLayout.Controls.Add(notificationsGroup, 1, 0);
+
+        _summaryLabel = new Label
+        {
+            Dock = DockStyle.Fill,
+            AutoSize = true,
+            Text = "Seleziona le preferenze per vedere un riepilogo.",
+            Margin = new Padding(0, 12, 0, 12)
+        };
+
+        var actionPanel = new FlowLayoutPanel
+        {
+            FlowDirection = FlowDirection.RightToLeft,
+            Dock = DockStyle.Fill,
+            AutoSize = true
+        };
+
+        actionPanel.Controls.Add(_closeButton);
+        actionPanel.Controls.Add(_resetButton);
+        actionPanel.Controls.Add(_saveButton);
+
+        mainLayout.Controls.Add(_titleLabel, 0, 0);
+        mainLayout.Controls.Add(preferencesLayout, 0, 1);
+        mainLayout.Controls.Add(_summaryLabel, 0, 2);
+        mainLayout.Controls.Add(actionPanel, 0, 3);
+
+        Controls.Add(mainLayout);
+
+        UpdateSummary();
+    }
+
+    private void InitRadioButtons()
+    {
+        _lightThemeRadio = new RadioButton
+        {
+            AutoSize = true,
+            Text = "Chiaro",
+            Checked = true
+        };
+        _darkThemeRadio = new RadioButton
+        {
+            AutoSize = true,
+            Text = "Scuro"
+        };
+        _systemThemeRadio = new RadioButton
+        {
+            AutoSize = true,
+            Text = "Sistema"
+        };
+
+        _lightThemeRadio.CheckedChanged += (_, _) => UpdateSummary();
+        _darkThemeRadio.CheckedChanged += (_, _) => UpdateSummary();
+        _systemThemeRadio.CheckedChanged += (_, _) => UpdateSummary();
+    }
+
+    private void InitCheckboxes()
+    {
         _emailCheckbox = new CheckBox
         {
             AutoSize = true,
@@ -130,55 +183,29 @@ public class UserPreferencesForm : Form
         _emailCheckbox.CheckedChanged += (_, _) => UpdateSummary();
         _smsCheckbox.CheckedChanged += (_, _) => UpdateSummary();
         _pushCheckbox.CheckedChanged += (_, _) => UpdateSummary();
+    }
 
-        notificationsPanel.Controls.Add(_emailCheckbox);
-        notificationsPanel.Controls.Add(_smsCheckbox);
-        notificationsPanel.Controls.Add(_pushCheckbox);
-        notificationsGroup.Controls.Add(notificationsPanel);
-
-        preferencesLayout.Controls.Add(themeGroup, 0, 0);
-        preferencesLayout.Controls.Add(notificationsGroup, 1, 0);
-
-        _summaryLabel = new Label
+    private void InitActionButtons()
+    {
+        _saveButton = new Button
         {
-            Dock = DockStyle.Fill,
-            AutoSize = true,
-            Text = "Seleziona le preferenze per vedere un riepilogo.",
-            Margin = new Padding(0, 12, 0, 12)
+            Text = "Salva",
+            AutoSize = true
         };
-
-        var actionPanel = new FlowLayoutPanel
+        _resetButton = new Button
         {
-            FlowDirection = FlowDirection.RightToLeft,
-            Dock = DockStyle.Fill,
+            Text = "Resetta",
+            AutoSize = true
+        };
+        _closeButton = new Button
+        {
+            Text = "Chiudi",
             AutoSize = true
         };
 
-        var closeButton = new Button
-        {
-            AutoSize = true,
-            Text = "Chiudi"
-        };
-        closeButton.Click += (_, _) => Close();
-
-        var resetButton = new Button
-        {
-            AutoSize = true,
-            Text = "Reimposta"
-        };
-        resetButton.Click += (_, _) => ResetPreferences();
-
-        actionPanel.Controls.Add(closeButton);
-        actionPanel.Controls.Add(resetButton);
-
-        mainLayout.Controls.Add(titleLabel, 0, 0);
-        mainLayout.Controls.Add(preferencesLayout, 0, 1);
-        mainLayout.Controls.Add(_summaryLabel, 0, 2);
-        mainLayout.Controls.Add(actionPanel, 0, 3);
-
-        Controls.Add(mainLayout);
-
-        UpdateSummary();
+        _saveButton.Click += (_, _) => MessageBox.Show("Preferenze salvate!", "Salvataggio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        _resetButton.Click += (_, _) => ResetPreferences();
+        _closeButton.Click += (_, _) => Close();
     }
 
     private void ResetPreferences()
@@ -186,11 +213,9 @@ public class UserPreferencesForm : Form
         _lightThemeRadio.Checked = true;
         _darkThemeRadio.Checked = false;
         _systemThemeRadio.Checked = false;
-
-        foreach (var checkbox in new[] { _emailCheckbox, _smsCheckbox, _pushCheckbox })
-        {
-            checkbox.Checked = false;
-        }
+        _emailCheckbox.Checked = false;
+        _smsCheckbox.Checked = false;
+        _pushCheckbox.Checked = false;
 
         UpdateSummary();
     }

@@ -1,7 +1,3 @@
-using System;
-using System.Drawing;
-using System.Windows.Forms;
-
 namespace WinFormsBase;
 
 public partial class MainForm : Form
@@ -13,7 +9,7 @@ public partial class MainForm : Form
     {
         Text = "WinForms - Esempio Base";
         StartPosition = FormStartPosition.CenterScreen;
-        ClientSize = new Size(420, 220);
+        ClientSize = new Size(800, 600);
         MinimumSize = new Size(360, 200);
 
         _messageLabel = new Label
@@ -28,7 +24,8 @@ public partial class MainForm : Form
 
         _actionButton = new Button
         {
-            Dock = DockStyle.Fill,
+            Dock = DockStyle.Bottom,
+            Height = 40,
             Margin = new Padding(20),
             Text = "Mostra Ora"
         };
@@ -41,6 +38,14 @@ public partial class MainForm : Form
     private void OnActionButtonClick(object? sender, EventArgs e)
     {
         var ora = DateTime.Now.ToString("HH:mm:ss");
-        MessageBox.Show($"Sono le {ora}", "WinForms", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        var result = MessageBox.Show($"Sono le {ora}", "WinForms", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+        if (result == DialogResult.Yes)
+        {
+            _messageLabel.Text = "Hai cliccato Sì!";
+        }
+        else
+        {
+            _messageLabel.Text = "Hai cliccato No!";
+        }
     }
 }
