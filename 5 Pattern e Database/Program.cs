@@ -12,6 +12,7 @@ using PatternEDatabase.Observer;
 using PatternEDatabase.Flyweight;
 using PatternEDatabase.State;
 using PatternEDatabase.Proxy;
+using PatternEDatabase.Mvp;
 using SQLiteExamples;
 
 namespace PatternEDatabaseApp;
@@ -50,6 +51,7 @@ public static class Program
             Console.WriteLine("14. Composite");
             Console.WriteLine("15. Flyweight");
             Console.WriteLine("16. Proxy");
+            Console.WriteLine("17. MVP");
             Console.WriteLine(" Q. Esci");
             Console.WriteLine();
             Console.Write("Seleziona un'opzione: ");
@@ -150,6 +152,10 @@ public static class Program
             case "16":
             case "proxy":
                 ProxyPatternDemo.Run();
+                return true;
+            case "17":
+            case "mvp":
+                MvpDemo.Run();
                 return true;
             default:
                 return false;
