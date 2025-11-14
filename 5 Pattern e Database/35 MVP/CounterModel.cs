@@ -7,7 +7,7 @@ namespace PatternEDatabase.Mvp;
 /// </summary>
 public class CounterModel
 {
-    public event Action<int>? CounterChanged;
+    public event Action<int>? OnCounterChanged;
 
     /// <summary>
     /// Valore corrente del contatore.
@@ -20,7 +20,7 @@ public class CounterModel
     public void Increment()
     {
         Value++;
-        CounterChanged?.Invoke(Value);
+        OnCounterChanged?.Invoke(Value);
     }
 
     /// <summary>
@@ -29,7 +29,7 @@ public class CounterModel
     public void Decrement()
     {
         Value--;
-        CounterChanged?.Invoke(Value);
+        OnCounterChanged?.Invoke(Value);
     }
 
     /// <summary>
@@ -38,6 +38,6 @@ public class CounterModel
     public void Reset()
     {
         Value = 0;
-        CounterChanged?.Invoke(Value);
+        OnCounterChanged?.Invoke(Value);
     }
 }

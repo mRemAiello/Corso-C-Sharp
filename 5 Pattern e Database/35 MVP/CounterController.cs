@@ -15,7 +15,7 @@ public class CounterController
     {
         _model = model;
         _view = view;
-        _model.CounterChanged += OnCounterChanged;
+        _model.OnCounterChanged += OnCounterChanged;
     }
 
     public void Run()

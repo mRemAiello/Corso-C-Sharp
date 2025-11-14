@@ -12,7 +12,7 @@ public static class MvpDemo
         Console.WriteLine("Avvio della dimostrazione Model-View-Presenter.\n");
 
         var model = new CounterModel();
-        var view = new ConsoleCounterView();
+        var view = new FileViewMVC();
         var controller = new CounterController(model, view);
 
         controller.Run();

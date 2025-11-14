@@ -9,7 +9,7 @@ public static class ObserverPatternDemo
 {
     public static void Run()
     {
-        Console.WriteLine("=== Observer Pattern: Stazione Meteo ===");
+        /*Console.WriteLine("=== Observer Pattern: Stazione Meteo ===");
 
         var station = new WeatherStation();
 
@@ -32,6 +32,6 @@ public static class ObserverPatternDemo
 
         Console.WriteLine();
         Console.WriteLine(statisticsObserver.BuildReport());
-        Console.WriteLine();
+        Console.WriteLine();*/
     }
 }
