@@ -1,5 +1,7 @@
 using System.Collections;
 
+namespace ProgettiExtra.Biblioteca;
+
 // DatabaseManager -> Singleton
 // Libreria (100 istanze)
 

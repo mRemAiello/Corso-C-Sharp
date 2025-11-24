@@ -1,3 +1,5 @@
+namespace ProgettiExtra.Biblioteca;
+
 public class Libro : ICloneable
 {
     private string _isbn;

@@ -1,3 +1,5 @@
+namespace ProgettiExtra.Biblioteca;
+
 public class Cliente : Utente
 {
     public Cliente(int id) : base(id)
