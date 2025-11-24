@@ -36,3 +36,7 @@ public static class StatePatternDemo
         Console.WriteLine($"Stato attuale dell'ordine: {order.Status}");
     }
 }
+
+// IState -> Context, CanTransitionTo(state), TransitionTo(state), Handle(), Name
+// StateManager -> state, TransitionTo(state)
+// StateManager.TransitionTo(NewOrderState);

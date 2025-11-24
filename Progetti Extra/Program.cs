@@ -1,4 +1,4 @@
-public class Program
+/*public class Program
 {
     public static void Main(string[] args)
     {
@@ -54,4 +54,4 @@ public class Program
         // 
         SenderSMS.Instance.Send("320204394", "Il termostato XY si è spento");
     }
-}
+}*/

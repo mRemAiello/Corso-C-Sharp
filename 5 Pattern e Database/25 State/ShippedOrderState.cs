@@ -14,6 +14,7 @@ public class ShippedOrderState : IOrderState
     public void Ship(OrderContext context)
     {
         Console.WriteLine("L'ordine è già stato spedito.");
+        context.TransitionTo(new DeliveredOrderState());
     }
 
     public void Cancel(OrderContext context)
