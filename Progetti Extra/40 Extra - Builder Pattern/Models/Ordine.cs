@@ -3,11 +3,11 @@ namespace ProgettiExtra.BuilderPattern.Models;
 public sealed class Ordine
 {
     public int Id { get; }
-    public Prodotto Prodotto { get; }
+    public ProdottoBuilderPattern Prodotto { get; }
     public int Quantita { get; }
     public DateTime DataOrdine { get; }
 
-    internal Ordine(int id, Prodotto prodotto, int quantita, DateTime dataOrdine)
+    internal Ordine(int id, ProdottoBuilderPattern prodotto, int quantita, DateTime dataOrdine)
     {
         Id = id;
         Prodotto = prodotto;

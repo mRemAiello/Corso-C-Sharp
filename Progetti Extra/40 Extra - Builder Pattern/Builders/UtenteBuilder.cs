@@ -48,13 +48,13 @@ public sealed class UtenteBuilder
         return this;
     }
 
-    public Utente Build()
+    public UtenteBuilderPattern Build()
     {
         if (_indirizzo is null)
         {
             throw new InvalidOperationException("Impossibile costruire un utente senza indirizzo.");
         }
 
-        return new Utente(_nome, _cognome, _indirizzo, _ordini.AsReadOnly());
+        return new UtenteBuilderPattern(_nome, _cognome, _indirizzo, _ordini.AsReadOnly());
     }
 }

@@ -168,7 +168,7 @@ namespace CommandPatternExample
 
     // ==== Program (client) ====
 
-    internal class Program
+    /*internal class Program
     {
         private static void Main(string[] args)
         {
@@ -198,5 +198,5 @@ namespace CommandPatternExample
             Console.WriteLine("Premi un tasto per uscire...");
             Console.ReadKey();
         }
-    }
+    }*/
 }

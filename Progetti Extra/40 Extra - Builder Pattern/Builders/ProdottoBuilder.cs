@@ -26,7 +26,7 @@ public sealed class ProdottoBuilder
         return this;
     }
 
-    public Prodotto Build()
+    public ProdottoBuilderPattern Build()
     {
         if (_id is null || _id <= 0)
         {
@@ -43,6 +43,6 @@ public sealed class ProdottoBuilder
             throw new InvalidOperationException("Il prezzo del prodotto non può essere negativo.");
         }
 
-        return new Prodotto(_id.Value, _nome.Trim(), _prezzo.Value);
+        return new ProdottoBuilderPattern(_id.Value, _nome.Trim(), _prezzo.Value);
     }
 }

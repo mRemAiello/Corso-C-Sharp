@@ -5,7 +5,7 @@ namespace ProgettiExtra.BuilderPattern.Builders;
 public sealed class OrdineBuilder
 {
     private int? _id;
-    private Prodotto? _prodotto;
+    private ProdottoBuilderPattern? _prodotto;
     private int _quantita = 1;
     private DateTime _data = DateTime.Today;
 
@@ -15,7 +15,7 @@ public sealed class OrdineBuilder
         return this;
     }
 
-    public OrdineBuilder ConProdotto(Prodotto prodotto)
+    public OrdineBuilder ConProdotto(ProdottoBuilderPattern prodotto)
     {
         _prodotto = prodotto;
         return this;

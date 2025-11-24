@@ -1,12 +1,12 @@
 namespace ProgettiExtra.BuilderPattern.Models;
 
-public sealed class Prodotto
+public sealed class ProdottoBuilderPattern
 {
     public int Id { get; }
     public string Nome { get; }
     public decimal Prezzo { get; }
 
-    internal Prodotto(int id, string nome, decimal prezzo)
+    internal ProdottoBuilderPattern(int id, string nome, decimal prezzo)
     {
         Id = id;
         Nome = nome;
