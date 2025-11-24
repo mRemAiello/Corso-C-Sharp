@@ -1,3 +1,5 @@
+namespace ProgettiExtra.Biblioteca;
+
 [Flags]
 public enum Permessi
 {

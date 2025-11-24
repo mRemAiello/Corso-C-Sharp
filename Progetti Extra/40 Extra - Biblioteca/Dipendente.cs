@@ -1,3 +1,5 @@
+namespace ProgettiExtra.Biblioteca;
+
 public class Dipendente : Utente
 {
     public Dipendente(int id) : base(id)

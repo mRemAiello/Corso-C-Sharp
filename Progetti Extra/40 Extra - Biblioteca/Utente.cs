@@ -1,3 +1,5 @@
+namespace ProgettiExtra.Biblioteca;
+
 public class Utente
 {
     private int _id;

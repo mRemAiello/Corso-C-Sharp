@@ -1,3 +1,5 @@
+namespace ProgettiExtra.Biblioteca;
+
 public enum Mesi
 {
     Gennaio,

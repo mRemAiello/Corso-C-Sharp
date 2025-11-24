@@ -1,3 +1,5 @@
+namespace ProgettiExtra.Biblioteca;
+
 public class Prestito
 {
     private Cliente _cliente;
