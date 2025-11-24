@@ -1,8 +1,6 @@
-using System;
-
 namespace PatternEDatabase.Facade;
 
-public class Projector
+public class Projector : IProjector
 {
     public void TurnOn()
     {

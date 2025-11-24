@@ -8,8 +8,8 @@ public class SandwichBuilder
 {
     private string _bread = "Pane bianco";
     private string _protein = "Tacchino";
-    private readonly List<string> _vegetables = new();
-    private readonly List<string> _condiments = new();
+    private readonly List<string> _vegetables = [];
+    private readonly List<string> _condiments = [];
     private bool _toasted;
 
     public SandwichBuilder Reset()

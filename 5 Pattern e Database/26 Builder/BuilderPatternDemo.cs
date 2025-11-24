@@ -12,13 +12,18 @@ public static class BuilderPatternDemo
         var builder = new SandwichBuilder();
         var director = new SandwichDirector(builder);
 
+        // Logica di utilizzo del pattern Builder in un contesto reale
+        // Esempio con ModalWindow
+        // ModalWindow.AddWarning("").AddButton("Ok", ButtonType.YesButton).AddButton("Annulla", ButtonType.NoButton).Show();
+
+        // Esempio con Utente
+        // UserManager.Instance.CreateDummyUser()
+        // UserManager.CreateUser().SetName("Mario").SetSurname("Rossi").SetAge(30).Save();
+
         var classic = director.CreateClassicClub();
         var vegetarian = director.CreateVegetarian();
 
-        var custom = builder
-            .Reset()
-            .WithBread("Baguette")
-            .WithProtein("Salmone affumicato")
+        var custom = builder.Reset().WithBread("Baguette").WithProtein("Salmone affumicato")
             .AddVegetable("Cetrioli")
             .AddVegetable("Finocchietto")
             .AddCondiment("Formaggio spalmabile")

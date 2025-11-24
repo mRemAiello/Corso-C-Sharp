@@ -1,24 +1,18 @@
-using System;
-
 namespace PatternEDatabase.Facade;
 
 public class HomeTheaterFacade
 {
     private readonly StreamingService _streamingService;
     private readonly SurroundSoundSystem _soundSystem;
-    private readonly Projector _projector;
+    private readonly IProjector _projector;
     private readonly AmbientLight _ambientLight;
 
-    public HomeTheaterFacade(
-        StreamingService streamingService,
-        SurroundSoundSystem soundSystem,
-        Projector projector,
-        AmbientLight ambientLight)
+    public HomeTheaterFacade(IProjector projector)
     {
-        _streamingService = streamingService;
-        _soundSystem = soundSystem;
+        _streamingService = new();
+        _soundSystem = new();
         _projector = projector;
-        _ambientLight = ambientLight;
+        _ambientLight = new();
     }
 
     public void StartMovieNight(string movieTitle)
@@ -43,5 +37,22 @@ public class HomeTheaterFacade
         _projector.TurnOff();
         _ambientLight.TurnOff();
         Console.WriteLine("Serata conclusa. A presto!\n");
+    }
+
+    public void Connect() => _streamingService.Connect();
+    public void Disconnect() => _streamingService.Disconnect();
+    public void TurnOnProjector() => _projector.TurnOn();
+    public void TurnOffProjector() => _projector.TurnOff();
+    public void TurnOnLights() => _ambientLight.TurnOn();
+    public void TurnOffLights() => _ambientLight.TurnOff();
+    public void SetDimLightsLevel(int level) => _ambientLight.Dim(level);
+    public void TurnOnSoundSystem() => _soundSystem.TurnOn();
+    public void TurnOffSoundSystem() => _soundSystem.TurnOff();
+    public void SetSoundSystemVolume(int level) => _soundSystem.SetVolume(level);
+    public void PlayStreamingMovie(string movie) => _streamingService.Play(movie);
+    public void PlayMovie(string movie)
+    {
+        StartMovieNight(movie);
+        EndMovieNight();
     }
 }
