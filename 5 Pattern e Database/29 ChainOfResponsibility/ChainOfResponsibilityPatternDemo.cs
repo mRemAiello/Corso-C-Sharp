@@ -15,6 +15,9 @@ public static class ChainOfResponsibilityPatternDemo
         var manager = new ManagerSupportHandler();
         helpDesk.SetNext(tecnico).SetNext(manager);
 
+        // helpDesk.SetNext(tecnico);
+        // tecnico.SetNext(manager);
+
         var richieste = new List<SupportRequest>
         {
             new("Ho dimenticato la password", SupportRequestLevel.DiBase),

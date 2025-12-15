@@ -11,7 +11,7 @@ public static class BridgePatternDemo
         var tv = new Television();
         var radio = new Radio();
 
-        RemoteControl basicRemote = new BasicRemote(tv);
+        var basicRemote = new BasicRemote(tv);
         var advancedRemote = new AdvancedRemote(radio);
 
         Console.WriteLine("Uso del telecomando base con la TV:");
