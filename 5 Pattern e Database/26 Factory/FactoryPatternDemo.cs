@@ -4,6 +4,14 @@ namespace PatternEDatabase.Factory;
 
 public static class FactoryPatternDemo
 {
+    // ITransport -> Truck / Ship
+    // IProduct -> AppleTablet, AppleSmartphone, AndroidTablet, AndroidSmartphone
+    // Logistics -> RoadLogistics / SeaLogistics
+    // Logistics roadLogistics = new RoadLogistics(); => Truck
+    // Logistics seaLogistics = new SeaLogistics(); => Ship
+    // AndroidDeviceFactory => CreateSmartPhone() => AndroidSmartphone, CreateTablet() => AndroidTablet
+    // PCDeviceFactory => CreatePC() => WindowsPC, CreateLaptop() => MacBook
+
     public static void Run()
     {
         Console.WriteLine("--- Factory Method ---");

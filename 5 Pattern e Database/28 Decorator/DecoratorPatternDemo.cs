@@ -8,7 +8,7 @@ public static class DecoratorPatternDemo
     {
         Console.WriteLine("*** Decorator Pattern: Noleggio Auto ***\n");
 
-        ICarRental noleggioBase = new BasicCarRental();
+        ICarRental noleggioBase = new FerrariCarRental();
         StampaDettagli("Offerta base", noleggioBase);
 
         ICarRental noleggioConGps = new GpsDecorator(noleggioBase);
@@ -17,7 +17,13 @@ public static class DecoratorPatternDemo
         ICarRental noleggioFamiglia = new AdditionalDriverDecorator(new FullInsuranceDecorator(noleggioConGps));
         StampaDettagli("Pacchetto famiglia", noleggioFamiglia);
 
-        ICarRental noleggioPremium = new FullInsuranceDecorator(new AdditionalDriverDecorator(new GpsDecorator(new BasicCarRental())));
+        // 39.90 + 4.5 + 6.00 + 15.00 = 65.40
+        // Descrizione = Noleggio auto base, Navigatore GPS, Conducente aggiuntivo, Assicurazione completa
+        ICarRental baseCarRental = new FerrariCarRental();
+        var gpsDecorator = new GpsDecorator(baseCarRental);
+        var additionalDriverDecorator = new AdditionalDriverDecorator(gpsDecorator);
+        ICarRental noleggioPremium = new FullInsuranceDecorator(additionalDriverDecorator);
+        var costo = noleggioPremium.CalcolaCosto();
         StampaDettagli("Pacchetto premium", noleggioPremium);
     }
 
