@@ -14,6 +14,7 @@ using PatternEDatabase.State;
 using PatternEDatabase.Proxy;
 using PatternEDatabase.Mvp;
 using PatternEDatabase.Mediator;
+using PatternEDatabase.Iterator;
 using SQLiteExamples;
 
 namespace PatternEDatabaseApp;
@@ -54,6 +55,7 @@ public static class Program
             Console.WriteLine("16. Proxy");
             Console.WriteLine("17. MVP");
             Console.WriteLine("18. Mediator");
+            Console.WriteLine("19. Iterator");
             Console.WriteLine(" Q. Esci");
             Console.WriteLine();
             Console.Write("Seleziona un'opzione: ");
@@ -162,6 +164,8 @@ public static class Program
             case "18":
             case "mediator":
                 MediatorPatternDemo.Run();
+            case "iterator":
+                IteratorPatternDemo.Run();
                 return true;
             default:
                 return false;
