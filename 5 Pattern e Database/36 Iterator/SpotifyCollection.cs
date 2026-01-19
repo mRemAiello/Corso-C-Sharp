@@ -1,18 +1,14 @@
 using System.Collections;
-using System.Runtime.CompilerServices;
 
 namespace PatternEDatabase.Iterator;
 
-public class SongCollection : IEnumerable<Song>
+public class SpotifyCollection : IEnumerable<Song>
 {
-    private readonly List<Song> _songs = new();
+    private readonly Dictionary<string, Song> _songs = new();
 
-    public void Add(Song song) => _songs.Add(song);
+    public void Add(Song song) => _songs.Add(song.Title, song);
 
-    // IEnumerator<T> GetEnumerator
-    // IEnumerator GetEnumerator
-
-    public IEnumerator<Song> GetEnumerator() => new SongIterator(_songs);
+    public IEnumerator<Song> GetEnumerator() => new SongIterator(_songs.Values.ToList());
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
@@ -21,19 +17,6 @@ public class SongCollection : IEnumerable<Song>
         foreach (var song in this)
         {
             if (song.IsFavorite)
-            {
-                yield return song;
-            }
-        }
-    }
-
-    public IEnumerable<Song> ByArtist(string artist) => _songs.FindAll(s => s.Artist.Equals(artist, StringComparison.OrdinalIgnoreCase));
-
-    public IEnumerable<Song> ByGenre(string genre)
-    {
-        foreach (var song in this)
-        {
-            if (song.Genre.Equals(genre, StringComparison.OrdinalIgnoreCase))
             {
                 yield return song;
             }
