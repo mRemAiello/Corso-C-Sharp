@@ -18,6 +18,8 @@ using PatternEDatabase.Iterator;
 using PatternEDatabase.Prototype;
 using PatternEDatabase.Memento;
 using PatternEDatabase.Strategy;
+using PatternEDatabase.TemplateMethod;
+using PatternEDatabase.Visitor;
 using SQLiteExamples;
 
 namespace PatternEDatabaseApp;
@@ -30,7 +32,7 @@ public static class Program
         {
             if (!TryRunDemo(args[0]))
             {
-                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state, builder, factory, facade, decorator, chain, bridge, adapter, composite, flyweight, proxy, mediator, iterator, prototype, memento, strategy.");
+                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state, builder, factory, facade, decorator, chain, bridge, adapter, composite, flyweight, proxy, mediator, iterator, prototype, memento, strategy, template, visitor.");
             }
 
             return;
@@ -62,6 +64,8 @@ public static class Program
             Console.WriteLine("20. Prototype");
             Console.WriteLine("21. Memento");
             Console.WriteLine("22. Strategy");
+            Console.WriteLine("23. Template Method");
+            Console.WriteLine("24. Visitor");
             Console.WriteLine(" Q. Esci");
             Console.WriteLine();
             Console.Write("Seleziona un'opzione: ");
@@ -186,6 +190,15 @@ public static class Program
             case "22":
             case "strategy":
                 StrategyPatternDemo.Run();
+                return true;
+            case "23":
+            case "template":
+            case "template method":
+                TemplateMethodPatternDemo.Run();
+                return true;
+            case "24":
+            case "visitor":
+                VisitorPatternDemo.Run();
                 return true;
             default:
                 return false;
