@@ -8,7 +8,7 @@ namespace PatternEDatabase.Flyweight;
 /// </summary>
 public class Forest
 {
-    private readonly List<Tree> _trees = new();
+    private readonly List<Tree> _trees = [];
     private readonly TreeFactory _factory = new();
 
     public void PlantTree(int posizioneX, int posizioneY, int altezzaMetri, string specie, string coloreFoglie, string textureCorteccia)

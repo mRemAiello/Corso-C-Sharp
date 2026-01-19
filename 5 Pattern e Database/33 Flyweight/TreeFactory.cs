@@ -7,7 +7,8 @@ namespace PatternEDatabase.Flyweight;
 /// </summary>
 public class TreeFactory
 {
-    private readonly Dictionary<string, TreeType> _treeTypes = new();
+    // pino-verde scuro-rugosa -> TreeType
+    private readonly Dictionary<string, TreeType> _treeTypes = [];
 
     public TreeType GetTreeType(string specie, string coloreFoglie, string textureCorteccia)
     {

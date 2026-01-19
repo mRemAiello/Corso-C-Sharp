@@ -10,10 +10,10 @@ public static class CompositePatternDemo
         var photos = new Folder("Foto");
         var travel = new Folder("Vacanze");
 
-        var todo = new FileItem("todo.txt");
-        var cv = new FileItem("cv.pdf");
-        var rome = new FileItem("Roma.jpg");
-        var paris = new FileItem("Parigi.jpg");
+        var todo = new FileItem("todo.txt", 20);
+        var cv = new FileItem("cv.pdf", 50);
+        var rome = new FileItem("Roma.jpg", 20);
+        var paris = new FileItem("Parigi.jpg", 35);
 
         travel.Add(rome);
         travel.Add(paris);
@@ -22,6 +22,9 @@ public static class CompositePatternDemo
         documents.Add(photos);
         documents.Add(todo);
         documents.Add(cv);
+
+        // Documents 125 -> Photos 55 -> Travel 55 -> [Rome.jpg 20, Paris.jpg 35]
+        // Documents -> [todo.txt 20, cv.pdf 50]
 
         Console.WriteLine("Stampa della gerarchia iniziale:\n");
         documents.Print();
