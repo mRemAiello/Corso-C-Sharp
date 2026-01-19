@@ -17,6 +17,7 @@ using PatternEDatabase.Mediator;
 using PatternEDatabase.Iterator;
 using PatternEDatabase.Prototype;
 using PatternEDatabase.Memento;
+using PatternEDatabase.Strategy;
 using SQLiteExamples;
 
 namespace PatternEDatabaseApp;
@@ -29,7 +30,7 @@ public static class Program
         {
             if (!TryRunDemo(args[0]))
             {
-                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state, builder, factory, facade, decorator, chain, bridge, adapter, composite, flyweight, proxy, mediator, iterator, prototype, memento.");
+                Console.WriteLine("Argomento non valido. Opzioni disponibili: mvvc, sqlite, singleton, observer, command, state, builder, factory, facade, decorator, chain, bridge, adapter, composite, flyweight, proxy, mediator, iterator, prototype, memento, strategy.");
             }
 
             return;
@@ -60,6 +61,7 @@ public static class Program
             Console.WriteLine("19. Iterator");
             Console.WriteLine("20. Prototype");
             Console.WriteLine("21. Memento");
+            Console.WriteLine("22. Strategy");
             Console.WriteLine(" Q. Esci");
             Console.WriteLine();
             Console.Write("Seleziona un'opzione: ");
@@ -180,6 +182,10 @@ public static class Program
             case "21":
             case "memento":
                 MementoPatternDemo.Run();
+                return true;
+            case "22":
+            case "strategy":
+                StrategyPatternDemo.Run();
                 return true;
             default:
                 return false;
