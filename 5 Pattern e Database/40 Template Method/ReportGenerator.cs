@@ -17,12 +17,16 @@ public abstract class ReportGenerator
     protected abstract string LoadData();
 
     protected abstract string FormatReport(string data);
+    //protected abstract void OnAfterExport();
 
-    protected virtual void ExportReport(string formattedReport)
+    protected void ExportReport(string formattedReport)
     {
         Console.WriteLine("--- Report esportato ---");
         Console.WriteLine(formattedReport);
         Console.WriteLine("------------------------\n");
+
+        //
+        //OnAfterExport();
     }
 
     protected virtual void AfterExport()
