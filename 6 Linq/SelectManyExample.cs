@@ -13,6 +13,13 @@ public static class SelectManyExample
             new("Lettere", new List<string> { "Letteratura italiana", "Storia contemporanea" })
         };
 
+        // Ingegneria -> (Ingegneria, Analisi 1)
+        // Ingegneria -> (Ingegneria, Fisica 1)
+        // Ingegneria -> (Ingegneria, Programmazione)
+
+        // Dipartimento => (Dipartimento) Ingegneria, (string) Analisi 1 => (string) "Ingegneria: Analisi 1"
+        // Dipartimento => Ingegneria, Fisica 1
+
         IEnumerable<string> tuttiICorsi = dipartimenti
             .SelectMany(d => d.Corsi, (dipartimento, corso) => $"{dipartimento.Nome}: {corso}")
             .OrderBy(nomeCorso => nomeCorso);

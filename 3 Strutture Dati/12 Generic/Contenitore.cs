@@ -1,13 +1,13 @@
 public class Contenitore<T> where T : Liquido
 {
-    private T? _contenuto;
+    private T _contenuto;
 
-    public Contenitore(T? contenuto)
+    public Contenitore(T contenuto)
     {
         _contenuto = contenuto;
     }
 
-    public T? GetContenuto()
+    public T GetContenuto()
     {
         return _contenuto;
     }

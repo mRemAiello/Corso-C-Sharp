@@ -17,14 +17,16 @@ public static class GroupByCategoryExample
             new("Angeli e Demoni", "Thriller")
         };
 
-        IEnumerable<IGrouping<string, Libro>> libriPerCategoria = libri.GroupBy(libro => libro.Categoria);
+        // [0] -> key Fantasy, (LOTR, HP)
+        // [1] -> Key Thiller, Vinci, Angeli e Demoni
+        var libriPerCategoria = libri.GroupBy(libro => libro.Categoria);
 
         Console.WriteLine("GroupBy - Libri raggruppati per categoria:");
-        foreach (IGrouping<string, Libro> gruppo in libriPerCategoria)
+        foreach (var gruppo in libriPerCategoria)
         {
             Console.WriteLine($"Categoria: {gruppo.Key}");
 
-            foreach (Libro libro in gruppo)
+            foreach (var libro in gruppo)
             {
                 Console.WriteLine($"- {libro.Titolo}");
             }

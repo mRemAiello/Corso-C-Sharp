@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        MethodVsQuery.Execute();
+        /*MethodVsQuery.Execute();
         LinqInterfacesExample.Execute();
         LinqInterfaceExample2.Execute();
         SelectExample.Execute();
@@ -21,9 +21,11 @@ class Program
         MaxMinAverageExample.Execute();
         GroupByParityExample.Execute();
         GroupByCategoryExample.Execute();
+        
+        TakeSkipExample.Execute();
+        SetOperationsExample.Execute();*/
+
         JoinExample.Execute();
         GroupJoinExample.Execute();
-        TakeSkipExample.Execute();
-        SetOperationsExample.Execute();
     }
 }

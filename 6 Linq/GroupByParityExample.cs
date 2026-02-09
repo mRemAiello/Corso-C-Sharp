@@ -9,6 +9,9 @@ public static class GroupByParityExample
         IEnumerable<IGrouping<string, int>> gruppi = numeri.GroupBy(n => n % 2 == 0 ? "Pari" : "Dispari");
 
         Console.WriteLine("GroupBy - Numeri raggruppati per parità:");
+
+        // Pari: 2, 4
+        // Dispari: 1, 3
         foreach (IGrouping<string, int> gruppo in gruppi)
         {
             Console.WriteLine($"{gruppo.Key}: {string.Join(", ", gruppo)}");
