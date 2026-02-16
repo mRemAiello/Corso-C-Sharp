@@ -8,9 +8,7 @@ public static class MethodVsQuery
         var numeriPariMetodo = numeri.Where(n => n % 2 == 0).Select(n => n);
 
         // Sintassi query
-        var numeriPariQuery = from n in numeri
-                              where n % 2 == 0
-                              select n;
+        var numeriPariQuery = from n in numeri where n % 2 == 0 select n;
 
         Console.WriteLine("Sintassi con metodi: " + string.Join(", ", numeriPariMetodo));
         Console.WriteLine("Sintassi query: " + string.Join(", ", numeriPariQuery));

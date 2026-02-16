@@ -12,7 +12,8 @@ public static class WhereObjectsExample
             new("Tastiera", 45.00m)
         };
 
-        IEnumerable<Prodotto> prodottiCostosi = prodotti.Where(p => p.Prezzo >= 100m);
+        Func<Prodotto, bool> pred = p => p.Prezzo >= 100m;
+        IEnumerable<Prodotto> prodottiCostosi = prodotti.Where(pred);
 
         Console.WriteLine("Where - Prodotti costosi:");
         foreach (Prodotto prodotto in prodottiCostosi)

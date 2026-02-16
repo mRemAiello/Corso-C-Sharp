@@ -12,7 +12,7 @@ class Program
         SelectAdvancedExample.Execute();
         SelectManyExample.Execute();
         WhereGreaterThanExample.Execute();
-        WhereObjectsExample.Execute();
+        
         FirstLastElementAtSingleExample.Execute();
         AllAnyContainsExample.Execute();
         OrderByExample.Execute();
@@ -25,7 +25,9 @@ class Program
         TakeSkipExample.Execute();
         SetOperationsExample.Execute();*/
 
-        JoinExample.Execute();
-        GroupJoinExample.Execute();
+        //JoinExample.Execute();
+        //GroupJoinExample.Execute();
+
+        WhereObjectsExample.Execute();
     }
 }
