@@ -28,7 +28,7 @@ public class Veicolo
         return _marca;
     }
 
-    public void Avvia()
+    public virtual void Avvia()
     {
         Console.WriteLine(_marca + " " + _modello + " motore avviato");
     }

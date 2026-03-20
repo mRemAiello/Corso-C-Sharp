@@ -8,18 +8,19 @@ public class SwitchEnum
         RimozioneMultipla = 6,
         Visualizza = 2,
         Modifica = 5,
-        Uscita = 3,
+        Uscita = 3
     }
 
     enum GiorniSettimana
     {
-        Lunedì,
-        Martedì,
-        Mercoledì,
-        Giovedì,
-        Venerdì,
-        Sabato,
-        Domenica
+        Lunedì = 0,
+        Martedì = 1,
+        Nuovo = 7,
+        Mercoledì = 2,
+        Giovedì = 3,
+        Venerdì = 4,
+        Sabato = 5,
+        Domenica = 6
     }
 
     public void Execute()

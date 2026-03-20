@@ -7,6 +7,7 @@ public class If
         if (eta >= 18)
         {
             Console.WriteLine("Sei maggiorenne.");
+            Console.WriteLine();
         }
         else
         {

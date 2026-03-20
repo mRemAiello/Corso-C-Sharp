@@ -40,6 +40,7 @@ public class Intro
         // Utilizzo di una variabile
         x = 10;
         int y = 6;
+        // Qua 10 + 6 -> 16 -> salva su z che è float -> 16.0
         float z = x + y;
         Console.WriteLine("Il risultato è " + z);
         z = x - y;
@@ -55,11 +56,10 @@ public class Intro
         z = x % y;
         Console.WriteLine("Il risultato è " + z);
 
-
         // Input
         Console.Write("Inserisci la tua età: ");
         string? inputEta = Console.ReadLine();
         int eta = Convert.ToInt32(inputEta);
-        Console.WriteLine("Hai " + eta + " anni.");
+        Console.WriteLine($"Hai {eta} anni.");
     }
 }

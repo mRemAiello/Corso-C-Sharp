@@ -4,7 +4,7 @@ public class Rand
     {
         // Seed : 6520251421301254014
         var rand = new Random();
-        long numeroRand = rand.NextInt64(1, 10);
+        int numeroRand = (int)rand.NextInt64(1, 10);
         int numeroRand2 = (int)rand.NextInt64(1, 10);
         Console.WriteLine("Numero casuale: " + numeroRand);
         Console.WriteLine("Numero casuale: " + numeroRand2);
