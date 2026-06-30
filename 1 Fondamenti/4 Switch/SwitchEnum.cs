@@ -51,6 +51,21 @@ public class SwitchEnum
             Console.WriteLine("Visualizza");
         }
 
+        if (operazione == Operazioni.Aggiunta || operazione == Operazioni.Rimozione || operazione == Operazioni.Visualizza)
+        {
+            Console.WriteLine("Operazione valida");
+        }
+
+        switch (operazione)
+        {
+            case Operazioni.Aggiunta:
+            case Operazioni.Rimozione:
+            case Operazioni.Visualizza:
+                Console.WriteLine("Operazione valida");
+                break;
+        }
+
+
         //
         switch (operazione)
         {
@@ -68,8 +83,6 @@ public class SwitchEnum
                 break;
         }
 
-        //
-        
         GiorniSettimana giorno = GiorniSettimana.Mercoledì;
         string localizedString = giorno switch
         {
@@ -97,8 +110,3 @@ public class SwitchEnum
         Console.WriteLine(nomeGiornoEnum);
     }
 }
-
-
-// https://codegrind.it/esercizi/csharp/switch
-
-// https://codegrind.it/esercizi/csharp/enum

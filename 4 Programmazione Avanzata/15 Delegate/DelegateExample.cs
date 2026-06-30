@@ -14,7 +14,6 @@ namespace DelegateExample
             _op = Add;
         }
 
-        // Metodo che somma due numeri
         static int Add(int a, int b)
         {
             return a + b;
@@ -36,6 +35,7 @@ namespace DelegateExample
             // Creazione di un'istanza del delegate e assegnazione del metodo Add
             // Chiamata del metodo tramite il delegate
             // _op(10, 5) -> Add(10, 5)
+            _op = Add;
             int result = _op(10, 5);
             Console.WriteLine("Somma: " + result);  // Output: Somma: 15
 

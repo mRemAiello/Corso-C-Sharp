@@ -3,7 +3,7 @@ public class Rand
     public void Execute()
     {
         // Seed : 6520251421301254014
-        var rand = new Random();
+        Random rand = new();
         int numeroRand = (int)rand.NextInt64(1, 10);
         int numeroRand2 = (int)rand.NextInt64(1, 10);
         Console.WriteLine("Numero casuale: " + numeroRand);

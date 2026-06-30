@@ -2,3 +2,7 @@ Giorni della settimana come Flags, creare un array di persone con i rispettivi F
 e filtrare tutte le persone che hanno una data disponibilità.
 
 Sviluppare un programma che chieda all'utente di inserire una disponibilità e mostri le persone.
+
+
+https://codegrind.it/esercizi/csharp/switch
+https://codegrind.it/esercizi/csharp/enum

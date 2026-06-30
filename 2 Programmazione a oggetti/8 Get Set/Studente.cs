@@ -1,6 +1,7 @@
 public class Studente
 {
     private string _name;
+    private string _cognome;
     private int _eta;
     private double _mediaVoti;
 
@@ -30,6 +31,8 @@ public class Studente
             _eta = value;
         }
     }
+
+    public string NomeCompleto => $"{_name} {_cognome}";
 
     // Accorpato sotto
     private string _titolo = "Non Assegnato";

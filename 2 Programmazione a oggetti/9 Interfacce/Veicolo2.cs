@@ -6,6 +6,8 @@ public class Veicolo2 : Veicolo, IVeicolo, ISellable, IBuyable
     public int BuyPrice => _buyPrice;
     public int SellPrice => _sellPrice;
 
+    public bool CanBeBought => true;
+
     public void Buy()
     { 
     }
@@ -27,12 +29,17 @@ public class Veicolo2 : Veicolo, IVeicolo, ISellable, IBuyable
     // Auto : Veicolo, Venduta, Comprata
 
     // Esempio Videogioco RPG
-    // Item => ID, Nome, Descrizione
+    // Item => ID, Nome, Descrizione, ....
     // Arma : Item, IBuyable, ISellable, IDamage, IEquipable
     // Armatura : Item, IBuyable, ISellable, IDefense, IEquipable
-    // Pozione : Item, IBuyable, ISellable, IConsumable
+    // Pozione : Item, IBuyable, ISellable, IConsumable(Use)
     // OggettoChiave : Item
-    // Pepite : ISellable
+    // Pepite : Item, ISellable
+
+    // Oggetto -> OggettoVendibile -> OggettoAcquistabile -> OggettoEquipaggiabile -> Arma, Armatura, ArmaDistanza, Scudo
+    // Oggetto -> OggettoVendibile -> OggettoAcquistabile -> OggettoEquipaggiabile -> Pozione
+    // Magia acquistabile, non vendibile, e non è un oggetto
+    // Magia -> OggettoAcquistabile -> new Magia(id, nome, descrizione, prezzoVendita)
 
     // Veicolo : IBuyable, ISellable
 

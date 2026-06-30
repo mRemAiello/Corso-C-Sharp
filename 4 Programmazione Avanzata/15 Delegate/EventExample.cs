@@ -1,3 +1,5 @@
+using System.Diagnostics.Tracing;
+
 namespace EventExample
 {
     // Definizione del delegate che rappresenta la firma dei metodi gestori dell'evento
@@ -45,6 +47,24 @@ namespace EventExample
 
     // SmsSender -> ThresholdReached -> Send()
 
+    class SMSSender
+    {
+        private List<int> _phoneNumbers;
+
+        public SMSSender(List<int> phoneNumbers)
+        {
+            _phoneNumbers = phoneNumbers;
+        }
+
+        public void Send(string messagge)
+        {
+            foreach (int phoneNumber in _phoneNumbers)
+            {
+                Console.WriteLine("Invio SMS a " + phoneNumber + ": " + messagge);
+            }
+        }
+    }
+
     class EventEx
     {
         public void Execute()
@@ -54,7 +74,11 @@ namespace EventExample
             // Iscrizione all'evento
             thermostat.OnThresholdReached += HandleThresholdReached;
 
-            // SmsSender smsSender = new SmsSender(3464471541);
+            // SMS Sender
+            SMSSender smsSender = new SMSSender(new List<int> { 34692839 });
+            thermostat.OnThresholdReached += (sender, e) => smsSender.Send("Soglia di temperatura superata! Temperatura attuale: " + ((ThermostatEventArgs)e).TemperaturaCorrente);
+
+            // 
             // thermostat.ThresholdReached += smsSender.Send;
 
             // LogWriter logWriter = new LogWriter("log.txt");

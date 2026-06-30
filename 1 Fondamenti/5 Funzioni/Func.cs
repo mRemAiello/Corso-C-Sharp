@@ -18,8 +18,7 @@ public class Func
     // Metodo che calcola la somma di due numeri interi
     int Somma(int a, int b = 0)
     {
-        int risultato = a + b;
-        return risultato;
+        return a + b;
     }
 
     // Overloading (Stesso nome della funzione, parametri differenti)
@@ -33,11 +32,13 @@ public class Func
 
     // numeri, i, somma
     // media = 2, pippo = 2 
+    // if (TryGet("nome", out float nome))
+    // 
     bool TryMedia(int[]? numeri, out float media)
     {
-        media = 0;
         if (numeri == null || numeri.Length == 0)
         {
+            media = 0;
             return false;
         }
 
@@ -50,11 +51,6 @@ public class Func
 
     float Media(float[] numeri)
     {
-        if (numeri == null || numeri.Length == 0)
-        {
-            return 0;
-        }
-
         float somma = 0;
         for (int i = 0; i < numeri.Length; i++)
         {

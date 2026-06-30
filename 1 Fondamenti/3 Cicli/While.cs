@@ -37,7 +37,7 @@ public class While
         {
             Console.WriteLine("Numero: " + numero);
             numero--;
-        } 
+        }
         while (numero > 0);
     }
 }

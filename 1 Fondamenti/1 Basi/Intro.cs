@@ -47,7 +47,7 @@ public class Intro
         Console.WriteLine("Il risultato è " + z);
         z = x * y;
         Console.WriteLine("Il risultato è " + z);
-        
+
         // Risultato della divisione
         z = x / y;
         Console.WriteLine("Il risultato è " + z);
@@ -58,8 +58,13 @@ public class Intro
 
         // Input
         Console.Write("Inserisci la tua età: ");
-        string? inputEta = Console.ReadLine();
+        string? inputEta = Console.ReadLine(); // "32"
         int eta = Convert.ToInt32(inputEta);
-        Console.WriteLine($"Hai {eta} anni.");
+        Console.Write("Inserisci il tuo nome: ");
+        string? nome = Console.ReadLine();
+
+        // Differenze
+        Console.WriteLine("Ciao, mi chiamo " + nome + " e ho " + eta + " anni.");
+        Console.WriteLine($"Ciao, mi chiamo {nome} e ho {eta} anni.");
     }
 }

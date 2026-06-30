@@ -6,17 +6,11 @@ public interface IVeicolo
     void Frena(int velocita);
 }
 
+// Veicolo (prezzoVendita, prezzoAcquisto, Compra, Vendi) -> Auto -> AutoSportiva
+// Veicolo -> Moto -> MotoSportiva
+
+// Libro (prezzoVendita, prezzoAcquisto, Compra, Vendi)
+
+// Program -> Acquista(Veicolo), Acquista(Libro)
+
 // Esempio di interfaccia di oggetto vendibile / acquistabile
-public interface ISellable
-{
-    int SellPrice { get; }
-
-    void Sell();
-}
-
-public interface IBuyable
-{
-    int BuyPrice { get; }
-
-    void Buy();
-}

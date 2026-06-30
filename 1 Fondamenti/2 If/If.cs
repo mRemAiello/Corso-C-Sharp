@@ -82,7 +82,7 @@ public class If
 
 
         // If ternario in azione
-        valore = (haAccount) ? 20 : 30;
+        valore = (haAccount && haEmailVerificata && passwordCorretta) ? 20 : 30;
 
 
         // If ternario

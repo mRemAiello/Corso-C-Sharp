@@ -7,8 +7,8 @@ using System;
 // Con le enum
 // Nessuno = 0 => 0
 // Lettura = 1 => 1
-// Scrittura = 2 => 11
-// Lettura + Scrittura = 3 => 011
+// Scrittura = 2 => 10
+// Lettura + Scrittura = 3 => 11
 // Esecuzione = 4
 // Lettura + Esecuzione = 5
 // Scrittura + Esecuzione = 6
