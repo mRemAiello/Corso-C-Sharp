@@ -16,6 +16,9 @@ public class Stringhe
         // Stringa di esempio
         string prova = "  Hello";
 
+        // Selezionare il primo carattere della stringa
+        Console.WriteLine(prova[0]);
+
         // ToUpper(): Converte la stringa in maiuscolo.
         string maiuscolo = prova.ToUpper(); // "HELLO"
 
@@ -65,7 +68,8 @@ public class Stringhe
         string toFormat = "Nome: {0}, Cognome: {1}, Età: {2}";
         string utente_1 = string.Format(toFormat, nome, cognome, eta);
         string utente_2 = string.Format(toFormat, "Marco", "Rossi", 24);
-        Console.WriteLine(toFormat);
+        Console.WriteLine(utente_1);
+        Console.WriteLine(utente_2);
 
         // Metodo 2
         string toFormat2 = $"Nome: {nome}, Cognome: {cognome}, Età: {eta}";

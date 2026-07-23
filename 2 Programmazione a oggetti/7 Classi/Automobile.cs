@@ -18,14 +18,14 @@ public class Automobile : Veicolo
         _numeroPorte = 0;
     }
 
-    /*public override void Avvia()
+    public override void Avvia()
     {
         // Qualora volessi avviare il metodo della superclasse
         // base.Avvia();
 
         //
         Console.WriteLine("Automobile avviata.");
-    }*/
+    }
 
     public override void MostraInformazioni()
     {

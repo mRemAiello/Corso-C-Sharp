@@ -1,4 +1,4 @@
-public abstract class Liquido
+public class Liquido
 {
     public int _valore;
 
@@ -7,6 +7,9 @@ public abstract class Liquido
         _valore += valore;
     }
 }
+
+// Liquido superclasse
+// Acqua, Vino, Petrolio, Latte, Succo, Birra, ecc. sono tutti tipi di liquidi
 
 public class Acqua : Liquido
 {

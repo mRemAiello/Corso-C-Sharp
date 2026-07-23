@@ -12,5 +12,7 @@ public static class Program
         Console.WriteLine(" - 11 Eccezioni");
         Console.WriteLine();
         Console.WriteLine("Gli esempi possono essere eseguiti istanziando le classi nei rispettivi file.");
+
+        Automobile automobile = new Automobile();
     }
 }

@@ -4,6 +4,8 @@ public class Veicolo
     private string _modello = "";
     private int _annoDiProduzione = 0;
     private int _anzianita = 0;
+    private int _numeroPorte = 0;
+    private int _cilindrata = 0;
 
     public Veicolo(string marca, string modello, int anno)
     {
@@ -21,6 +23,9 @@ public class Veicolo
         _marca = "Non definito";
         _modello = "Non definito";
         _annoDiProduzione = 0;
+        _anzianita = 0;
+        _numeroPorte = 0;
+        _cilindrata = 0;
     }
 
     public string GetMarca()

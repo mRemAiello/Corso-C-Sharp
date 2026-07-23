@@ -20,9 +20,6 @@ public class Test
         Contenitore<Acqua> bottiglia = new(acqua);
         Contenitore<Vino> bottiglia2 = new(vino);
 
-        List<int> numeri = new List<int>();
-        List<Persona> persone = new List<Persona>();
-
 
         /*
         */
