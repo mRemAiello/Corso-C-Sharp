@@ -58,7 +58,7 @@ public class Intro
 
         // Input
         Console.Write("Inserisci la tua età: ");
-        string? inputEta = Console.ReadLine(); // "32"
+        string? inputEta = Console.ReadLine(); // "", "ciao", "20", null
         int eta = Convert.ToInt32(inputEta);
         Console.Write("Inserisci il tuo nome: ");
         string? nome = Console.ReadLine();

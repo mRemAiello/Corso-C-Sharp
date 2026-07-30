@@ -6,3 +6,6 @@ public interface IBuyable
 
     void Buy();
 }
+
+// Veicolo : IBuyable, Auto : Veicolo, ISellable, Moto, Camion, Autobus
+// Penna : Oggetto, IBuyable, ISellable
