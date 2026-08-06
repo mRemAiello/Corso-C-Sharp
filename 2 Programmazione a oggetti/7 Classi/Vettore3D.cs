@@ -31,6 +31,11 @@ public struct Vettore3D
         return new Vettore3D(a * b.X, a * b.Y, a * b.Z);
     }
 
+    public static Vettore3D operator *(Vettore3D a, Vettore3D b)
+    {
+        return new Vettore3D(a.X * b.X, a.Y * b.Y, a.Z * b.Z);
+    }
+
     public static Vettore3D operator +(Vettore3D a, Vettore3D b)
     {
         return new Vettore3D(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
@@ -39,11 +44,6 @@ public struct Vettore3D
     public static Vettore3D operator -(Vettore3D a, Vettore3D b)
     {
         return new Vettore3D(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
-    }
-
-    public static Vettore3D operator *(Vettore3D a, Vettore3D b)
-    {
-        return new Vettore3D(a.X * b.X, a.Y * b.Y, a.Z * b.Z);
     }
 
     public override string ToString()

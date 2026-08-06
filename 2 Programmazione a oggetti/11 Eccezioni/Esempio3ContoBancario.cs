@@ -24,6 +24,8 @@ public class ContoBancario
 
     public void Preleva(float importo)
     {
+        // Condizione 1: Importo > Saldo
+        // Condizione 2: Problemi vari con l'ATM (offline, guasto, banca non disponibile, banca chiusa, non ha le monete)
         if (importo > Saldo)
         {
             throw new SaldoInsufficienteException("Saldo insufficiente per completare l'operazione.");
@@ -44,4 +46,10 @@ public class ContoBancario
         Saldo += importo;
         Console.WriteLine("Depositato " + importo + " $");
     }
+
+    //
+    // ContoBancario conto = new ContoBancario(500);
+    // try
+    // conto.Preleva(100);
+    // catch (SaldoInsufficienteException ex)
 }

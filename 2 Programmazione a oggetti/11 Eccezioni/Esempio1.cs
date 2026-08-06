@@ -17,7 +17,6 @@ public class EsempioEccezioneNumeri
             Console.WriteLine("Questo blocco viene eseguito sempre.");
         }
 
-        //
-        
+        // ...
     }
 }

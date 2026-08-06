@@ -1,0 +1,168 @@
+# Esercizio C# – Banking System
+
+Realizzare un'applicazione console in C# per la gestione di un semplice sistema bancario. 
+Il programma dovrà permettere di creare diversi tipi di conti correnti, effettuare operazioni di deposito e prelievo e gestire eventuali errori attraverso eccezioni personalizzate.
+
+## Requisiti
+
+### 1. Interfaccia `ITransaction`
+
+Creare un'interfaccia chiamata `ITransaction` contenente i seguenti metodi:
+
+* `void Deposit(decimal amount)`
+* `void Withdraw(decimal amount)`
+
+Tutte le classi che rappresentano un conto bancario dovranno implementare questa interfaccia.
+
+---
+
+### 2. Classe astratta `BankAccount`
+
+Creare una classe astratta chiamata `BankAccount` contenente le seguenti proprietà:
+
+* `int AccountNumber`
+* `string Owner`
+* `decimal Balance`
+
+La classe deve includere:
+
+* un costruttore per inizializzare tutte le proprietà;
+* un metodo astratto `void PrintAccountInfo()`;
+* un metodo concreto `bool IsValid()` che restituisca `true` se il nome del proprietario non è vuoto e il saldo iniziale è maggiore o uguale a zero.
+
+Non deve essere possibile istanziare direttamente la classe `BankAccount`.
+
+---
+
+### 3. Sottoclassi
+
+Creare almeno tre classi derivate da `BankAccount`.
+
+#### `CheckingAccount`
+
+Aggiungere la proprietà:
+
+* `decimal OverdraftLimit`
+
+Il conto può andare in negativo fino al limite dello scoperto.
+
+---
+
+#### `SavingsAccount`
+
+Aggiungere la proprietà:
+
+* `decimal InterestRate`
+
+Il saldo non può mai diventare negativo.
+
+---
+
+#### `BusinessAccount`
+
+Aggiungere la proprietà:
+
+* `string CompanyName`
+
+Il conto aziendale può effettuare operazioni come un normale conto corrente.
+
+---
+
+Ogni sottoclasse dovrà implementare il metodo `PrintAccountInfo()` mostrando tutte le informazioni del conto.
+
+---
+
+### 4. Eccezioni personalizzate
+
+Creare le seguenti eccezioni:
+
+* `InvalidAccountException`
+* `InsufficientFundsException`
+* `AccountNotFoundException`
+
+Le eccezioni dovranno essere lanciate nei seguenti casi:
+
+* creazione di un conto con dati non validi;
+* tentativo di prelevare una somma non consentita;
+* ricerca di un conto inesistente.
+
+---
+
+### 5. Classe `Bank`
+
+Creare una classe `Bank` che contenga una collezione di oggetti di tipo `BankAccount`.
+
+La classe deve implementare i seguenti metodi:
+
+* `void AddAccount(BankAccount account)`
+* `BankAccount FindAccount(int accountNumber)`
+* `void RemoveAccount(int accountNumber)`
+* `void Deposit(int accountNumber, decimal amount)`
+* `void Withdraw(int accountNumber, decimal amount)`
+* `void PrintAllAccounts()`
+
+Il metodo `AddAccount()` deve verificare che il conto sia valido; in caso contrario deve lanciare `InvalidAccountException`.
+
+Il metodo `FindAccount()` deve lanciare `AccountNotFoundException` se il conto non esiste.
+
+Il metodo `Withdraw()` deve verificare che il saldo disponibile sia sufficiente secondo le regole del tipo di conto; in caso contrario deve lanciare `InsufficientFundsException`.
+
+---
+
+### 6. Programma principale
+
+Nel metodo `Main`:
+
+1. Creare un oggetto della classe `Bank`.
+2. Aggiungere almeno:
+
+   * un `CheckingAccount`;
+   * un `SavingsAccount`;
+   * un `BusinessAccount`.
+   
+3. Visualizzare tutti i conti registrati.
+4. Effettuare un deposito su un conto.
+5. Effettuare un prelievo valido.
+6. Tentare un prelievo superiore al saldo disponibile per provocare un'eccezione.
+7. Cercare un conto con un numero inesistente.
+8. Tentare di creare un conto con dati non validi.
+9. Rimuovere un conto esistente.
+10. Gestire tutte le eccezioni mediante blocchi `try`, `catch` e, dove opportuno, `finally`.
+
+Il programma non deve terminare in caso di errore: tutte le eccezioni dovranno essere intercettate e gestite mostrando un messaggio significativo.
+
+---
+
+## Vincoli
+
+* Utilizzare correttamente l'ereditarietà.
+* Utilizzare almeno una classe astratta.
+* Utilizzare almeno un'interfaccia.
+* Utilizzare il polimorfismo.
+* Utilizzare `override` per implementare `PrintAccountInfo()`.
+* Utilizzare eccezioni personalizzate.
+* Utilizzare una collezione generica (`List<BankAccount>`).
+* Applicare l'incapsulamento mediante proprietà e modificatori di accesso appropriati.
+* Evitare la duplicazione del codice.
+
+---
+
+## Obiettivo facoltativo
+
+Aggiungere una classe `PremiumAccount` derivata da `CheckingAccount`.
+
+Il conto premium dispone di una proprietà aggiuntiva:
+
+* `decimal CashbackRate`
+
+Ogni deposito restituisce automaticamente una piccola percentuale dell'importo come cashback, accreditandola sul saldo.
+
+Infine, realizzare un menu testuale che permetta all'utente di:
+
+1. aggiungere un conto;
+2. visualizzare tutti i conti;
+3. cercare un conto;
+4. effettuare un deposito;
+5. effettuare un prelievo;
+6. eliminare un conto;
+7. uscire dal programma.
