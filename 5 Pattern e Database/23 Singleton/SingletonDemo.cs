@@ -6,18 +6,17 @@ public static class SingletonDemo
     {
         Console.WriteLine("=== Singleton Demo ===");
 
-        var manager = DatabaseManager.Instance;
-        manager.Connect();
-        manager.Load();
-        manager.Save();
+        var database = DatabaseManager.Instance;
+        database.Connect();
+        database.Load();
+        database.Save();
 
         Console.WriteLine();
         Console.WriteLine("Recupero nuovamente l'istanza del DatabaseManager...");
 
-        var sameManager = DatabaseManager.Instance;
-        sameManager.Connect();
-        sameManager.Load();
-        sameManager.Save();
+        database.Connect();
+        database.Load();
+        database.Save();
 
         Console.WriteLine();
         Console.WriteLine("La stessa istanza viene riutilizzata in tutte le chiamate.");

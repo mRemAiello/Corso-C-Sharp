@@ -5,7 +5,7 @@ public static class MethodVsQuery
         List<int> numeri = new() { 1, 2, 3, 4, 5, 6 };
 
         // Sintassi con metodi
-        var numeriPariMetodo = numeri.Where(n => n % 2 == 0).Select(n => n);
+        var numeriPariMetodo = numeri.Where(n => n > 0 && n % 2 == 0).Select(n => n).ToList();
 
         // Sintassi query
         var numeriPariQuery = from n in numeri where n % 2 == 0 select n;

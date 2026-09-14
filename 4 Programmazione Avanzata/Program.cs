@@ -1,6 +1,6 @@
 namespace ProgrammazioneAvanzataApp;
 
-public static class Program
+/*public static class Program
 {
     public static void Main(string[] args)
     {
@@ -13,3 +13,4 @@ public static class Program
         Console.WriteLine("Apri ogni cartella per esplorare il relativo codice sorgente.");
     }
 }
+*/

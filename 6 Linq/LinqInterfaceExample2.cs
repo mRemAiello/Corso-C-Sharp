@@ -28,8 +28,9 @@ public static class LinqInterfaceExample2
         };
 
         var promossi = studenti
-            .Where(s => s.Voto >= 26)
-            .Select(s => s.Nome);
+            .Where(s => s.Voto >= 26 && s.Facolta == "Informatica")
+            .Select(s => s.Nome)
+            .ToList();
 
         Console.WriteLine("Studenti promossi: " + string.Join(", ", promossi));
     }

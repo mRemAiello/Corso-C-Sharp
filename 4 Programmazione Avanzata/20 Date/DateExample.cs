@@ -5,7 +5,7 @@ class DateExample
     public void Execute()
     {
         // Creazione di un oggetto DateTime con data e ora specifiche
-        DateTime dataSpecificata = new DateTime(2025, 10, 20, 14, 30, 0);
+        DateTime dataSpecificata = new(2025, 10, 20, 14, 30, 0);
         Console.WriteLine("Data specificata: " + dataSpecificata);
 
         // Ottenere la data e ora correnti

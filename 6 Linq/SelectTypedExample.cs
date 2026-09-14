@@ -3,7 +3,6 @@ namespace LinqExamples;
 public static class SelectTypedExample
 {
     private record Studente(string Nome, string Cognome, int Crediti);
-
     private record StudenteReport(string NomeCompleto, int Crediti, bool InRegola);
 
     public static void Execute()

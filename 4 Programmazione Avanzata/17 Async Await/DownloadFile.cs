@@ -1,14 +1,16 @@
 public class DownloadFile
 {
-    /*static async Task Main(string[] args)
+    static async Task Main(string[] args)
     {
-        string url = "https://www.example.com";
+        string url = "https://www.google.com";
 
         // Avvio del download della pagina
         string contenutoPagina = await ScaricaPaginaAsync(url);
 
         // Visualizzazione del contenuto scaricato
         Console.WriteLine(contenutoPagina);
+
+        File.WriteAllText("google.html", contenutoPagina);
     }
 
     // Metodo asincrono che scarica il contenuto di una pagina web
@@ -20,5 +22,5 @@ public class DownloadFile
             string contenuto = await client.GetStringAsync(url);
             return contenuto;
         }
-    }*/
+    }
 }

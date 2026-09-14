@@ -1,3 +1,5 @@
+Gestione thread e condivisione thread in C#
+
 # Corso C#
 
 Raccolta di materiale didattico per il corso di C# e MAUI. Ogni macro-area del programma è ora organizzata come progetto indipendente apribile con Visual Studio Code o con l'interprete `dotnet`.
