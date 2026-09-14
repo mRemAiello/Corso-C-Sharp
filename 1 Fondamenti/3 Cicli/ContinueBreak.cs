@@ -31,7 +31,7 @@ public class ContinueBreak
             if (i % 2 == 0 && i % 3 == 0)
             {
                 Console.WriteLine("Iterazione: " + i);
-            }           
+            }
 
             // Metodo 2:
             if (i % 2 != 0)

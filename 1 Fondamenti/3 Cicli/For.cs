@@ -12,6 +12,7 @@ public class For
         colori[0] = "Rosso";
         colori[1] = "Verde";
         colori[2] = "Blu";
+        
         // Secondo caso: inserisco gli elementi direttamente
         string[] colori2 = new string[] { "Rosso", "Verde", "Blu" };
 

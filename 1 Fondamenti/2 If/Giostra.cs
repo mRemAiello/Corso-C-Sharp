@@ -2,7 +2,7 @@ public class Giostra
 {
     public void Execute()
     {
-        int eta = 15;
+        int eta = 14;
         double altezza = 1.40;
         Console.WriteLine("Età: " + eta + ", Altezza: " + altezza);
 
