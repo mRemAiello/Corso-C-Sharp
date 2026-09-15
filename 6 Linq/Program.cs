@@ -28,6 +28,6 @@ class Program
         //JoinExample.Execute();
         //GroupJoinExample.Execute();
 
-        WhereObjectsExample.Execute();
+        //WhereObjectsExample.Execute();
     }
 }

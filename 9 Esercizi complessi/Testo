@@ -1,0 +1,254 @@
+# Esercizio avanzato C# — Travel Booking System
+
+Realizza un'applicazione in **C#** per la gestione di un'agenzia di viaggi denominata **Travel Booking System**.
+
+L'applicazione dovrà consentire agli utenti di consultare diverse tipologie di viaggio, effettuare prenotazioni e gestire le proprie prenotazioni. Gli amministratori dovranno invece poter gestire l'offerta dei viaggi disponibili.
+
+Il progetto dovrà essere sviluppato utilizzando **classi, ereditarietà, polimorfismo, delegate, eventi, design pattern Singleton, database MySQL e architettura MVC**.
+
+## 1. Gestione dei viaggi
+
+Crea una classe astratta `Viaggio` contenente almeno le seguenti proprietà:
+
+* `ID`
+* `Destinazione`
+* `DataPartenza`
+* `DataRitorno`
+* `PrezzoBase`
+* `PostiDisponibili`
+
+Implementa almeno tre sottoclassi:
+
+* `ViaggioAereo`
+* `ViaggioTreno`
+* `Crociera`
+
+Ogni sottoclasse dovrà possedere proprietà specifiche.
+
+Ad esempio, `ViaggioAereo` potrà contenere compagnia aerea, aeroporto di partenza e numero del volo; `ViaggioTreno` la stazione di partenza, la compagnia ferroviaria e il numero del treno; `Crociera` il porto di partenza, la compagnia e il nome della nave.
+
+Implementa inoltre un metodo astratto:
+
+`MostraDettagli()`
+
+Ogni sottoclasse dovrà effettuare l'override del metodo mostrando le informazioni specifiche del viaggio.
+
+Implementa anche ToString()
+
+Utilizza il polimorfismo per permettere all'applicazione di gestire differenti tipologie di viaggio attraverso riferimenti alla classe base `Viaggio`.
+
+## 2. Gestione degli utenti
+
+Crea una classe astratta `Utente` contenente:
+
+* `ID`
+* `Nome`
+* `Cognome`
+* `Email`
+* `Password`
+* `DataRegistrazione`
+
+Implementa due sottoclassi:
+
+`Cliente`, che può cercare viaggi, effettuare prenotazioni e visualizzare lo storico delle proprie prenotazioni.
+
+`Amministratore`, che può aggiungere, modificare e rimuovere i viaggi disponibili.
+
+L'applicazione dovrà verificare il ruolo dell'utente prima di consentire l'esecuzione delle operazioni riservate.
+
+## 3. Sistema di prenotazione
+
+Crea una classe `Prenotazione` contenente almeno:
+
+* `ID`
+* `Cliente`
+* `Viaggio`
+* `NumeroPasseggeri`
+* `PrezzoTotale`
+* `DataPrenotazione`
+* `Stato`
+
+Lo stato della prenotazione potrà assumere valori come:
+
+`InAttesa`, `Confermata`, `Annullata`.
+
+Un cliente potrà effettuare una prenotazione solamente se il viaggio possiede un numero sufficiente di posti disponibili.
+
+Quando la prenotazione viene confermata, il numero dei posti disponibili dovrà essere aggiornato.
+
+Ad esempio, se un viaggio dispone di 15 posti e un cliente effettua una prenotazione per 4 persone, i posti disponibili dovranno diventare 11.
+
+## 4. Delegate — Calcolo dinamico del prezzo
+
+Il prezzo finale di una prenotazione non dovrà essere calcolato direttamente all'interno della classe `Prenotazione`.
+
+Definisci un **delegate** responsabile del calcolo del prezzo, ad esempio:
+
+`CalcoloPrezzoDelegate`
+
+Il delegate dovrà consentire di utilizzare differenti strategie di prezzo.
+
+Implementa almeno tre strategie:
+
+* prezzo standard;
+* sconto percentuale;
+* maggiorazione stagionale.
+
+Ad esempio, durante il mese di agosto potrebbe essere applicata una maggiorazione del 20%, mentre un cliente Premium potrebbe ricevere uno sconto del 10%.
+
+Il sistema dovrà poter cambiare strategia di calcolo senza modificare la logica principale che gestisce la prenotazione.
+
+## 5. Eventi — Gestione delle prenotazioni
+
+Quando una prenotazione viene completata correttamente, il sistema dovrà generare un evento:
+
+`PrenotazioneConfermata`
+
+L'evento dovrà trasportare informazioni relative alla prenotazione appena effettuata.
+
+Crea almeno due componenti iscritti all'evento.
+
+Un `EmailNotificationService` dovrà simulare l'invio di una conferma al cliente.
+
+Un `LogService` dovrà registrare le informazioni relative alla prenotazione.
+
+Il componente che conferma la prenotazione non dovrà richiamare direttamente questi servizi. Dovrà solamente generare l'evento, lasciando ai subscriber la responsabilità di reagire.
+
+Implementa inoltre un secondo evento:
+
+`PrenotazioneAnnullata`
+
+Quando una prenotazione viene annullata, i posti precedentemente occupati dovranno tornare disponibili.
+
+## 6. Singleton — Gestione del database
+
+Implementa una classe `DatabaseManager` utilizzando il **design pattern Singleton**.
+
+La classe dovrà essere responsabile della configurazione dell'accesso al database MySQL e dovrà garantire l'esistenza di una sola istanza del manager all'interno dell'applicazione.
+
+Il Singleton non dovrà necessariamente mantenere una singola connessione aperta per tutta l'esecuzione del programma. Dovrà invece fornire un punto centralizzato attraverso cui ottenere le connessioni necessarie.
+
+## 7. Database MySQL
+
+Crea un database MySQL denominato:
+
+`travel_booking`
+
+Il database dovrà contenere almeno le seguenti tabelle:
+
+* `utenti`
+* `viaggi`
+* `prenotazioni`
+
+Puoi aggiungere ulteriori tabelle se necessarie per rappresentare correttamente il dominio.
+
+Dovranno essere utilizzate correttamente:
+
+* Primary Key
+* Foreign Key
+* vincoli `NOT NULL`
+* tipi di dato appropriati
+* relazioni tra le tabelle
+
+Ogni prenotazione dovrà essere collegata al cliente che l'ha effettuata e al viaggio prenotato.
+
+Implementa le principali operazioni CRUD necessarie al funzionamento dell'applicazione.
+
+Le query contenenti dati provenienti dall'utente dovranno utilizzare **query parametrizzate**.
+
+## 8. Pattern MVC
+
+L'applicazione dovrà essere organizzata secondo il pattern **Model-View-Controller**.
+
+Il **Model** dovrà contenere le entità del dominio, come `Utente`, `Cliente`, `Amministratore`, `Viaggio`, le sue sottoclassi e `Prenotazione`.
+
+La **View** dovrà occuparsi esclusivamente dell'interazione con l'utente. È sufficiente realizzare un'interfaccia Console.
+
+Il **Controller** dovrà coordinare le operazioni tra View, Model e servizi applicativi.
+
+Implementa almeno:
+
+`ViaggiController`, per ricerca e gestione dei viaggi.
+
+`PrenotazioniController`, per creazione, annullamento e visualizzazione delle prenotazioni.
+
+`UtentiController`, per autenticazione e gestione degli utenti.
+
+I Controller non dovranno contenere direttamente query SQL.
+
+## 9. Repository
+
+Per separare ulteriormente la logica applicativa dalla persistenza dei dati, implementa:
+
+* `UtenteRepository`
+* `ViaggioRepository`
+* `PrenotazioneRepository`
+
+I Repository dovranno essere gli unici componenti autorizzati a eseguire direttamente le query MySQL.
+
+I Controller dovranno quindi utilizzare Repository e Service senza conoscere i dettagli relativi alle query SQL.
+
+## 10. Ricerca dei viaggi
+
+Il cliente dovrà poter cercare i viaggi utilizzando almeno uno dei seguenti criteri:
+
+* destinazione;
+* intervallo di date;
+* prezzo massimo;
+* tipologia di viaggio;
+* numero minimo di posti disponibili.
+
+I risultati dovranno essere recuperati dal database e mostrati attraverso la View.
+
+## 11. Transazioni
+
+La conferma di una prenotazione dovrà utilizzare una **transazione MySQL**.
+
+Durante una prenotazione il sistema dovrà:
+
+1. verificare la disponibilità del viaggio;
+2. calcolare il prezzo tramite delegate;
+3. creare la prenotazione;
+4. diminuire i posti disponibili;
+5. salvare le modifiche nel database;
+6. eseguire il `COMMIT`;
+7. generare l'evento `PrenotazioneConfermata`.
+
+Se una delle operazioni sul database fallisce, dovrà essere eseguito il `ROLLBACK`.
+
+Non dovrà essere possibile ottenere una prenotazione registrata senza il corrispondente aggiornamento dei posti disponibili.
+
+## 12. Funzionamento dell'applicazione
+
+All'avvio dovrà essere mostrato un menu attraverso il quale l'utente potrà registrarsi oppure effettuare il login.
+
+Dopo l'autenticazione, il menu dovrà cambiare in base al ruolo.
+
+Il **Cliente** dovrà poter cercare un viaggio, visualizzarne i dettagli, effettuare una prenotazione, visualizzare le proprie prenotazioni e annullare una prenotazione.
+
+L'**Amministratore** dovrà poter visualizzare tutti i viaggi, inserire un nuovo viaggio, modificare un viaggio, eliminarlo e visualizzare le prenotazioni effettuate dagli utenti.
+
+## Obiettivo dell'esercizio
+
+L'obiettivo è realizzare un'applicazione completa mantenendo una chiara separazione delle responsabilità.
+
+Al termine del progetto dovrai essere in grado di spiegare dove viene utilizzata l'ereditarietà, come viene sfruttato il polimorfismo, perché il calcolo del prezzo è stato delegato a un delegate, come funziona il meccanismo publisher/subscriber degli eventi, perché `DatabaseManager` utilizza Singleton e come MVC e Repository separano interfaccia, logica applicativa e persistenza dei dati.
+
+### Bonus
+
+Per aumentare la complessità del progetto, implementa almeno **tre** delle seguenti funzionalità:
+
+* utilizzo di `async` e `await` nelle operazioni MySQL;
+* autenticazione con password salvate tramite hashing;
+* Dependency Injection;
+* interfaccia generica `IRepository<T>`;
+* clienti Standard e Premium;
+* codici promozionali;
+* sistema di recensioni dei viaggi;
+* lista dei viaggi preferiti;
+* gestione di pacchetti viaggio composti da volo + hotel;
+* paginazione dei risultati di ricerca;
+* logging su file;
+* gestione centralizzata delle eccezioni;
+* unit test sul calcolo del prezzo;
+* prevenzione dell'overbooking in caso di prenotazioni concorrenti.

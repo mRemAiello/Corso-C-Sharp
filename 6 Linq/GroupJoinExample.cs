@@ -42,7 +42,7 @@ public static class GroupJoinExample
             new(3, "Stampante")
         };
 
-        IEnumerable<(string Cliente, IEnumerable<OrdineGroupJoin> Ordini)> ordiniPerCliente = clienti
+        var ordiniPerCliente = clienti
             .GroupJoin(
                 ordini,
                 cliente => cliente.Id,
