@@ -97,8 +97,7 @@ public class Func
         {
             Console.WriteLine("Media: " + pippo);
         }
-
-
+        
         //
         Console.WriteLine(risultato);
         Console.WriteLine(risultato2);
