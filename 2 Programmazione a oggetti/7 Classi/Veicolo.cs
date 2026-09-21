@@ -15,7 +15,7 @@ public class Veicolo
         _anzianita = 2025 - anno;
 
         // Qualora ci sia ambiguità sui nomi, usa this
-        // this._anno = anno;
+        // this.anno = anno;
     }
 
     public Veicolo()
