@@ -1,4 +1,0 @@
-interface:
-  display_name: "Save System"
-  short_description: "Integrate every new tool with the save system"
-  default_prompt: "Analyze and implement this change, ensuring complete persistence through the existing save system."
