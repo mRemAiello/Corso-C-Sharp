@@ -7,17 +7,39 @@ namespace EsempioMVC.Controllers
     public class StudenteController
     {
         private readonly Studente _model;
-        private readonly StudenteView _view;
+        private readonly IView _view;
 
-        public StudenteController(Studente model, StudenteView view)
+        public StudenteController(Studente model, IView view)
         {
             _model = model;
             _view = view;
         }
 
-        public void SetNome(string nome) => _model.Nome = nome;
+        public void SetNome(string nome)
+        {
+            // TODO: Controllare il nome (es. non vuoto, solo lettere)
+            if (string.IsNullOrWhiteSpace(nome))
+            {
+                _view.MostraMessaggio("Nome non valido: non può essere vuoto.");
+                return;
+            }
 
-        public void SetCognome(string cognome) => _model.Cognome = cognome;
+            // Se il controllo è passato, aggiorna il modello
+            _model.Nome = nome;
+        }
+
+        public void SetCognome(string cognome)
+        {
+            // TODO: Controllare il cognome (es. non vuoto, solo lettere)
+            if (string.IsNullOrWhiteSpace(cognome))
+            {
+                _view.MostraMessaggio("Cognome non valido: non può essere vuoto.");
+                return;
+            }
+
+            // Se il controllo è passato, aggiorna il modello
+            _model.Cognome = cognome;
+        }
 
         public void SetVoto(int voto)
         {
@@ -32,7 +54,7 @@ namespace EsempioMVC.Controllers
 
         public void MostraStudente()
         {
-            _view.MostraDettagli(_model);
+            _view.MostraDettagli("Scheda Studente", _model.ToDictionary());
         }
     }
 }

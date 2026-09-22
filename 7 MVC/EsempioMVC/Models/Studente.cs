@@ -15,5 +15,16 @@ namespace EsempioMVC.Models
             Cognome = cognome;
             Voto = voto;
         }
+
+        public Dictionary<string, string> ToDictionary()
+        {
+            return new Dictionary<string, string>
+            {
+                { "ID", Id.ToString() },
+                { "Nome", Nome },
+                { "Cognome", Cognome },
+                { "Voto", Voto.ToString() }
+            };
+        }
     }
 }
