@@ -34,11 +34,11 @@ public class Func
     // media = 2, pippo = 2 
     // if (TryGet("nome", out float nome))
     // 
-    bool TryMedia(int[]? numeri, out float media)
+    bool TryMedia(int[]? numeri, out float? media)
     {
         if (numeri == null || numeri.Length == 0)
         {
-            media = 0;
+            media = null;
             return false;
         }
 
@@ -61,11 +61,11 @@ public class Func
         return somma;
     }
 
-    float Media(int[]? numeri, bool excludeNegative = true)
+    float? Media(int[]? numeri, bool excludeNegative = true)
     {
         if (numeri == null || numeri.Length == 0)
         {
-            return 0;
+            return null;
         }
 
         int somma = 0;
@@ -73,8 +73,8 @@ public class Func
         {
             somma += numeri[i];
         }
-
         somma /= numeri.Length;
+        
         return somma;
     }
 
@@ -90,10 +90,10 @@ public class Func
 
         //
         int[] eta = { 10, 20, 30 };
-        float risultato_media = Media(eta);
+        float? risultato_media = Media(eta);
 
         // 
-        if (TryMedia(eta, out float pippo))
+        if (TryMedia(eta, out float? pippo))
         {
             Console.WriteLine("Media: " + pippo);
         }

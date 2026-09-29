@@ -13,6 +13,7 @@ public class EsempioNullable
         // HasValue permette di sapere se il nullable contiene un valore.
         // Value lo restituisce, ma va usato soltanto dopo il controllo: se il valore fosse null,
         // provocherebbe un'InvalidOperationException.
+        // Equivalente a scrivere voto == null
         if (voto.HasValue)
         {
             Console.WriteLine($"Il voto e {voto.Value}.");
@@ -20,7 +21,6 @@ public class EsempioNullable
 
         // Il pattern matching e un modo piu compatto e sicuro per controllare e leggere il valore.
         // Dentro l'if, etaInserita e un int non nullable.
-        eta = 25;
         if (eta is int etaInserita)
         {
             Console.WriteLine($"L'eta inserita e {etaInserita} anni.");
@@ -35,7 +35,7 @@ public class EsempioNullable
         // sono abilitati nel progetto. string? comunica al compilatore che null e previsto.
         string? soprannome = null;
 
-        // ?. esegue l'operazione soltanto se l'oggetto non e null; in caso contrario restituisce null.
+        // L'operatore ?. esegue l'operazione soltanto se l'oggetto non e null; in caso contrario restituisce null.
         // Combinandolo con ?? evitiamo una NullReferenceException e mostriamo un testo alternativo.
         int lunghezzaSoprannome = soprannome?.Length ?? 0;
         Console.WriteLine($"Lunghezza del soprannome: {lunghezzaSoprannome}");
