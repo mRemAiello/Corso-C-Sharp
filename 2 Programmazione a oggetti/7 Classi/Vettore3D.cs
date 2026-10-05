@@ -13,10 +13,12 @@ public struct Vettore3D
 
     public void Funzione()
     {
-        int a = 5;
-        Vettore3D vettore1 = new Vettore3D(1, 2, 3);
-        Vettore3D vettore2 = new Vettore3D(4, 5, 6);
+        Vettore3D vettore1 = new(1, 2, 3);
+        Vettore3D vettore2 = new(4, 5, 6);
         var vettore3 = vettore1 + vettore2; // Somma di vettori
+
+        // Prodotto scalare per vettore
+        int a = 5;
         var vettore4 = a * vettore1;
     }
 
@@ -51,7 +53,6 @@ public struct Vettore3D
         return $"Vettore3D({X}, {Y}, {Z})";
     }
 }
-
 
 // Differenze tra struct e classe:
 

@@ -21,7 +21,7 @@ public class Automobile : Veicolo
     public override void Avvia()
     {
         // Qualora volessi avviare il metodo della superclasse
-        // base.Avvia();
+        base.Avvia();
 
         //
         Console.WriteLine("Automobile avviata.");

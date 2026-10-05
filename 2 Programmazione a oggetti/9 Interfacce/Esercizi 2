@@ -1,0 +1,15 @@
+Crea un programma C# per gestire diversi tipi di veicoli utilizzati da un’azienda di trasporti.
+Definisci una classe base Vehicle con le proprietà Brand, Model e Year. Aggiungi un metodo ShowInfo() che mostri le informazioni principali del veicolo.
+Crea due sottoclassi di Vehicle: Car e Truck.
+La classe Car deve avere una proprietà aggiuntiva NumberOfDoors, mentre la classe Truck deve avere una proprietà MaxLoad.
+Definisci tre interfacce:
+IDrivable, contenente i metodi Start() e Drive().
+IRefuelable, contenente il metodo Refuel(double amount).
+IInsurable, contenente il metodo CalculateInsuranceCost() che restituisce un valore di tipo double.
+La classe Car deve implementare IDrivable e IInsurable.
+La classe Truck deve implementare IDrivable, IRefuelable e IInsurable.
+Esegui l’override di ShowInfo() nelle due sottoclassi, mostrando anche le informazioni specifiche di Car e Truck.
+Per CalculateInsuranceCost(), utilizza una formula diversa per ciascun tipo di veicolo. Ad esempio, il costo dell’assicurazione può dipendere dall’anno del veicolo e, nel caso di Truck, anche dal carico massimo.
+Nel Main, crea almeno due oggetti Car e due oggetti Truck e inseriscili all’interno di una List<Vehicle>.
+Scorri la collezione e mostra le informazioni di ogni veicolo. Successivamente, verifica quali interfacce sono implementate da ciascun oggetto ed esegui i relativi metodi.
+Infine, calcola e visualizza il costo totale dell’assicurazione di tutti i veicoli che implementano IInsurable.

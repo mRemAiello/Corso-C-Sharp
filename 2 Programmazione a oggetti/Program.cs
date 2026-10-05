@@ -13,6 +13,12 @@ public static class Program
         Console.WriteLine();
         Console.WriteLine("Gli esempi possono essere eseguiti istanziando le classi nei rispettivi file.");
 
-        Automobile automobile = new Automobile();
+        Automobile automobile = new("Fiat", "Panda", 2026, 4);
+        automobile.Avvia();
+
+        automobile._marca = "Fiat";
+        
+        Automobile automobile2 = new();
+        Automobile automobile3 = new();
     }
 }

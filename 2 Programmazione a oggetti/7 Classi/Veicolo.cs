@@ -1,6 +1,6 @@
 public class Veicolo
 {
-    protected string _marca = "";
+    public string _marca = "";
     private string _modello = "";
     private int _annoDiProduzione = 0;
     private int _anzianita = 0;
