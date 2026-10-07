@@ -20,7 +20,6 @@ public class Test
         Contenitore<Acqua> bottiglia = new(acqua);
         Contenitore<Vino> bottiglia2 = new(vino);
 
-
         /*
         */
 

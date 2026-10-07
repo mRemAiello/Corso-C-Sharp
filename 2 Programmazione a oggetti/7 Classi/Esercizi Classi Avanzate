@@ -1,0 +1,88 @@
+ESERCIZIO GIACCA A VENTO
+
+Si crei una classe per rappresentare giacche a vento, le giacche a vento dovranno essere caratterizzate dalla taglia (numeri interi positivi tra 30 e 60) e dall’apertura della cerniera memorizzata come percentuale di chiusura della cerniera; scrivere i metodi per poter aprire o chiudere completamente la cerniera o aprirla o chiuderla di un certa percentuale passata quando viene richiamato il metodo, creare ovviamente anche i metodi per poter conoscere la taglia, la percentuale di chiusura di una cerniera, se è chiusa completamente la cerniera.
+Dopo aver creato la classe testarla creando due giacche a vento con le taglie decise dall’utente, per ogni giacca per 4 volte far aprire e chiudere la cerniera di quantità casuali tra 10 e 50. Verificare poi quale tra le due giacche a vento ha il valore dato dalla taglia per la chiusura della giacca a vento maggiore dell’altra.
+
+
+ESERCIZIO SCARPE
+
+Si crei una classe scarpe con gli strectch (linguette adesive col feltro); ogni paio di scarpe è caratterizzato dalla dimensione (data da un numero intero) e ha tre stretch sulla scarpa destra e tre sulla scarpa sinistra.
+Creare due paia scarpe con gli stretch e per 10 volte estrarre casualmente su quale paio di scarpe cambiare da allacciato a slacciato o viceversa uno degli stretch (scelto casualmente) di una delle due scarpe scelta casualmente.
+Dopo aver fatto aprire e chiudere per le 10 volte gli stretch, stampare la situazione finale delle scarpe; si consideri che inizialmente tutti gli stretch sono slacciati.
+(non si usino gli array e le matrici come attributi)
+
+
+ESERCIZIO TRENO
+
+Si crei una classe treno, la classe treno sarà caratterizzata dal numero di vagoni; tutti i vagoni possono contenere al massimo lo stesso numero di viaggiatori,; nota bene, nella classe non serve memorizzare il numero di viaggiatori effettivemente presenti in ogni singolo vagone, basta quello totale.
+Creare un treno in cui il numero di vagoni e il numero massimo di viaggiatori per vagone siano scelti dall’utente e per 5 volte far chiedere all’utente se salgono o scendono viaggiatori e memorizzare il numero di viaggiatori presenti nel treno.
+Dopo le 5 volte stampare il numero totale di viaggiatori e il numero medio di viaggiatori per vagone.
+
+
+ESERCIZIO TELEVISIONE
+
+Creare una classe Televisione sapendo che lo stato di una televisione è caratterizzato dal fatto di essere accesa o spenta, dal volume (che è compreso tra zero e 10), dal canale (che è compreso tra 0 e 99) e dal fatto che sia in modalità silenzioso o meno.
+
+Creare un opportuno costruttore, e iseguenti metodi: pulasanterosso(), canaleSuccessivo(), canalePrecedente(), aumentaVolume(), abbassaVolume(), impostaCanale(int c), print(), pulsanteSilenzioso().
+Si esplicitino le scelte implementative prese scrivendole nei commenti all’inizio del codice.
+Testare la classe con un opportuno main.
+
+Si rispettino i dettami della programmazione orientata agli oggetti impostando attributi privati e i metodi pubblici.
+
+
+ESERCIZIO ANFORE (sviluppo di una classe e utilizzo di una classe)
+
+Scrivere un programma che, tramite un main e la classe Indovinello, permetta di affrontare il famoso indovinello delle due anfore (presente anche nel film Die Hard); l’indovinello è il seguente: Si hanno due anfore, una può contenere al massimo 5 litri d’acqua, l’altra 3 litri. Si vuole riuscire a misurare con l’ausilio delle due anfore (e senza l’ausilio di altri strumenti) la quantità di 4 litri d’acqua, come si può fare?
+
+Il main permetterà all’utente di simulare le azioni che si possono fare con le due anfore;il main consisterà in un ciclo che visualizzerà un menu e farà scegliere all’utente che azione fare tra quelle a disposizione.
+Le azioni saranno quelle messe a disposizione dalla classe Indovinello, ovvero:
+svuotare o riempire completamente un’anfora, svuotare un’anfora nell’altra, sapere lo stato delle anfore, sapere se un’anfora sia vuota o piena.
+Quando l’anfora da 5 litri conterrà esattamente 4 litri il main dirà all’utente che ha vinto e terminerà il programma.
+
+
+ESERCIZIO FRAZIONE
+
+Creare una classe per rappresentare delle frazioni che saranno caratterizzate da numeratore e denominatore (se viene passato un denominatore uguale a zero verrà automaticamente cambiato a 1).
+Sulle frazioni si potrà operare cambiando numeratore o denominatore (se si proverà a portare a zero il denominatore rimarrà al valore precedente), moltiplicandole per un intero, riducendole ai minimi termini, calcolandone il valore in decimale.
+Creare un main che memorizza una frazione, ne cambia il numeratore
+con un altro numeratore scelto dall’utente e infine moltiplica la frazione per un nuovo numero passato dall’utente; dopo ognuna delle operazioni precedenti ridurre ai minimi termini e infine stampare il valore decimale della frazione.
+
+
+ESERCIZIO DISPENSER SAPONE
+Creare una classe per realizzare un dispenser di sapone liquido, i dispenser sono caratterizzati dalla capienza (riportata sull’etichetta del dispenser), dalla quantità di sapone e dalla quantità di sapone che esce quando si aziona il pulsante del dispenser, i dispenser possono essere ricaricati con quantità di sapone variabile.
+L’azienda che produce dispenser ne produce di standard pieni con capienza 500 ml e erogazione 10 ml o di custom con capienze e quantità di prodotto erogato variabile.
+Creare la classe e un main per provarla.
+
+
+ESERCIZIO STAMPANTE
+Una stampante è caratterizzata dal livello di inchiostro delle singole cartucce C M Y K, le cartucce non possono essere ricaricate ma sostituite, la stampante permette di stampare singoli fogli (bisogna passare i livelli di inchiostro richiesti per la stampa di quel foglio), o più copie di uno stesso foglio, si può sempre verificare il livello di inchiostro di una cartuccia.
+Ragionare su quali attributi e metodi sono presenti e sul codice dei metodi (in particolare si ragioni su come gestire le stampe soprattutto nel caso non ci sia inchiostro sufficiente).
+Creare la classe e un main.
+
+
+ESERCIZIO SQUADRA
+Creare una classe Squadra che rappresenta una squadra di calcio e ha come attributi il numero di partite vinte, il numero di partite perse e il numero di partite pareggiate.
+Ha opportuni metodi per impostare i parametri e farli visualizzare, inoltre ha il metodo punti() che restituisce quanti punti ha in campionato (ogni partita vinta vale 3 punti, ogni partita pareggiata 1, quelle perse 0) e un metodo inizioanno() che resetta il numero di partite vinte, pareggiate e perse portandole a zero.
+
+Creare un main per provare la classe creando due istanze Juventus e Milan e si provino ad utilizzare facendo inserire all’utente per entrambe le squadre il numero di partite vinte, perse e pareggiate e poi confrontando quale delle due ha più punti in campionato. NB: si sviluppi usando il paradigma della programmazione ad oggetti ed in particolare rispettando l’information hiding: parametri privati, metodi pubblici.
+
+
+ESERCIZIO CASSA
+
+Creare una classe cassa che serva a rappresentare la cassa di un negozio; ogni cassa conserva una quantità di denaro all’interno che può aumentare nel tempo man mano che i clienti effettuano acquisti, la cassa ogni giorno memorizza il numero di acquisti del negozio. A fine giornata si dà alla cassa il comando “chiusura cassa” che riporta la quantità di denaro presente in cassa a una quantità iniziale “fondo cassa”, restituendo quanto incassato e azzera il numero di acquisti, predisponendo la cassa per il suo uso nel giorno successivo. 
+NB: la cassa non mantiene in memoria quanti acquisti sono stati fatti nei giorni precedenti.
+Si creino anche i relativi metodi set e get dove sensato.
+
+SLOT MACHINE
+
+Creare una classe che permetta di rappresentare una slot machine e un main per gestirla, deve funzionare così inserita una moneta girano le tre rotelle della slot machine e appaiono tre simboli (nel nostro caso tre lettere), l’utente per due volte può decidere di tenere una o più lettere apparse o fermarsi, una volta che si ferma se c’è una coppia viene restituita una moneta se c’è un tris di lettere uguali vengono restituito un numero di monete pari alla posizione in ordine alfabetico della lettera del tris.
+
+EREADER
+
+Si consideri sia già scritta una classe Ereader per rappresentare un lettore di ebook; si consideri che quando si crea un oggetto ereader col costruttore di defatult ci sia già presente e caricata nell’ereader una piccola biblioteca di libri.
+Si considerino presenti i seguenti metodi:
+Ereader()
+int getQuantiLibri() //restituisce quanti libri sono presenti in memoria
+void seleziona(int n) //seleziona il libro n presente in memoria
+int getPagine() //restituisce il numero di pagine del libro selezionato, 0 se non è selezionato alcun libro
+void leggi(int n, int m) //legge ad alta voce le pagine comprese tra le pagine n e m del libro selezionato.

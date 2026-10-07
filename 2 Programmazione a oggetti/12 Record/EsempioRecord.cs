@@ -19,6 +19,17 @@ public struct PersonaStruct
 {
     public string Nome { get; set; }
     public int Eta { get; set; }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj is PersonaStruct other)
+        {
+            return Nome == other.Nome && Eta == other.Eta;
+        }
+        return false;
+    }
+
+    public override int GetHashCode() => base.GetHashCode();
 }
 
 // Un record struct è un tipo valore come una struct,
