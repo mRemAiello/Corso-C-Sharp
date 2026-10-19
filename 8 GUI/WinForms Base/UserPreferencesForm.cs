@@ -16,16 +16,6 @@ public class UserPreferencesForm : Form
 
     private Label? _summaryLabel;
 
-    Label _titleLabel = new()
-    {
-        Dock = DockStyle.Top,
-        Height = 50,
-        Text = "Imposta le tue preferenze",
-        Font = new Font(FontFamily.GenericSansSerif, 16, FontStyle.Bold),
-        TextAlign = ContentAlignment.MiddleCenter,
-        Margin = new Padding(0, 0, 0, 12)
-    };
-
     public UserPreferencesForm()
     {
         Text = "Preferenze utente";
@@ -39,7 +29,6 @@ public class UserPreferencesForm : Form
         InitCheckboxes();
         InitActionButtons();
 
-        //
         var mainLayout = new TableLayoutPanel
         {
             Dock = DockStyle.Fill,
@@ -52,6 +41,31 @@ public class UserPreferencesForm : Form
         mainLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
         mainLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
 
+        mainLayout.Controls.Add(CreateHeader(), 0, 0);
+        mainLayout.Controls.Add(CreatePreferences(), 0, 1);
+        mainLayout.Controls.Add(CreateSummaryLabel(), 0, 2);
+        mainLayout.Controls.Add(CreateActionButtons(), 0, 3);
+
+        Controls.Add(mainLayout);
+
+        UpdateSummary();
+    }
+
+    private Label CreateHeader()
+    {
+        return new Label
+        {
+            Dock = DockStyle.Top,
+            Height = 50,
+            Text = "Imposta le tue preferenze",
+            Font = new Font(FontFamily.GenericSansSerif, 16, FontStyle.Bold),
+            TextAlign = ContentAlignment.MiddleCenter,
+            Margin = new Padding(0, 0, 0, 16)
+        };
+    }
+
+    private TableLayoutPanel CreatePreferences()
+    {
         var preferencesLayout = new TableLayoutPanel
         {
             Dock = DockStyle.Fill,
@@ -66,7 +80,7 @@ public class UserPreferencesForm : Form
         {
             Text = "Tema dell'interfaccia",
             Dock = DockStyle.Fill,
-            Padding = new Padding(12)
+            Padding = new Padding(Constant.DefaultPadding)
         };
 
         var themeOptionsPanel = new FlowLayoutPanel
@@ -87,7 +101,7 @@ public class UserPreferencesForm : Form
         {
             Text = "Notifiche",
             Dock = DockStyle.Fill,
-            Padding = new Padding(12)
+            Padding = new Padding(Constant.DefaultPadding)
         };
 
         var notificationsPanel = new FlowLayoutPanel
@@ -109,14 +123,26 @@ public class UserPreferencesForm : Form
         preferencesLayout.Controls.Add(themeGroup, 0, 0);
         preferencesLayout.Controls.Add(notificationsGroup, 1, 0);
 
-        _summaryLabel = new Label
+        return preferencesLayout;
+    }
+
+    private Label CreateSummaryLabel()
+    {
+        var summaryLabel = new Label
         {
             Dock = DockStyle.Fill,
             AutoSize = true,
             Text = "Seleziona le preferenze per vedere un riepilogo.",
+            TextAlign = ContentAlignment.MiddleCenter,
             Margin = new Padding(0, 12, 0, 12)
         };
 
+        _summaryLabel = summaryLabel;
+        return summaryLabel;
+    }
+
+    private FlowLayoutPanel CreateActionButtons()
+    {
         var actionPanel = new FlowLayoutPanel
         {
             FlowDirection = FlowDirection.RightToLeft,
@@ -128,14 +154,7 @@ public class UserPreferencesForm : Form
         actionPanel.Controls.Add(_resetButton);
         actionPanel.Controls.Add(_saveButton);
 
-        mainLayout.Controls.Add(_titleLabel, 0, 0);
-        mainLayout.Controls.Add(preferencesLayout, 0, 1);
-        mainLayout.Controls.Add(_summaryLabel, 0, 2);
-        mainLayout.Controls.Add(actionPanel, 0, 3);
-
-        Controls.Add(mainLayout);
-
-        UpdateSummary();
+        return actionPanel;
     }
 
     private void InitRadioButtons()

@@ -5,7 +5,10 @@ public static class Program
     [STAThread]
     private static void Main()
     {
+        UserPreferencesForm mainForm = new();
+        // controller = new Controller(mainForm);
+
         ApplicationConfiguration.Initialize();
-        Application.Run(new UserPreferencesForm());
+        Application.Run(mainForm);
     }
 }

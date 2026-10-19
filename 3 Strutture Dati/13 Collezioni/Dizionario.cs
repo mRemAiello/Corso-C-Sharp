@@ -20,7 +20,7 @@ public class Dizionario
         // Iterazione attraverso il dizionario
         Console.WriteLine("Tutte le persone nel dizionario:");
         // persona -> KeyValuePair<string, int>
-        foreach (var persona in etaPersone)
+        foreach (KeyValuePair<string, int> persona in etaPersone)
         {
             // persona = KeyValuePair<string, int>
             Console.WriteLine(persona.Key + " ha " + persona.Value + " anni.");
