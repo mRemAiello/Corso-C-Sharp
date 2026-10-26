@@ -3,7 +3,6 @@ namespace DelegateExample
     // Definizione del delegate
     // Operation tipo di funzione che accetta due int e restituisce un int
     public delegate int Operation(int x, int y);
-    
 
     class DelegateEx
     {

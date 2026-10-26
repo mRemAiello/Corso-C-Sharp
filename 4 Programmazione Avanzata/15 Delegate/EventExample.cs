@@ -56,6 +56,14 @@ namespace EventExample
             _phoneNumbers = phoneNumbers;
         }
 
+        public void Send(object sender, EventArgs e) 
+        {
+            if (e is ThermostatEventArgs args)
+            {
+                Send("Soglia di temperatura superata! Temperatura attuale: " + args.TemperaturaCorrente);
+            }
+        }
+
         public void Send(string messagge)
         {
             foreach (int phoneNumber in _phoneNumbers)
@@ -79,7 +87,7 @@ namespace EventExample
             thermostat.OnThresholdReached += (sender, e) => smsSender.Send("Soglia di temperatura superata! Temperatura attuale: " + ((ThermostatEventArgs)e).TemperaturaCorrente);
 
             // 
-            // thermostat.ThresholdReached += smsSender.Send;
+            //thermostat.OnThresholdReached += smsSender.Send;
 
             // LogWriter logWriter = new LogWriter("log.txt");
             // thermostat.ThresholdReached += logWriter.Write;
