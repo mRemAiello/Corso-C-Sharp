@@ -8,6 +8,10 @@ public class EsempioEccezioneNumeri
         {
             Console.WriteLine(numeri[5]); // Questo genererà un'eccezione IndexOutOfRangeException
         }
+        catch (IndexOutOfRangeException ex)
+        {
+            Console.WriteLine("Si è verificata un'eccezione di tipo IndexOutOfRangeException: " + ex.Message);
+        }
         catch (Exception ex)
         {
             Console.WriteLine("Si è verificata un'eccezione generica: " + ex.Message);

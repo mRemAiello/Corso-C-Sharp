@@ -1,4 +1,4 @@
-/*public class OpParallele
+public class OpParallele
 {
     static async Task Main(string[] args)
     {
@@ -20,4 +20,4 @@
         await Task.Delay(delay);
         Console.WriteLine($"{nomeOperazione} completata.");
     }
-}*/
+}

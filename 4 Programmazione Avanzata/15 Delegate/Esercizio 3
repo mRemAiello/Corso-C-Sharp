@@ -1,0 +1,217 @@
+# Esercizio: Sistema di Gestione di un Conto Corrente Bancario
+
+**Argomento:** Programmazione a Oggetti, Incapsulamento, Eventi e Progettazione delle Classi
+
+**Difficoltà:** Intermedia/Avanzata
+
+## Descrizione
+
+Una banca desidera sviluppare un sistema software per gestire i conti correnti dei propri clienti.
+
+Il sistema deve consentire di effettuare operazioni bancarie, monitorare il saldo, registrare lo storico delle transazioni e notificare automaticamente determinati eventi.
+
+L'obiettivo dell'esercizio è progettare e implementare un'applicazione orientata agli oggetti, prestando particolare attenzione alla **suddivisione delle responsabilità tra le classi, all'incapsulamento dei dati e all'utilizzo degli eventi per la comunicazione tra i componenti del sistema**.
+
+## Requisiti funzionali
+
+### 1. Gestione del conto corrente
+
+Ogni conto corrente deve possedere le seguenti informazioni:
+
+- Un codice IBAN univoco.
+- Il nome e il cognome del titolare.
+- Un saldo disponibile.
+- Una data di apertura.
+- Uno stato che indichi se il conto è attivo oppure bloccato.
+
+Il sistema deve permettere di:
+
+- Aprire un nuovo conto corrente.
+- Effettuare depositi di denaro.
+- Effettuare prelievi.
+- Trasferire denaro tra due conti correnti.
+- Consultare il saldo disponibile.
+- Bloccare e sbloccare un conto corrente.
+- Consultare lo storico delle operazioni.
+
+Il saldo non deve poter essere modificato direttamente dall'esterno della classe responsabile della sua gestione.
+
+### 2. Gestione delle transazioni
+
+Ogni operazione bancaria deve essere registrata attraverso una transazione.
+
+Una transazione deve contenere almeno:
+
+- Un identificativo univoco.
+- La data e l'ora dell'operazione.
+- La tipologia dell'operazione.
+- L'importo.
+- Il saldo risultante dall'operazione.
+- Una descrizione dell'operazione.
+- L'esito dell'operazione.
+
+Le transazioni devono essere conservate in uno storico consultabile.
+
+Una transazione registrata non deve poter essere modificata successivamente.
+
+### 3. Regole bancarie
+
+Il sistema deve rispettare le seguenti regole:
+
+1. Non è possibile depositare importi minori o uguali a zero.
+2. Non è possibile prelevare una somma superiore al saldo disponibile.
+3. Non è possibile effettuare operazioni su un conto bloccato.
+4. Un trasferimento deve coinvolgere due conti differenti.
+5. Un trasferimento deve essere eseguito soltanto se il conto mittente possiede fondi sufficienti.
+6. Se un trasferimento non può essere completato, nessuno dei due saldi deve essere modificato.
+7. Ogni operazione, riuscita o fallita, deve produrre un risultato che permetta al sistema di comprenderne l'esito.
+
+## 4. Sistema di eventi
+
+La banca desidera che alcuni componenti dell'applicazione possano reagire automaticamente alle operazioni effettuate sui conti correnti.
+
+Il sistema deve quindi implementare un meccanismo basato sugli **eventi**, evitando che la classe responsabile del conto corrente debba conoscere direttamente tutti i componenti interessati alle operazioni.
+
+Devono essere gestiti almeno i seguenti eventi:
+
+**DepositoEffettuato**
+
+Si verifica quando un deposito viene completato correttamente.
+
+**PrelievoEffettuato**
+
+Si verifica quando un prelievo viene completato correttamente.
+
+**TrasferimentoEffettuato**
+
+Si verifica quando un trasferimento tra due conti viene completato correttamente.
+
+**OperazioneRifiutata**
+
+Si verifica quando un'operazione non può essere completata a causa della violazione di una regola bancaria.
+
+**SaldoSottoSoglia**
+
+Si verifica quando, in seguito a un'operazione, il saldo di un conto passa da un valore pari o superiore a 100 € a un valore inferiore a 100 €.
+
+**ContoBloccato**
+
+Si verifica quando un conto corrente viene bloccato.
+
+Ogni evento deve trasportare le informazioni necessarie affinché i componenti interessati possano reagire senza dover accedere direttamente ai dettagli interni delle classi che lo hanno generato.
+
+## 5. Sistema di notifiche
+
+La banca vuole introdurre un sistema di notifiche automatiche.
+
+Quando viene effettuato un deposito, un prelievo o un trasferimento, il titolare deve ricevere una notifica contenente le informazioni principali dell'operazione.
+
+Quando il saldo scende sotto la soglia stabilita, il sistema deve generare un messaggio di avviso.
+
+Quando un conto viene bloccato, il titolare deve ricevere una notifica relativa al cambiamento di stato.
+
+**Vincolo architetturale:** il componente responsabile delle notifiche non deve essere richiamato direttamente dai metodi che eseguono le operazioni bancarie.
+
+La comunicazione deve avvenire esclusivamente attraverso gli eventi.
+
+## 6. Sistema di registrazione delle attività
+
+Per motivi di sicurezza, la banca desidera mantenere un registro delle attività significative.
+
+Il registro deve memorizzare:
+
+- Le operazioni completate correttamente.
+- Le operazioni rifiutate.
+- I blocchi dei conti correnti.
+- Gli avvisi relativi ai saldi inferiori alla soglia.
+
+Il componente responsabile del registro deve funzionare indipendentemente dal sistema di notifiche.
+
+Entrambi i componenti devono poter reagire allo stesso evento senza dipendere l'uno dall'altro.
+
+## 7. Gestione delle sottoscrizioni
+
+Il sistema deve consentire ai componenti interessati di iscriversi e disiscriversi dagli eventi.
+
+In particolare:
+
+- Un componente deve poter iniziare ad ascoltare un evento durante l'esecuzione del programma.
+- Un componente deve poter interrompere l'ascolto di un evento.
+- La rimozione di un componente non deve impedire agli altri componenti di continuare a ricevere gli eventi.
+- La classe che genera un evento non deve conoscere il numero o l'identità dei componenti che lo ascoltano.
+
+## 8. Progettazione delle classi
+
+Prima di implementare il programma, progettare la struttura delle classi necessarie.
+
+Per ogni classe individuata, specificare:
+
+- La responsabilità principale.
+- Gli attributi.
+- I metodi pubblici.
+- Gli eventuali metodi privati.
+- Gli eventi generati o gestiti.
+- Le relazioni con le altre classi.
+
+La progettazione deve rispettare i principi fondamentali della programmazione orientata agli oggetti.
+
+In particolare, evitare di concentrare tutte le funzionalità in un'unica classe.
+
+Il sistema deve essere progettato in modo da consentire l'aggiunta futura di nuovi componenti, come un servizio di notifiche tramite email o un sistema di rilevamento delle operazioni sospette, senza modificare la logica delle operazioni bancarie.
+
+## 9. Simulazione richiesta
+
+Realizzare un programma che esegua automaticamente la seguente sequenza:
+
+1. Creare due conti correnti intestati a Mario Rossi e Laura Bianchi, entrambi con saldo iniziale pari a 0 €.
+2. Attivare il sistema di notifiche e quello di registrazione delle attività.
+3. Depositare 1.000 € sul conto di Mario.
+4. Depositare 500 € sul conto di Laura.
+5. Prelevare 200 € dal conto di Mario.
+6. Trasferire 650 € dal conto di Mario a quello di Laura.
+7. Tentare di prelevare 500 € dal conto di Mario.
+8. Prelevare 100 € dal conto di Mario.
+9. Bloccare il conto di Laura.
+10. Tentare di depositare 200 € sul conto bloccato di Laura.
+11. Disattivare la ricezione degli eventi da parte del sistema di notifiche.
+12. Effettuare un deposito di 300 € sul conto di Mario.
+13. Verificare che il sistema di registrazione continui a ricevere gli eventi, mentre quello di notifiche non riceva più alcuna comunicazione.
+14. Visualizzare il saldo finale dei due conti.
+15. Visualizzare lo storico delle transazioni e il registro delle attività.
+
+Durante la simulazione, tutti gli eventi devono essere generati automaticamente dalle operazioni corrispondenti.
+
+## 10. Vincoli tecnici
+
+Il progetto deve rispettare obbligatoriamente i seguenti vincoli:
+
+- Utilizzare classi e oggetti per rappresentare le entità del sistema.
+- Applicare correttamente l'incapsulamento.
+- Utilizzare eventi per comunicare le operazioni ai componenti interessati.
+- Evitare dipendenze dirette tra la gestione dei conti, le notifiche e il registro delle attività.
+- Evitare l'utilizzo di variabili globali per condividere lo stato dell'applicazione.
+- Separare la logica bancaria dalla visualizzazione dei messaggi nella console.
+- Garantire che le operazioni non valide non alterino il saldo dei conti.
+- Evitare la duplicazione della logica di validazione delle operazioni.
+- Utilizzare una struttura facilmente estendibile e manutenibile.
+
+## 11. Domande finali
+
+Al termine dell'implementazione, rispondere alle seguenti domande:
+
+1. Quali classi sono state individuate e perché?
+2. Quali responsabilità sono state assegnate a ciascuna classe?
+3. Perché è preferibile utilizzare eventi anziché richiamare direttamente il sistema di notifiche?
+4. Cosa accadrebbe se più componenti si iscrivessero allo stesso evento?
+5. Come viene garantito che un componente possa disiscriversi senza influenzare gli altri?
+6. Come si potrebbe aggiungere un sistema di rilevamento delle frodi senza modificare le classi responsabili delle operazioni bancarie?
+7. Quali problemi potrebbero verificarsi se tutte le funzionalità fossero implementate all'interno di un'unica classe?
+8. In che modo la struttura realizzata rispetta il principio di responsabilità singola (Single Responsibility Principle)?
+
+## Obiettivo finale
+
+Realizzare un sistema bancario funzionante, modulare ed estendibile, nel quale **gli eventi costituiscano il principale meccanismo di comunicazione tra componenti indipendenti**.
+
+La valutazione non si baserà esclusivamente sul corretto funzionamento delle operazioni bancarie, ma anche sulla qualità della progettazione, sulla separazione delle responsabilità e sull'utilizzo appropriato degli eventi.
+
+**Non è consentito implementare l'intero esercizio all'interno di un'unica classe.**
