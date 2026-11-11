@@ -24,9 +24,11 @@ public partial class MainForm : Form
 
         _actionButton = new Button
         {
+            AutoSize = false,
             Dock = DockStyle.Bottom,
+            Width = 200,
             Height = 40,
-            Margin = new Padding(20),
+            Margin = new Padding(40),
             Text = "Mostra Ora"
         };
         _actionButton.Click += OnActionButtonClick;

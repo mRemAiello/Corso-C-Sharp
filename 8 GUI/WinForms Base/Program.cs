@@ -5,10 +5,19 @@ public static class Program
     [STAThread]
     private static void Main()
     {
-        UserPreferencesForm mainForm = new();
-        // controller = new Controller(mainForm);
-
-        ApplicationConfiguration.Initialize();
-        Application.Run(mainForm);
+        try
+        {
+            ApplicationConfiguration.Initialize();
+            Application.Run(new UserPreferencesForm());
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(
+                ex.ToString(),
+                "Errore avvio applicazione",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error
+            );
+        }
     }
 }

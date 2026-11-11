@@ -18,27 +18,21 @@ public class LoadingForm : Form
 
     public LoadingForm()
     {
-        Text = "Simulazione Caricamento";
-        StartPosition = FormStartPosition.CenterScreen;
-        ClientSize = new Size(520, 260);
-        BackColor = Color.FromArgb(37, 51, 71);
-        Font = new Font("Segoe UI", 10, FontStyle.Regular, GraphicsUnit.Point);
-        Icon = SystemIcons.Information;
-        MinimumSize = new Size(460, 240);
+        InitWinForm();
 
         _titleLabel = new Label
         {
             Dock = DockStyle.Top,
             Height = 60,
             Text = "Prepara il tuo ambiente",
-            TextAlign = ContentAlignment.BottomCenter,
+            TextAlign = ContentAlignment.MiddleCenter,
             Font = new Font("Segoe UI Semibold", 20, FontStyle.Bold),
             ForeColor = Color.FromArgb(245, 245, 245)
         };
 
         _statusIcon = new PictureBox
         {
-            Size = new Size(64, 64),
+            Size = new Size(32, 32),
             Image = SystemIcons.Information.ToBitmap(),
             SizeMode = PictureBoxSizeMode.Zoom,
             BackColor = Color.Transparent,
@@ -104,7 +98,7 @@ public class LoadingForm : Form
             Enabled = false
         };
         _cancelButton.FlatAppearance.BorderColor = Color.FromArgb(154, 52, 52);
-        _cancelButton.Click += (_, _) => CancelCountdown();
+        _cancelButton.Click += CancelCountdown;
 
         var buttonPanel = new TableLayoutPanel
         {
@@ -127,6 +121,17 @@ public class LoadingForm : Form
         Controls.Add(_titleLabel);
     }
 
+    private void InitWinForm()
+    {
+        Text = "Simulazione Caricamento";
+        StartPosition = FormStartPosition.CenterScreen;
+        ClientSize = new Size(520, 260);
+        BackColor = Color.FromArgb(37, 51, 71);
+        Font = new Font("Segoe UI", 10, FontStyle.Bold, GraphicsUnit.Point);
+        Icon = SystemIcons.WinLogo;
+        MinimumSize = new Size(460, 240);
+    }
+
     private void StartCountdown()
     {
         _elapsedSeconds = 0;
@@ -138,7 +143,7 @@ public class LoadingForm : Form
         _countdownTimer.Start();
     }
 
-    private void CancelCountdown()
+    private void CancelCountdown(object? sender, EventArgs e)
     {
         _countdownTimer.Stop();
         _statusLabel.Text = "Caricamento annullato.";

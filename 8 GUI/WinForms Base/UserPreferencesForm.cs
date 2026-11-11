@@ -147,7 +147,8 @@ public class UserPreferencesForm : Form
         {
             FlowDirection = FlowDirection.RightToLeft,
             Dock = DockStyle.Fill,
-            AutoSize = true
+            AutoSize = false,
+            Height = 35,
         };
 
         actionPanel.Controls.Add(_closeButton);
@@ -208,17 +209,21 @@ public class UserPreferencesForm : Form
     {
         _saveButton = new Button
         {
+            Width = 200,
+            Height = 30,
             Text = "Salva",
             AutoSize = true
         };
         _resetButton = new Button
         {
             Text = "Resetta",
+            Height = 30,
             AutoSize = true
         };
         _closeButton = new Button
         {
             Text = "Chiudi",
+            Height = 30,
             AutoSize = true
         };
 
